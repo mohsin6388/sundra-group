@@ -1,0 +1,213 @@
+
+/* ── Navbar ─────────────────────────────────────────────────────────────────── */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(248, 241, 225, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(27, 35, 22, 0.08);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.navbar-scrolled {
+  box-shadow: 0 4px 24px -8px rgba(27, 35, 22, 0.15);
+  background: rgba(248, 241, 225, 0.98);
+}
+
+/* ── Container ───────────────────────────────────────────────────────────────── */
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+}
+
+/* ── Desktop nav links ───────────────────────────────────────────────────────── */
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 40px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border-radius: 999px;           /* pill shape */
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background: rgba(31, 77, 44, 0.07);
+  color: #1f4d2c;
+}
+
+/* Active link — solid dark green pill (matches screenshot) */
+.nav-link.active {
+  background: #1f4d2c;
+  color: #f8f1e1;
+  font-weight: 600;
+}
+
+.nav-link.active:hover {
+  background: #2d6a3e;
+  color: #f8f1e1;
+}
+
+/* ── Desktop right-side actions ──────────────────────────────────────────────── */
+
+.desktop-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+/* Phone link — icon + number, subtle style */
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.phone-link:hover {
+  color: #1f4d2c;
+}
+
+/* "Become a Dealer" — gold/amber pill (matches screenshot) */
+.dealer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #c9871f;            /* gold — matches screenshot */
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.dealer-btn:hover {
+  background: #b3751a;
+  transform: translateY(-1px);
+}
+
+/* ── Mobile hamburger ────────────────────────────────────────────────────────── */
+
+.mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  color: #1b2316;
+  margin-left: auto;
+  transition: background 0.2s ease;
+}
+
+.mobile-toggle:hover {
+  background: rgba(27, 35, 22, 0.07);
+}
+
+/* ── Mobile dropdown menu ────────────────────────────────────────────────────── */
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px 20px;
+  gap: 2px;
+  border-top: 1px solid rgba(27, 35, 22, 0.08);
+  background: rgba(248, 241, 225, 0.99);
+}
+
+.mobile-link {
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-link:hover {
+  background: rgba(31, 77, 44, 0.07);
+  color: #1f4d2c;
+}
+
+.mobile-link.active {
+  background: #1f4d2c;
+  color: #f8f1e1;
+  font-weight: 600;
+}
+
+.mobile-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  margin-top: 4px;
+}
+
+.mobile-phone:hover {
+  background: rgba(31, 77, 44, 0.07);
+  color: #1f4d2c;
+}
+
+/* Mobile dealer btn — full width */
+.mobile-menu .dealer-btn {
+  margin-top: 8px;
+  justify-content: center;
+}
+
+/* ── Responsive breakpoint ───────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .desktop-menu,
+  .desktop-actions {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+}

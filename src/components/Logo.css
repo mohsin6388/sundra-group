@@ -1,0 +1,64 @@
+/* Logo styles */
+/* 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1f4d2c;
+  letter-spacing: -0.01em;
+  font-family: Georgia, serif;
+}
+
+.logo-text span {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c9871f;
+  margin-top: 2px;
+} */
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* logo aur text ke beech ka space */
+}
+
+.logo-img {
+  width: 42px; /* apne hisab se adjust kar lo */
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo-text span {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+}

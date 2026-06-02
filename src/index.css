@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@300;400;500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #f8f1e1;
+  --cream-2: #f1e7cf;
+  --ink: #1b2316;
+  --forest: #1f4d2c;
+  --forest-2: #2d6a3e;
+  --gold: #c9871f;
+  --gold-2: #e3a73f;
+  --terracotta: #b34a25;
+  --brick: #8a2a1a;
+  --line: rgba(27, 35, 22, 0.14);
+}
+
+@layer base {
+  :root {
+    --background: 42 53% 93%;
+    --foreground: 90 18% 12%;
+    --card: 40 40% 97%;
+    --card-foreground: 90 18% 12%;
+    --popover: 40 40% 97%;
+    --popover-foreground: 90 18% 12%;
+    --primary: 138 42% 22%;
+    --primary-foreground: 42 53% 96%;
+    --secondary: 38 60% 90%;
+    --secondary-foreground: 90 18% 12%;
+    --muted: 40 30% 88%;
+    --muted-foreground: 90 10% 32%;
+    --accent: 38 76% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 8 65% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 90 12% 80%;
+    --input: 90 12% 80%;
+    --ring: 138 42% 30%;
+    --radius: 0.75rem;
+  }
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+.font-display {
+  font-family: "Fraunces", Georgia, serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+
+.font-hindi {
+  font-family: "Tiro Devanagari Hindi", "Noto Sans Devanagari", serif;
+}
+
+/* Grain overlay */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.45 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(27, 35, 22, 0.25),
+    transparent
+  );
+}
+
+.ticker {
+  animation: ticker 40s linear infinite;
+}
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.cow-pattern {
+  background-image: radial-gradient(
+      circle at 20% 30%,
+      rgba(201, 135, 31, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(31, 77, 44, 0.08),
+      transparent 40%
+    );
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease, color 0.25s ease;
+}
+.btn-primary {
+  background: var(--forest);
+  color: var(--cream);
+}
+.btn-primary:hover {
+  background: var(--forest-2);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -16px rgba(31, 77, 44, 0.6);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--forest);
+  border: 1px solid rgba(31, 77, 44, 0.3);
+}
+.btn-ghost:hover {
+  background: rgba(31, 77, 44, 0.06);
+}
+.btn-gold {
+  background: var(--gold);
+  color: #fff;
+}
+.btn-gold:hover {
+  background: var(--gold-2);
+  transform: translateY(-2px);
+}
+
+.card-soft {
+  background: #fffaf0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.product-card {
+  position: relative;
+  background: #fffaf0;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px -28px rgba(27, 35, 22, 0.4);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--forest);
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: rgba(27, 35, 22, 0.2);
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 0.8s ease forwards;
+}
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float-slow {
+  animation: float 7s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Hide scrollbar for marquee */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Navbar offset — compensate for fixed 72px navbar */
+main {
+  padding-top: 72px;
+}
+
+/* ── Global Responsive Utilities ─────────────────────────────────────────── */
+
+/* Prevent horizontal scroll on all screen sizes */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Responsive section padding for inline-styled sections */
+@media (max-width: 600px) {
+  /* Reduce padding for sections using 32px horizontal padding */
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  /* Keep vertical padding intact but reduce on very small screens */
+  main > section:first-child {
+    padding-top: 40px !important;
+  }
+}
+
+/* Ensure images never overflow their container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive font sizes for headings using inline styles with clamp already applied */
+
+/* ── About page specific ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .about-image-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Products page ───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .products-header-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+/* ── Benefits page ───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .benefits-hero-grid,
+  .benefits-cta-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .benefits-cta-grid {
+    padding: 32px !important;
+  }
+}
+
+/* ── Home page ───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .value-header-grid,
+  .science-grid,
+  .testimonial-grid,
+  .cta-band-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .value-cards-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .featured-products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .cta-band-grid {
+    padding: 32px !important;
+  }
+  .hero-cta-wrap {
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+}
+@media (max-width: 480px) {
+  .value-cards-grid,
+  .science-specs-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
