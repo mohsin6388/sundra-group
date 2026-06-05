@@ -13,8 +13,8 @@ import Logo from "./Logo";
 
 function Footer() {
   const COMPANY = {
-    name: "Barsana Pashu Aahar",
-    founder: "Founder Name",
+    name: "Sundra Group",
+    founder: "Deific Digital",
     established: "2010",
     regOffice: "Kanpur, Uttar Pradesh, India",
     email: "info@barsana.com",
@@ -196,7 +196,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          © {new Date().getFullYear()} {COMPANY.name} | Founded by {COMPANY.founder}
+          © {new Date().getFullYear()} {COMPANY.name} | Designed by {COMPANY.founder}
         </div>
       </footer>
     </>

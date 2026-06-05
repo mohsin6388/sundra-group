@@ -69,9 +69,9 @@ function Navbar() {
             {COMPANY.phones[0]}
           </a>
 
-          <Link to="/dealers" className="dealer-btn">
+          {/* <Link to="/dealers" className="dealer-btn">
             Become a Dealer
-          </Link>
+          </Link> */}
         </div>
 
         <button

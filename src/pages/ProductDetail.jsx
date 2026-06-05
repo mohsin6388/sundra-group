@@ -9,11 +9,25 @@ import {
   Phone,
 } from "lucide-react";
 
+// import BarsanaPacketYellow from "../assets/Barsana-D.webp"
+// import BarsanaPacketPink from "../assets/BarsanaPink.webp"
+// import BarsanaPacketRed from "../assets/Barsana-Packet.webp"
+// import BuffSpecial from "../assets/Buff-Special.webp"
+// import Churi from "../assets/Churi.webp"
+// import MultiGranChukar from "../assets/Multigran-Chokar.webp"
+// import RoyalMixture from "../assets/Royal-Mixture.webp"
+// import Sudarshan from "../assets/Sudarshan.webp"
+// import Super from "../assets/Super.webp"
+// import SupremePlus from "../assets/Supremeplus.webp"
+// import eightThousand from "../assets/8000.webp"
+
 import { findProduct, PRODUCTS, COMPANY } from "../lib/products";
 
 export default function ProductDetail() {
   const { slug } = useParams();
   const product = findProduct(slug);
+
+  console.log("Yeh kya hai bhai ---> ",product)
 
   if (!product) {
     return <Navigate to="/products" replace />;

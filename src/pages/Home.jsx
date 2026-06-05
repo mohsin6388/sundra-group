@@ -99,8 +99,8 @@ export default function Home() {
           }}
         />
 
-        {/* Buttons */}
-        <div
+       
+    {/*}    <div
           className="hero-cta-wrap"
           style={{
             position: "absolute",
@@ -124,9 +124,11 @@ export default function Home() {
             Become a Dealer
           </Link>
         </div>
+        */}
       </section>
 
-      {/* ── VALUE PROPS ──────────────────────────────────────────────────── */}
+
+      
       <section
         style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 32px" }}
       >
