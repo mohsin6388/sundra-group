@@ -35,7 +35,7 @@
 //   {
 //     Icon: HeartHandshake,
 //     title: "Farmer Partnership",
-//     desc: "Our agronomists provide on-ground training and support, helping more than 10,000 farmers across India and Nepal unlock their herds' full potential.",
+//     desc: "Our agronomists provide on-ground training and support, helping more than 10,000 farmers across India unlock their herds' full potential.",
 //   },
 // ];
 
@@ -883,7 +883,7 @@ const VALUES = [
   {
     Icon: HeartHandshake,
     title: "Farmer Partnership",
-    desc: "Our agronomists provide on-ground training and support, helping more than 10,000 farmers across India and Nepal unlock their herds' full potential.",
+    desc: "Our agronomists provide on-ground training and support, helping more than 10,000 farmers across India unlock their herds' full potential.",
   },
 ];
 
@@ -916,9 +916,9 @@ const JOURNEY = [
     desc: "Inaugurated a state-of-the-art in-house research laboratory, enabling precision nutrition formulation.",
   },
   {
-    year: "2022",
-    title: "Nepal Operations",
-    desc: "Extended our reach to Nepal, helping dairy farmers across the border access world-class animal feed.",
+    year: "2021",
+    title: "Sustainability Initiative",
+    desc: "Launched our sustainable sourcing program, partnering with local farmers to promote eco-friendly agricultural practices.",
   },
   {
     year: "2025",
@@ -1526,7 +1526,7 @@ export default function AboutSections() {
         {/* ═══ HERO BANNER ═══════════════════════════════════ */}
         <section className="hero-banner">
           <div
-            style={{
+            style={{ 
               position: "relative",
               maxWidth: "800px",
               margin: "0 auto",
@@ -1539,10 +1539,10 @@ export default function AboutSections() {
             <h1 className="hero-title">
               Nourishing <Gold>10,000+ Farmers</Gold>
               <br />
-              Across India & Nepal
+              Across India
             </h1>
             <p className="hero-subtitle">
-              For over 25 years, Sundra Group has combined rigorous science with
+              For over 14 years, Sundra Group has combined rigorous science with
               a farmer-first philosophy — delivering feed solutions that boost
               yield, improve animal health, and strengthen rural livelihoods.
             </p>
@@ -1600,7 +1600,7 @@ export default function AboutSections() {
                     margin: "0",
                   }}
                 >
-                  From the Gangetic plains to the Terai belt of Nepal, Sundra
+                  From the Gangetic plains to the Terai belt of Sundra
                   Group's nutritionists work directly with farmers to design
                   feed programs that match breed, climate, and herd size —
                   delivering measurable improvements in milk output and animal
