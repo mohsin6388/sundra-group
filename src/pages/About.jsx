@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import { Link } from "react-router-dom";
 // import {
@@ -507,7 +506,7 @@
 //         style={{ maxWidth: "1400px", margin: "0 auto",  padding: "50px 30px", }}
 //       >
 //         <div className="facility-grid">
-         
+
 //           <div>
 //             <p
 //               style={{
@@ -563,7 +562,6 @@
 //               India's growing demand for premium dairy nutrition.
 //             </p>
 
-           
 //             <div
 //               style={{
 //                 display: "flex",
@@ -630,7 +628,6 @@
 //             </Link>
 //           </div>
 
-         
 //           <div style={{ position: "relative" }}>
 //             <img
 //               src={GALLERY_IMAGES[0]}
@@ -643,7 +640,7 @@
 //                 display: "block",
 //               }}
 //             />
-          
+
 //             <div
 //               style={{
 //                 position: "absolute",
@@ -834,7 +831,6 @@
 //     </>
 //   );
 // }
-
 
 //==========================================================================================
 //=========================================================================================
@@ -1527,22 +1523,28 @@ export default function AboutSections() {
       `}</style>
 
       <div className="about-page">
-
         {/* ═══ HERO BANNER ═══════════════════════════════════ */}
         <section className="hero-banner">
-          <div style={{ position: "relative", maxWidth: "800px", margin: "0 auto" }}>
+          <div
+            style={{
+              position: "relative",
+              maxWidth: "800px",
+              margin: "0 auto",
+            }}
+          >
             <div className="hero-badge">
               <Globe2 size={12} />
               India's Trusted Dairy Nutrition Partner
             </div>
             <h1 className="hero-title">
-              Nourishing <Gold>10,000+ Farmers</Gold><br />
+              Nourishing <Gold>10,000+ Farmers</Gold>
+              <br />
               Across India & Nepal
             </h1>
             <p className="hero-subtitle">
-              For over 25 years, Sundra Group has combined rigorous science with a
-              farmer-first philosophy — delivering feed solutions that boost yield,
-              improve animal health, and strengthen rural livelihoods.
+              For over 25 years, Sundra Group has combined rigorous science with
+              a farmer-first philosophy — delivering feed solutions that boost
+              yield, improve animal health, and strengthen rural livelihoods.
             </p>
             <div className="hero-links">
               <Link to="/products" className="btn-gold">
@@ -1578,32 +1580,67 @@ export default function AboutSections() {
                   Empowering dairy farmers with feed that creates{" "}
                   <Gold>real economic prosperity</Gold>
                 </h2>
-                <p style={{ fontSize: "15px", lineHeight: "1.85", color: "#555", margin: "0 0 8px" }}>
-                  We believe the backbone of India's dairy economy is the small and
-                  mid-scale farmer. Our research, products, and field teams exist to
-                  serve that backbone — one village at a time.
+                <p
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: "1.85",
+                    color: "#555",
+                    margin: "0 0 8px",
+                  }}
+                >
+                  We believe the backbone of India's dairy economy is the small
+                  and mid-scale farmer. Our research, products, and field teams
+                  exist to serve that backbone — one village at a time.
                 </p>
-                <p style={{ fontSize: "15px", lineHeight: "1.85", color: "#555", margin: "0" }}>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: "1.85",
+                    color: "#555",
+                    margin: "0",
+                  }}
+                >
                   From the Gangetic plains to the Terai belt of Nepal, Sundra
-                  Group's nutritionists work directly with farmers to design feed
-                  programs that match breed, climate, and herd size — delivering
-                  measurable improvements in milk output and animal longevity.
+                  Group's nutritionists work directly with farmers to design
+                  feed programs that match breed, climate, and herd size —
+                  delivering measurable improvements in milk output and animal
+                  longevity.
                 </p>
                 <div className="values-mini-grid">
                   {VALUES.map(({ Icon, title, desc }) => (
                     <div key={title} className="value-card">
-                      <div style={{
-                        width: "42px", height: "42px", borderRadius: "12px",
-                        background: "rgba(31,77,44,0.1)",
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                        marginBottom: "12px",
-                      }}>
+                      <div
+                        style={{
+                          width: "42px",
+                          height: "42px",
+                          borderRadius: "12px",
+                          background: "rgba(31,77,44,0.1)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          marginBottom: "12px",
+                        }}
+                      >
                         <Icon size={20} color="#1f4d2c" />
                       </div>
-                      <h3 style={{ margin: "0 0 6px", fontSize: "14px", color: "#1a2e1e", fontWeight: "700" }}>
+                      <h3
+                        style={{
+                          margin: "0 0 6px",
+                          fontSize: "14px",
+                          color: "#1a2e1e",
+                          fontWeight: "700",
+                        }}
+                      >
                         {title}
                       </h3>
-                      <p style={{ margin: 0, fontSize: "13px", lineHeight: "1.65", color: "#666" }}>
+                      <p
+                        style={{
+                          margin: 0,
+                          fontSize: "13px",
+                          lineHeight: "1.65",
+                          color: "#666",
+                        }}
+                      >
                         {desc}
                       </p>
                     </div>
@@ -1614,23 +1651,65 @@ export default function AboutSections() {
               {/* Right */}
               <div>
                 <div className="mission-img-wrap">
-                  <img src={GALLERY_IMAGES[2]} alt="Cattle at Sundra farm" className="mission-img" />
+                  <img
+                    src={GALLERY_IMAGES[2]}
+                    alt="Cattle at Sundra farm"
+                    className="mission-img"
+                  />
                   <div className="img-overlay">
-                    <p style={{ color: "#c9871f", fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", margin: "0 0 8px" }}>
+                    <p
+                      style={{
+                        color: "#c9871f",
+                        fontSize: "11px",
+                        letterSpacing: "2px",
+                        textTransform: "uppercase",
+                        margin: "0 0 8px",
+                      }}
+                    >
                       Best Choice for Dairy Farmers
                     </p>
-                    <h3 style={{ color: "#fff", fontSize: "clamp(1rem, 2vw, 20px)", margin: "0 0 18px", fontFamily: "'Playfair Display', serif", lineHeight: "1.35" }}>
+                    <h3
+                      style={{
+                        color: "#fff",
+                        fontSize: "clamp(1rem, 2vw, 20px)",
+                        margin: "0 0 18px",
+                        fontFamily: "'Playfair Display', serif",
+                        lineHeight: "1.35",
+                      }}
+                    >
                       Advanced technology · Quality nutrition · Higher yield
                     </h3>
-                    <Link to="/contact" className="btn-gold" style={{ fontSize: "13px", padding: "10px 22px" }}>
+                    <Link
+                      to="/contact"
+                      className="btn-gold"
+                      style={{ fontSize: "13px", padding: "10px 22px" }}
+                    >
                       Call Us <ArrowRight size={14} />
                     </Link>
                   </div>
                   <div className="img-badge">
                     <Milk size={22} color="#c9871f" />
                     <div>
-                      <div style={{ fontSize: "10px", color: "#999", textTransform: "uppercase", letterSpacing: "1px" }}>Daily Output</div>
-                      <div style={{ fontSize: "17px", fontWeight: "800", color: "#1a2e1e", fontFamily: "'Playfair Display', serif" }}>500+ MT</div>
+                      <div
+                        style={{
+                          fontSize: "10px",
+                          color: "#999",
+                          textTransform: "uppercase",
+                          letterSpacing: "1px",
+                        }}
+                      >
+                        Daily Output
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "17px",
+                          fontWeight: "800",
+                          color: "#1a2e1e",
+                          fontFamily: "'Playfair Display', serif",
+                        }}
+                      >
+                        500+ MT
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1646,8 +1725,8 @@ export default function AboutSections() {
               <p className="section-tag">Our Journey</p>
               <h2 className="section-title">25 years of growth & innovation</h2>
               <p className="section-desc">
-                From a single plant in Uttar Pradesh to a pan-India operation — here
-                are the milestones that shaped Sundra Group.
+                From a single plant in Uttar Pradesh to a pan-India operation —
+                here are the milestones that shaped Sundra Group.
               </p>
             </div>
 
@@ -1658,9 +1737,7 @@ export default function AboutSections() {
                     <span className="timeline-year">{item.year}</span>
                   </div>
                   <div className="timeline-center">
-                    <div className="timeline-dot">
-                      {i + 1}
-                    </div>
+                    <div className="timeline-dot">{i + 1}</div>
                   </div>
                   <div className="timeline-right">
                     <div className="timeline-card">
@@ -1679,10 +1756,12 @@ export default function AboutSections() {
           <div className="section-inner">
             <div className="section-header">
               <p className="section-tag">What We Make</p>
-              <h2 className="section-title">Products built on decades of research</h2>
+              <h2 className="section-title">
+                Products built on decades of research
+              </h2>
               <p className="section-desc">
-                Each product in our portfolio is backed by in-house nutritional science
-                and field-tested across thousands of herds.
+                Each product in our portfolio is backed by in-house nutritional
+                science and field-tested across thousands of herds.
               </p>
             </div>
             <div className="products-grid">
@@ -1694,11 +1773,18 @@ export default function AboutSections() {
                   </div>
                   <h3 className="product-name">{name}</h3>
                   <p className="product-desc">{desc}</p>
-                  <Link to="/products" style={{
-                    display: "inline-flex", alignItems: "center", gap: "6px",
-                    color: "#c9871f", fontWeight: "700", fontSize: "13px",
-                    textDecoration: "none",
-                  }}>
+                  <Link
+                    to="/products"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      color: "#c9871f",
+                      fontWeight: "700",
+                      fontSize: "13px",
+                      textDecoration: "none",
+                    }}
+                  >
                     Learn more <ArrowRight size={13} />
                   </Link>
                 </div>
@@ -1722,16 +1808,31 @@ export default function AboutSections() {
                 <h2 className="section-title">
                   State-of-the-art manufacturing built for scale
                 </h2>
-                <p style={{ fontSize: "15px", lineHeight: "1.85", color: "#666", marginBottom: "14px" }}>
-                  Our plant is equipped with automated batching, computerised nutritional
-                  mixing, and real-time quality assays. Capacity across our facilities
-                  exceeds <strong>500 MT per day</strong>, enabling us to serve large
-                  cooperatives and individual farmers with equal reliability.
+                <p
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: "1.85",
+                    color: "#666",
+                    marginBottom: "14px",
+                  }}
+                >
+                  Our plant is equipped with automated batching, computerised
+                  nutritional mixing, and real-time quality assays. Capacity
+                  across our facilities exceeds <strong>500 MT per day</strong>,
+                  enabling us to serve large cooperatives and individual farmers
+                  with equal reliability.
                 </p>
-                <p style={{ fontSize: "15px", lineHeight: "1.85", color: "#666", marginBottom: "24px" }}>
-                  A new greenfield facility currently under construction will double our
-                  capacity by 2026, reinforcing our commitment to meeting India's growing
-                  demand for premium dairy nutrition.
+                <p
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: "1.85",
+                    color: "#666",
+                    marginBottom: "24px",
+                  }}
+                >
+                  A new greenfield facility currently under construction will
+                  double our capacity by 2026, reinforcing our commitment to
+                  meeting India's growing demand for premium dairy nutrition.
                 </p>
 
                 <ul className="facility-features">
@@ -1743,7 +1844,11 @@ export default function AboutSections() {
                     "Solar-powered plant operations reducing carbon footprint by 30%",
                   ].map((feat) => (
                     <li key={feat}>
-                      <CheckCircle2 size={16} color="#c9871f" style={{ flexShrink: 0, marginTop: "2px" }} />
+                      <CheckCircle2
+                        size={16}
+                        color="#c9871f"
+                        style={{ flexShrink: 0, marginTop: "2px" }}
+                      />
                       {feat}
                     </li>
                   ))}
@@ -1756,8 +1861,27 @@ export default function AboutSections() {
                     { label: "New Plant", value: "50,000 MT/yr" },
                   ].map(({ label, value }) => (
                     <div key={label} className="spec-item">
-                      <div style={{ fontSize: "11px", color: "#999", textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "4px" }}>{label}</div>
-                      <div style={{ fontSize: "22px", fontWeight: "800", color: "#1a2e1e", fontFamily: "'Playfair Display', serif" }}>{value}</div>
+                      <div
+                        style={{
+                          fontSize: "11px",
+                          color: "#999",
+                          textTransform: "uppercase",
+                          letterSpacing: "1.5px",
+                          marginBottom: "4px",
+                        }}
+                      >
+                        {label}
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "22px",
+                          fontWeight: "800",
+                          color: "#1a2e1e",
+                          fontFamily: "'Playfair Display', serif",
+                        }}
+                      >
+                        {value}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -1769,22 +1893,61 @@ export default function AboutSections() {
 
               {/* Right */}
               <div style={{ position: "relative" }}>
-                <img src={GALLERY_IMAGES[0]} alt="Manufacturing facility" className="facility-img" />
-                <div style={{
-                  position: "absolute", bottom: "-16px", right: "-16px",
-                  width: "120px", height: "120px", borderRadius: "20px",
-                  background: "#c9871f", opacity: 0.12, zIndex: -1,
-                }} />
-                <div style={{
-                  position: "absolute", top: "24px", left: "24px",
-                  background: "#fff", borderRadius: "14px",
-                  padding: "14px 20px", boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
-                  display: "flex", alignItems: "center", gap: "12px",
-                }}>
+                <img
+                  src={GALLERY_IMAGES[0]}
+                  alt="Manufacturing facility"
+                  className="facility-img"
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "-16px",
+                    right: "-16px",
+                    width: "120px",
+                    height: "120px",
+                    borderRadius: "20px",
+                    background: "#c9871f",
+                    opacity: 0.12,
+                    zIndex: -1,
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "24px",
+                    left: "24px",
+                    background: "#fff",
+                    borderRadius: "14px",
+                    padding: "14px 20px",
+                    boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                  }}
+                >
                   <Factory size={22} color="#1f4d2c" />
                   <div>
-                    <div style={{ fontSize: "10px", color: "#999", textTransform: "uppercase", letterSpacing: "1px" }}>Est.</div>
-                    <div style={{ fontSize: "18px", fontWeight: "800", color: "#1a2e1e", fontFamily: "'Playfair Display', serif", lineHeight: 1 }}>1998</div>
+                    <div
+                      style={{
+                        fontSize: "10px",
+                        color: "#999",
+                        textTransform: "uppercase",
+                        letterSpacing: "1px",
+                      }}
+                    >
+                      Est.
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "800",
+                        color: "#1a2e1e",
+                        fontFamily: "'Playfair Display', serif",
+                        lineHeight: 1,
+                      }}
+                    >
+                      1998
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1796,15 +1959,42 @@ export default function AboutSections() {
         <section className="team-section">
           <div className="section-inner">
             <div className="section-header">
-              <p style={{ color: "#c9871f", fontWeight: "700", letterSpacing: "3px", textTransform: "uppercase", fontSize: "12px", marginBottom: "14px" }}>
+              <p
+                style={{
+                  color: "#c9871f",
+                  fontWeight: "700",
+                  letterSpacing: "3px",
+                  textTransform: "uppercase",
+                  fontSize: "12px",
+                  marginBottom: "14px",
+                }}
+              >
                 Meet the Team
               </p>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 4vw, 44px)", color: "#fff", fontWeight: "800", lineHeight: "1.2", margin: "0 0 16px" }}>
+              <h2
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(1.8rem, 4vw, 44px)",
+                  color: "#fff",
+                  fontWeight: "800",
+                  lineHeight: "1.2",
+                  margin: "0 0 16px",
+                }}
+              >
                 The experts behind every batch
               </h2>
-              <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", lineHeight: "1.8", maxWidth: "520px", margin: "0 auto" }}>
-                Our team of nutritionists, agronomists, and operations specialists
-                bring decades of field experience to every product we make.
+              <p
+                style={{
+                  color: "rgba(255,255,255,0.5)",
+                  fontSize: "15px",
+                  lineHeight: "1.8",
+                  maxWidth: "520px",
+                  margin: "0 auto",
+                }}
+              >
+                Our team of nutritionists, agronomists, and operations
+                specialists bring decades of field experience to every product
+                we make.
               </p>
             </div>
             <div className="team-grid">
@@ -1822,44 +2012,73 @@ export default function AboutSections() {
 
         {/* ═══ CTA SECTION ════════════════════════════════════ */}
         <section className="cta-section">
-          <div style={{ position: "relative", maxWidth: "720px", margin: "0 auto" }}>
-            <p style={{ color: "rgba(255,255,255,0.7)", letterSpacing: "3px", fontSize: "12px", textTransform: "uppercase", marginBottom: "16px", fontWeight: "700" }}>
+          <div
+            style={{
+              position: "relative",
+              maxWidth: "720px",
+              margin: "0 auto",
+            }}
+          >
+            <p
+              style={{
+                color: "rgba(255,255,255,0.7)",
+                letterSpacing: "3px",
+                fontSize: "12px",
+                textTransform: "uppercase",
+                marginBottom: "16px",
+                fontWeight: "700",
+              }}
+            >
               Get in Touch
             </p>
-            <h2 className="cta-title">
-              Partner with Sundra Group
-            </h2>
+            <h2 className="cta-title">Partner with Sundra Group</h2>
             <p className="cta-desc">
-              Whether you're a dealer, cooperative, or individual farmer — our team
-              is ready to help you find the right feed solution for your herd.
+              Whether you're a dealer, cooperative, or individual farmer — our
+              team is ready to help you find the right feed solution for your
+              herd.
             </p>
 
             <div className="cta-contact-row">
               <a href="tel:+911234567890" className="contact-pill">
-                <Phone size={15} /> +91 12345 67890
+                <Phone size={15} /> +91 9876543210
               </a>
               <a href="mailto:info@sundragroup.com" className="contact-pill">
-                <Globe2 size={15} /> info@sundragroup.com
+                <Globe2 size={15} /> info@barsana.com
               </a>
             </div>
 
-            <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link to="/contact" style={{
-                display: "inline-flex", alignItems: "center", gap: "10px",
-                background: "#1a2e1e", color: "#fff",
-                textDecoration: "none", padding: "14px 32px",
-                borderRadius: "50px", fontWeight: "700", fontSize: "14px",
-                boxShadow: "0 8px 28px rgba(0,0,0,0.25)",
-              }}>
+            {/* <div
+              style={{
+                display: "flex",
+                gap: "16px",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <Link
+                to="/contact"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  background: "#1a2e1e",
+                  color: "#fff",
+                  textDecoration: "none",
+                  padding: "14px 32px",
+                  borderRadius: "50px",
+                  fontWeight: "700",
+                  fontSize: "14px",
+                  boxShadow: "0 8px 28px rgba(0,0,0,0.25)",
+                }}
+              >
                 Contact Us <ArrowRight size={17} />
               </Link>
               <Link to="/products" className="btn-outline">
                 Our Products <ArrowRight size={17} />
               </Link>
-            </div>
+            </div> */}
           </div>
         </section>
-
       </div>
     </>
   );
