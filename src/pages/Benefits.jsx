@@ -78,9 +78,11 @@ export default function Benefits({ lang}) {
   ];
 
   return (
-    <main
-      style={{ fontFamily: "sans-serif", color: C.ink, background: C.cream }}
-    >
+    // <main
+    //   style={{ fontFamily: "sans-serif", color: C.ink, background: C.cream }}
+    // >
+
+    <div className="main-hero">
       {/* ═══ HERO ═══ */}
       <section
         style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 32px 60px" }}
@@ -89,7 +91,7 @@ export default function Benefits({ lang}) {
           style={{
             fontSize: "0.7rem",
             fontWeight: 700,
-            letterSpacing: "0.2em",
+            // letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: C.gold,
             marginBottom: 20,
@@ -113,7 +115,7 @@ export default function Benefits({ lang}) {
                 lang === "hi"
                   ? "clamp(1.8rem, 4vw, 3rem)"
                   : "clamp(2.5rem, 5vw, 4rem)",
-              lineHeight: 1.1,
+              lineHeight: 1.5,
               margin: 0,
               color: C.ink,
             }}
@@ -276,7 +278,7 @@ export default function Benefits({ lang}) {
               style={{
                 fontFamily: "Georgia, serif",
                 fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-                lineHeight: 1.2,
+                lineHeight: 1.5,
                 margin: 0,
               }}
             >
@@ -333,11 +335,22 @@ export default function Benefits({ lang}) {
       </section>
 
       <style>{`
+
+      .main-hero{
+      font-family: "sans-serif";
+      color: ${C.ink};
+      background: ${C.cream}
+      }
+
+
         @media (max-width: 768px) {
           .benefits-hero-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
           .benefits-cta-grid { grid-template-columns: 1fr !important; padding: 32px !important; }
+          .main-hero{
+            padding-top: 50px;
+           }
         }
       `}</style>
-    </main>
+    </div>
   );
 }

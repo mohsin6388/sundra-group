@@ -234,7 +234,7 @@ select {
 }
 /* Navbar offset — compensate for fixed 72px navbar */
 main {
-  padding-top: 72px;
+  padding-top: 62px;
 }
 
 /* ── Global Responsive Utilities ─────────────────────────────────────────── */
@@ -247,13 +247,13 @@ html, body {
 /* Responsive section padding for inline-styled sections */
 @media (max-width: 600px) {
   /* Reduce padding for sections using 32px horizontal padding */
-  section {
+  /* section {
     padding-left: 16px !important;
     padding-right: 16px !important;
-  }
+  } */
   /* Keep vertical padding intact but reduce on very small screens */
   main > section:first-child {
-    padding-top: 40px !important;
+    padding-top: 5px !important;
   }
 }
 

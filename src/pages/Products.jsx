@@ -2,28 +2,29 @@ import React from "react";
 import ProductCard from "../components/ProductCard";
 import { PRODUCTS } from "../lib/products";
 
-export default function Products() {
+export default function Products({lang}) {
   return (
-    <main>
+    
+    <div className="Main">
       {/* HEADER */}
 
       <section
         style={{
           maxWidth: "1300px",
           margin: "0 auto",
-          padding: "80px 20px 40px",
+          padding: "100px 40px 40px",
         }}
       >
         <div
           style={{
             color: "#c9871f",
             fontWeight: "600",
-            letterSpacing: "2px",
+            // letterSpacing: "2px",
             textTransform: "uppercase",
             marginBottom: "25px",
           }}
         >
-          The Barsana Range
+          {lang == "hi" ? "बरसाना रेंज" : "The Barsana Range"}
         </div>
 
         <div
@@ -44,7 +45,7 @@ export default function Products() {
               fontWeight: "700",
             }}
           >
-            Nine premium feeds.
+            {lang == "hi" ? "नौ प्रीमियम फ़ीड" : "Nine premium feeds."}
             <br />
             <span
               style={{
@@ -52,7 +53,7 @@ export default function Products() {
                 fontStyle: "italic",
               }}
             >
-              One promise.
+              {lang == "hi" ? "एक वादा।" : "One promise."}
             </span>
           </h1>
 
@@ -63,9 +64,13 @@ export default function Products() {
               color: "#666",
             }}
           >
-            From everyday rations to specialised buffalo formulations, every
-            variant of Barsana Pashu Aahar is engineered for a specific yield
-            range and life-stage.
+            
+            { lang == "hi"?
+            "रोज़ाना के राशन से लेकर विशेष भैंस फ़ॉर्मूलेशन तक, बरसाना पशु आहार का हर वेरिएंट एक खास उत्पादन क्षमता और जीवन-अवस्था के लिए तैयार किया गया है।"
+            :
+            "From everyday rations to specialised buffalo formulations, every variant of Barsana Pashu Aahar is engineered for a specific yield range and life-stage."
+            
+            }
           </p>
         </div>
       </section>
@@ -100,11 +105,15 @@ export default function Products() {
             gap: 24px !important;
           }
 
+          .Main{
+           padding: 0 30px
+          }
+
           .products-grid{
           padding: 0 40px !important;
           }
         }
       `}</style>
-    </main>
+    </div>
   );
 }

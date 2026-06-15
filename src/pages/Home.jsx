@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Droplets, Heart, Sparkles, Wheat, BadgeCheck, MapPin } from "lucide-react";
-import { PRODUCTS, COMPANY, GALLERY_IMAGES } from "../lib/products";
+import { HERO_PRODUCTS, COMPANY, GALLERY_IMAGES } from "../lib/products";
 import ProductCard from "../components/ProductCard";
 import banner1 from "../assets/banner-main.webp";
 import banner2 from "../assets/Sundra-banner.webp";
@@ -128,7 +128,7 @@ export default function Home({ lang }) {
   const VISIBLE = isMobile ? 2 : 3;
   const GAP = isMobile ? 16 : 24;
   const PADDING = isMobile ? 32 : 64; // total horizontal padding of section
-  const steps = PRODUCTS.length - VISIBLE + 1;
+  const steps = HERO_PRODUCTS.length - VISIBLE + 1;
   const CARD_WIDTH = `calc((min(1216px, 100vw - ${PADDING}px) - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`;
 
   useEffect(() => {
@@ -143,887 +143,652 @@ export default function Home({ lang }) {
   }, [steps]);
 
   return (
-    <main
-      data-testid="home-page"
-      style={{ fontFamily: "sans-serif", color: C.ink, background: C.cream }}
-    >
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+    <>
+      <style>
+        {`
 
-      <section
-        style={{
-          position: "relative",
-          width: "100%",
-          overflow: "hidden",
-        }}
+        .section-2{
+          maxWidth: "100%",
+          margin: "0 auto",
+           padding: "64px 2px",
+           fontFamily: "'Inter', sans-serif",
+          
+        }
+
+        @media (max-width: 786px){
+        .section-2{
+          padding: 0px 50px;
+          width: 100%;
+        }
+        }
+    
+
+    `}
+      </style>
+
+      <main
+        data-testid="home-page"
+        style={{ fontFamily: "sans-serif", color: C.ink, background: C.cream }}
       >
-        <div
+        {/* ── HERO ─────────────────────────────────────────────────────────── */}
+
+        <section
           style={{
-            display: "flex",
-            width: `${slides.length * 100}%`,
-            transform: `translateX(-${(current * 100) / slides.length}%)`,
-            transition: isTransitioning ? "transform 0.6s ease-in-out" : "none",
+            position: "relative",
+            width: "100%",
+            padding: 0,
+            overflow: "hidden",
+            // background: "red",
           }}
         >
-          {slides.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={`Banner ${i + 1}`}
+          <div
+            style={{
+              display: "flex",
+              width: `${slides.length * 100}%`,
+              transform: `translateX(-${(current * 100) / slides.length}%)`,
+              transition: isTransitioning
+                ? "transform 0.6s ease-in-out"
+                : "none",
+            }}
+          >
+            {slides.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={`Banner ${i + 1}`}
+                style={{
+                  width: `${100 / slides.length}%`,
+                  display: "block",
+                  objectFit: "cover",
+                  objectPosition: "center center",
+                }}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="section-2"
+          style={{
+            padding: "64px 42px",
+            maxWidth: "960px",
+            margin: "0 auto",
+            fontFamily: "'Inter', sans-serif",
+            lineHeight: 1.8,
+          }}
+        >
+          <div>
+            {/* Tag */}
+            <p
               style={{
-                width: `${100 / slides.length}%`,
-                display: "block",
-                objectFit: "cover",
-                objectPosition: "center center",
+                fontSize: "12px",
+                textTransform: "uppercase",
+                color: C.gold,
+                fontWeight: 500,
+                marginBottom: "16px",
+              }}
+            >
+              {t("hero.tagline")}
+              {/* Trusted by thousands */}
+            </p>
+
+            {/* Heading */}
+            <h2
+              style={{
+                fontSize:
+                  lang === "hi"
+                    ? "clamp(24px, 3.5vw, 35px)"
+                    : "clamp(28px, 4vw, 42px)",
+                fontWeight: 500,
+                color: "#111",
+                lineHeight: lang === "hi" ? 1.5 : 1,
+                marginBottom: "16px",
+              }}
+            >
+              {t("hero.headline_1")}
+              {/* Pashu ka doodh badhe, */}
+              <br />
+              {t("hero.headline_2")}
+              <span style={{ color: "#2D6A3E" }}> {t("hero.headline_3")}</span>
+            </h2>
+
+            {/* Subtext */}
+            <p
+              style={{
+                fontSize: "15px",
+                color: "#666",
+                lineHeight: 1.7,
+                maxWidth: "480px",
+                marginBottom: "48px",
+              }}
+            >
+              {t("hero.description")}
+            </p>
+
+            {/* Divider */}
+            <div
+              style={{
+                borderTop: "1px solid #e5e5e5",
+                marginBottom: "40px",
               }}
             />
-          ))}
-        </div>
-      </section>
 
-      {/* <section
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "auto",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={banner}
-          alt="Hero Banner"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center center",
-            display: "block",
-          }}
-        />
-      </section> */}
+            {/* Stats */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                gap: "48px",
+                flexWrap: "wrap",
+              }}
+            >
+              {stats.map((s, i) => (
+                <div key={i}>
+                  <div
+                    style={{
+                      fontSize: "clamp(32px, 4vw, 44px)",
+                      fontWeight: 500,
+                      color: "#2D6A3E",
+                      lineHeight: 1,
+                    }}
+                  >
+                    {s.num}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      color: "#888",
+                      marginTop: "6px",
+                    }}
+                  >
+                    {s.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      <section
-        style={{
-          padding: "64px 2px",
-          maxWidth: "960px",
-          margin: "0 auto",
-          fontFamily: "'Inter', sans-serif",
-        }}
-      >
-        {/* Tag */}
-        <p
-          style={{
-            fontSize: "12px",
-            // letterSpacing: "2.5px",
-            textTransform: "uppercase",
-            color: C.gold,
-            fontWeight: 500,
-            marginBottom: "16px",
-          }}
-        >
-          {t("hero.tagline")}
-          {/* Trusted by thousands */}
-        </p>
-
-        {/* Heading */}
-        <h2
-          style={{
-            fontSize:
-              lang === "hi"
-                ? "clamp(24px, 3.5vw, 35px)"
-                : "clamp(28px, 4vw, 42px)",
-            fontWeight: 500,
-            color: "#111",
-            lineHeight: lang === "hi" ? 1.5 : 1,
-            marginBottom: "16px",
-          }}
-        >
-          {t("hero.headline_1")}
-          {/* Pashu ka doodh badhe, */}
-          <br />
-          {t("hero.headline_2")}
-          <span style={{ color: "#2D6A3E" }}> {t("hero.headline_3")}</span>
-        </h2>
-
-        {/* Subtext */}
-        <p
-          style={{
-            fontSize: "15px",
-            color: "#666",
-            lineHeight: 1.7,
-            maxWidth: "480px",
-            marginBottom: "48px",
-          }}
-        >
-          {t("hero.description")}
-        </p>
-
-        {/* Divider */}
         <div
           style={{
             borderTop: "1px solid #e5e5e5",
-            marginBottom: "40px",
+            marginBottom: "30px",
+            marginTop: "20px",
+            marginLeft: "80px",
+            marginRight: "80px",
           }}
         />
 
-        {/* Stats */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "48px",
-            flexWrap: "wrap",
-          }}
-        >
-          {stats.map((s, i) => (
-            <div key={i}>
-              <div
-                style={{
-                  fontSize: "clamp(32px, 4vw, 44px)",
-                  fontWeight: 500,
-                  color: "#2D6A3E",
-                  lineHeight: 1,
-                }}
-              >
-                {s.num}
-              </div>
-              <div
-                style={{
-                  fontSize: "13px",
-                  color: "#888",
-                  marginTop: "6px",
-                }}
-              >
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div
-        style={{
-          borderTop: "1px solid #e5e5e5",
-          marginBottom: "30px",
-          marginTop: "20px",
-          marginLeft: "80px",
-          marginRight: "80px",
-        }}
-      />
-
-      {/* <section
-        style={{ maxWidth: 1180, margin: "0 auto", padding: "70px 32px" }}
-      >
-        <div
-          className="value-header-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "7fr 5fr",
-            gap: 40,
-            alignItems: "flex-end",
-            marginBottom: 48,
-          }}
-        >
-          <div>
-            <div style={kicker}>About US</div>
-            <h2
-              style={{
-                fontFamily: "Georgia, serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                color: C.ink,
-                lineHeight: 1.2,
-                marginTop: 16,
-              }}
-            >
-              Complete nutrition. Real results in the milking pail.
-            </h2>
-          </div>
-          <p style={{ color: `${C.ink}b3`, lineHeight: 1.65 }}>
-            Every batch of Barsana feed is engineered for a measurable outcome —
-            more milk, stronger animals and timelier reproduction. No artificial
-            chemicals. No unscientific shortcuts.
-          </p>
-        </div>
-
-        <div
-          className="value-cards-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 20,
-          }}
-        >
-          {[
-            {
-              icon: Droplets,
-              title: "More Milk",
-              desc: "Up to 22% higher yield with optimised protein, energy and fat ratios.",
-              hi: "अधिक दूध",
-            },
-            {
-              icon: Heart,
-              title: "Better Health",
-              desc: "Improved digestion, immunity and lifelong vigour for your herd.",
-              hi: "बेहतर स्वास्थ्य",
-            },
-            {
-              icon: Sparkles,
-              title: "Richer Fat",
-              desc: "Up to 6–6.5% fat in cow milk and higher in buffalo milk.",
-              hi: "उच्च वसा",
-            },
-            {
-              icon: Wheat,
-              title: "Natural Grains",
-              desc: "Jwar, makka, sarson khali & kapas khali — steam cooked.",
-              hi: "प्राकृतिक अनाज",
-            },
-          ].map(({ icon: Icon, title, desc, hi }) => (
-            <div
-              key={title}
-              style={{ ...cardSoft, padding: 24 }}
-              data-testid={`value-${title.toLowerCase().replace(/\s/g, "-")}`}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "translateY(-4px)")
-              }
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "none")}
-            >
-              <div
-                style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: 16,
-                  background: `${C.forest}1a`,
-                  color: C.forest,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Icon size={20} />
-              </div>
-              <h3
-                style={{
-                  fontFamily: "Georgia, serif",
-                  fontSize: "1.25rem",
-                  marginTop: 20,
-                }}
-              >
-                {title}
-              </h3>
-              <p style={{ fontSize: "0.875rem", color: C.gold, marginTop: 4 }}>
-                {hi}
-              </p>
-              <p
-                style={{
-                  fontSize: "0.875rem",
-                  color: `${C.ink}b3`,
-                  marginTop: 12,
-                  lineHeight: 1.6,
-                }}
-              >
-                {desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
-      <section
-        style={{ maxWidth: 1180, margin: "0 auto", padding: "70px 32px" }}
-      >
-        <div
-          className="value-header-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "7fr 5fr",
-            gap: 40,
-            alignItems: "flex-end",
-            marginBottom: 48,
-          }}
-        >
-          <div>
-            <div style={kicker}>{t("about.label")}</div>
-            <h2
-              style={{
-                fontFamily: "Georgia, serif",
-                fontSize:
-                  lang === "hi"
-                    ? "clamp(2rem, 4vw, 2.5rem)"
-                    : "clamp(2rem, 4vw, 3rem)",
-                color: C.ink,
-                lineHeight: 1.2,
-                marginTop: 16,
-              }}
-            >
-              {t("about.headline")}
-            </h2>
-          </div>
-          <p style={{ color: `${C.ink}b3`, lineHeight: 1.65 }}>
-            {t("about.description")}
-          </p>
-        </div>
-
-        <div
-          className="value-cards-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 20,
-          }}
-        >
-          {[
-            { icon: Droplets, key: "milk" },
-            { icon: Heart, key: "health" },
-            { icon: Sparkles, key: "fat" },
-            { icon: Wheat, key: "grains" },
-          ].map(({ icon: Icon, key }) => (
-            <div
-              key={key}
-              style={{ ...cardSoft, padding: 24 }}
-              data-testid={`value-${key}`}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "translateY(-4px)")
-              }
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "none")}
-            >
-              <div
-                style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: 16,
-                  background: `${C.forest}1a`,
-                  color: C.forest,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Icon size={20} />
-              </div>
-              <h3
-                style={{
-                  fontFamily: "Georgia, serif",
-                  fontSize: "1.25rem",
-                  marginTop: 20,
-                }}
-              >
-                {t(`feature.${key}.title`)}
-              </h3>
-              <p style={{ fontSize: "0.875rem", color: C.gold, marginTop: 4 }}>
-                {lang === "en"
-                  ? t(`feature.${key}.title`)
-                  : t(`feature.${key}.title`)}
-              </p>
-              <p
-                style={{
-                  fontSize: "0.875rem",
-                  color: `${C.ink}b3`,
-                  marginTop: 12,
-                  lineHeight: 1.6,
-                }}
-              >
-                {t(`feature.${key}.desc`)}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div
-        style={{
-          borderTop: "1px solid #e5e5e5",
-          marginBottom: "30px",
-          marginTop: "20px",
-          marginLeft: "80px",
-          marginRight: "80px",
-        }}
-      />
-
-      {/* ── FEATURED PRODUCTS ────────────────────────────────────────────── */}
-
-      <section
-        style={{
-          maxWidth: 1180,
-          margin: "0 auto",
-          padding: isMobile ? "40px 16px" : "64px 32px",
-        }}
-      >
-        {/* Header */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: 16,
-            marginBottom: isMobile ? 24 : 40,
-          }}
-        >
-          <div>
-            <div style={kicker}>{t("range.label")}</div>
-            <h2
-              style={{
-                fontFamily: "Georgia, serif",
-                fontSize: isMobile ? "1.6rem" : "clamp(2rem, 4vw, 3rem)",
-                color: C.ink,
-                marginTop: 16,
-              }}
-            >
-              {t("range.headline")}
-            </h2>
-          </div>
-          <Link
-            to="/products"
-            style={btnGhost}
-            data-testid="home-view-all-products"
-          >
-            {t("range.cta")} <ArrowRight size={16} />
-          </Link>
-        </div>
-
-        {/* Slider */}
-        <div
-          style={{
-            overflow: "hidden",
-            padding: isMobile ? "10px 8px" : "10px 40px",
-          }}
+        <section
+          style={{ maxWidth: 1180, margin: "0 auto", padding: "70px 32px" }}
         >
           <div
+            className="value-header-grid"
             style={{
-              display: "flex",
-              gap: GAP,
-              transition: "transform 0.55s cubic-bezier(.4,0,.2,1)",
-              transform: `translateX(calc(-${cur} * (${CARD_WIDTH} + ${GAP}px)))`,
+              display: "grid",
+              gridTemplateColumns: "7fr 5fr",
+              gap: 40,
+              alignItems: "flex-end",
+              marginBottom: 48,
+              lineHeight: 1.8,
             }}
           >
-            {PRODUCTS.map((p) => (
-              <div
-                key={p.slug}
+            <div>
+              <div style={kicker}>{t("about.label")}</div>
+              <h2
                 style={{
-                  minWidth: CARD_WIDTH,
-                  maxWidth: CARD_WIDTH,
-                  flexShrink: 0,
+                  fontFamily: "Georgia, serif",
+                  fontSize:
+                    lang === "hi"
+                      ? "clamp(2rem, 4vw, 2.5rem)"
+                      : "clamp(2rem, 4vw, 3rem)",
+                  color: C.ink,
+                  lineHeight: 1.2,
+                  marginTop: 16,
                 }}
               >
-                <ProductCard product={p} />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Dots */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 8,
-            marginTop: 20,
-          }}
-        >
-          {Array.from({ length: steps }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCur(i)}
-              style={{
-                width: i === cur ? 20 : 8,
-                height: 8,
-                borderRadius: 4,
-                border: "none",
-                cursor: "pointer",
-                background: i === cur ? C.ink : "#ccc",
-                transition: "all 0.3s",
-                padding: 0,
-              }}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* ── SCIENCE BAND ─────────────────────────────────────────────────── */}
-      {/* <section style={{ background: C.forest, color: C.cream, marginTop: 40 }}>
-        <div
-          className="science-grid"
-          style={{
-            maxWidth: 1180,
-            margin: "0 auto",
-            padding: "80px 32px",
-            display: "grid",
-            gridTemplateColumns: "6fr 6fr",
-            gap: 40,
-            alignItems: "center",
-          }}
-        >
-          <div>
-            <div style={{ ...kicker, color: C.gold2 }}>The Science</div>
-            <h2
-              style={{
-                fontFamily: "Georgia, serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                lineHeight: 1.2,
-                marginTop: 16,
-              }}
-            >
-              Composition that{" "}
-              <em style={{ fontStyle: "italic", color: C.gold2 }}>delivers</em>.
-            </h2>
-            <p
-              style={{
-                marginTop: 24,
-                color: `${C.cream}cc`,
-                maxWidth: 520,
-                lineHeight: 1.65,
-              }}
-            >
-              Every product variant is calibrated for a specific yield range.
-              From the everyday Supreme+ to the elite Barsana 8000, you get
-              balanced energy, crude protein and fibre — every single bag.
+                {t("about.headline")}
+              </h2>
+            </div>
+            <p style={{ color: `${C.ink}b3`, lineHeight: 1.65 }}>
+              {t("about.description")}
             </p>
-            <Link
-              to="/benefits"
-              style={{ ...btnGold, marginTop: 32, display: "inline-flex" }}
-              data-testid="science-cta"
-            >
-              See full benefits <ArrowRight size={16} />
-            </Link>
           </div>
 
           <div
-            className="science-specs-grid"
-            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}
+            className="value-cards-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: 20,
+            }}
           >
             {[
-              ["Energy", "2200–2800 kcal/kg"],
-              ["Crude Protein", "20–24%"],
-              ["Crude Fibre", "≤ 11%"],
-              ["Fat (E.E.)", "3–7%"],
-              ["Moisture", "≤ 12%"],
-              ["Vitamin A", "7000 IU/kg"],
-            ].map(([k, v]) => (
+              { icon: Droplets, key: "milk" },
+              { icon: Heart, key: "health" },
+              { icon: Sparkles, key: "fat" },
+              { icon: Wheat, key: "grains" },
+            ].map(({ icon: Icon, key }) => (
               <div
-                key={k}
-                style={{
-                  background: "rgba(253,248,240,0.10)",
-                  border: "1px solid rgba(255,255,255,0.10)",
-                  borderRadius: 16,
-                  padding: 20,
-                  backdropFilter: "blur(8px)",
-                }}
+                key={key}
+                style={{ ...cardSoft, padding: 24 }}
+                data-testid={`value-${key}`}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.transform = "translateY(-4px)")
+                }
+                onMouseLeave={(e) => (e.currentTarget.style.transform = "none")}
               >
                 <div
                   style={{
-                    fontSize: "0.65rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.2em",
-                    color: C.gold2,
-                    fontWeight: 700,
+                    width: 48,
+                    height: 48,
+                    borderRadius: 16,
+                    background: `${C.forest}1a`,
+                    color: C.forest,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  {k}
+                  <Icon size={20} />
                 </div>
-                <div
+                <h3
                   style={{
                     fontFamily: "Georgia, serif",
-                    fontSize: "1.5rem",
-                    marginTop: 4,
+                    fontSize: "1.25rem",
+                    marginTop: 20,
                   }}
                 >
-                  {v}
-                </div>
+                  {t(`feature.${key}.title`)}
+                </h3>
+                <p
+                  style={{ fontSize: "0.875rem", color: C.gold, marginTop: 4 }}
+                >
+                  {lang === "en"
+                    ? t(`feature.${key}.title`)
+                    : t(`feature.${key}.title`)}
+                </p>
+                <p
+                  style={{
+                    fontSize: "0.875rem",
+                    color: `${C.ink}b3`,
+                    marginTop: 12,
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {t(`feature.${key}.desc`)}
+                </p>
               </div>
             ))}
           </div>
-        </div>
-      </section> */}
-      <section style={{ background: C.forest, color: C.cream, marginTop: 40 }}>
+        </section>
+
         <div
-          className="science-grid"
+          style={{
+            borderTop: "1px solid #e5e5e5",
+            marginBottom: "30px",
+            marginTop: "20px",
+            marginLeft: "80px",
+            marginRight: "80px",
+          }}
+        />
+
+        {/* ── FEATURED PRODUCTS ────────────────────────────────────────────── */}
+
+        <section
           style={{
             maxWidth: 1180,
             margin: "0 auto",
-            padding: "80px 32px",
-            display: "grid",
-            gridTemplateColumns: "6fr 6fr",
-            gap: 40,
-            alignItems: "center",
+            padding: isMobile ? "40px 36px" : "64px 32px",
           }}
         >
-          <div>
-            <div style={{ ...kicker, color: C.gold2 }}>
-              {t("science.label")}
+          {/* Header */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: 16,
+              marginBottom: isMobile ? 24 : 40,
+            }}
+          >
+            <div>
+              <div style={kicker}>{t("range.label")}</div>
+              <h2
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontSize: isMobile ? "1.6rem" : "clamp(2rem, 4vw, 3rem)",
+                  color: C.ink,
+                  marginTop: 16,
+                }}
+              >
+                {t("range.headline")}
+              </h2>
             </div>
-            <h2
-              style={{
-                fontFamily: "Georgia, serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                lineHeight: 1.2,
-                marginTop: 16,
-              }}
-            >
-              {t("science.headline_1")}{" "}
-              <em style={{ fontStyle: "italic", color: C.gold2 }}>
-                {t("science.headline_2")}
-              </em>
-            </h2>
-            <p
-              style={{
-                marginTop: 24,
-                color: `${C.cream}cc`,
-                maxWidth: 520,
-                lineHeight: 1.65,
-              }}
-            >
-              {t("science.description")}
-            </p>
             <Link
-              to="/benefits"
-              style={{ ...btnGold, marginTop: 32, display: "inline-flex" }}
-              data-testid="science-cta"
+              to="/products"
+              style={btnGhost}
+              data-testid="home-view-all-products"
             >
-              {t("science.cta")} <ArrowRight size={16} />
+              {t("range.cta")} <ArrowRight size={16} />
             </Link>
           </div>
 
-          <div
-            className="science-specs-grid"
-            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}
-          >
-            {["energy", "protein", "fibre", "fat", "moisture", "vitamin"].map(
-              (key) => (
-                <div
-                  key={key}
-                  style={{
-                    background: "rgba(253,248,240,0.10)",
-                    border: "1px solid rgba(255,255,255,0.10)",
-                    borderRadius: 16,
-                    padding: 20,
-                    backdropFilter: "blur(8px)",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "0.65rem",
-                      textTransform: "uppercase",
-                      // letterSpacing: "0.2em",
-                      color: C.gold2,
-                      fontWeight: 700,
-                    }}
-                  >
-                    {t(`science.${key}.label`)}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "Georgia, serif",
-                      fontSize: "1.5rem",
-                      marginTop: 4,
-                    }}
-                  >
-                    {t(`science.${key}.value`)}
-                  </div>
-                </div>
-              ),
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIAL ──────────────────────────────────────────────────── */}
-      <section
-        style={{ maxWidth: 1180, margin: "0 auto", padding: "96px 32px" }}
-      >
-        <div
-          className="testimonial-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "5fr 7fr",
-            gap: 48,
-            alignItems: "center",
-          }}
-        >
+          {/* Slider */}
           <div
             style={{
-              aspectRatio: "1/1",
-              borderRadius: 28,
               overflow: "hidden",
-              border: `1px solid ${C.line}`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              background: "#fff",
+              padding: isMobile ? "10px 8px" : "10px 40px",
             }}
           >
-            <img
-              src={farmer}
-              alt="Farmer"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center 20%",
-              }}
-            />
-          </div>
-
-          <div>
-            <div style={kicker}>{t("testimonial.label")}</div>
-            <blockquote
-              style={{
-                fontFamily: "Georgia, serif",
-                fontSize:
-                  lang === "hi"
-                    ? "clamp(1.2rem, 2.2vw, 1.6rem)"
-                    : "clamp(1.6rem, 3vw, 2.25rem)",
-                lineHeight: 1.35,
-                color: C.ink,
-                margin: "16px 0 0",
-                fontStyle: "normal",
-              }}
-            >
-              "{t("testimonial.1.quote")}
-              <em style={{ fontStyle: "italic", color: C.forest }}>
-                {t("testimonial.2.quote")}{" "}
-              </em>
-              {t("testimonial.3.quote")}"
-            </blockquote>
             <div
               style={{
-                marginTop: 32,
                 display: "flex",
-                alignItems: "center",
+                gap: GAP,
+                transition: "transform 0.55s cubic-bezier(.4,0,.2,1)",
+                transform: `translateX(calc(-${cur} * (${CARD_WIDTH} + ${GAP}px)))`,
+              }}
+            >
+              {HERO_PRODUCTS.map((p) => (
+                <div
+                  key={p.slug}
+                  style={{
+                    minWidth: CARD_WIDTH,
+                    maxWidth: CARD_WIDTH,
+                    flexShrink: 0,
+                  }}
+                >
+                  <ProductCard product={p} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Dots */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 8,
+              marginTop: 20,
+            }}
+          >
+            {Array.from({ length: steps }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCur(i)}
+                style={{
+                  width: i === cur ? 20 : 8,
+                  height: 8,
+                  borderRadius: 4,
+                  border: "none",
+                  cursor: "pointer",
+                  background: i === cur ? C.ink : "#ccc",
+                  transition: "all 0.3s",
+                  padding: 0,
+                }}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section
+          style={{ background: C.forest, color: C.cream, marginTop: 40 }}
+        >
+          <div
+            className="science-grid"
+            style={{
+              maxWidth: 1180,
+              margin: "0 auto",
+              padding: "80px 32px",
+              display: "grid",
+              gridTemplateColumns: "6fr 6fr",
+              gap: 40,
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <div style={{ ...kicker, color: C.gold2 }}>
+                {t("science.label")}
+              </div>
+              <h2
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  lineHeight: 1.2,
+                  marginTop: 16,
+                }}
+              >
+                {t("science.headline_1")}{" "}
+                <em style={{ fontStyle: "italic", color: C.gold2 }}>
+                  {t("science.headline_2")}
+                </em>
+              </h2>
+              <p
+                style={{
+                  marginTop: 24,
+                  color: `${C.cream}cc`,
+                  maxWidth: 520,
+                  lineHeight: 1.65,
+                }}
+              >
+                {t("science.description")}
+              </p>
+              <Link
+                to="/benefits"
+                style={{ ...btnGold, marginTop: 32, display: "inline-flex" }}
+                data-testid="science-cta"
+              >
+                {t("science.cta")} <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            <div
+              className="science-specs-grid"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
                 gap: 16,
               }}
             >
-              <div
+              {["energy", "protein", "fibre", "fat", "moisture", "vitamin"].map(
+                (key) => (
+                  <div
+                    key={key}
+                    style={{
+                      background: "rgba(253,248,240,0.10)",
+                      border: "1px solid rgba(255,255,255,0.10)",
+                      borderRadius: 16,
+                      padding: 20,
+                      backdropFilter: "blur(8px)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: "0.65rem",
+                        textTransform: "uppercase",
+                        // letterSpacing: "0.2em",
+                        color: C.gold2,
+                        fontWeight: 700,
+                      }}
+                    >
+                      {t(`science.${key}.label`)}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "Georgia, serif",
+                        fontSize: "1.5rem",
+                        marginTop: 4,
+                      }}
+                    >
+                      {t(`science.${key}.value`)}
+                    </div>
+                  </div>
+                ),
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* ── TESTIMONIAL ──────────────────────────────────────────────────── */}
+        <section
+          style={{ maxWidth: 1180, margin: "0 auto", padding: "96px 36px" }}
+        >
+          <div
+            className="testimonial-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "5fr 7fr",
+              gap: 48,
+              alignItems: "center",
+            }}
+          >
+            <div
+              style={{
+                aspectRatio: "1/1",
+                borderRadius: 28,
+                overflow: "hidden",
+                border: `1px solid ${C.line}`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#fff",
+              }}
+            >
+              <img
+                src={farmer}
+                alt="Farmer"
                 style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: "50%",
-                  background: C.forest,
-                  color: C.cream,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center 20%",
+                }}
+              />
+            </div>
+
+            <div>
+              <div style={kicker}>{t("testimonial.label")}</div>
+              <blockquote
+                style={{
                   fontFamily: "Georgia, serif",
-                  fontSize: "1.25rem",
-                  flexShrink: 0,
+                  fontSize:
+                    lang === "hi"
+                      ? "clamp(1.2rem, 2.2vw, 1.6rem)"
+                      : "clamp(1.6rem, 3vw, 2.25rem)",
+                  lineHeight: 1.35,
+                  color: C.ink,
+                  margin: "16px 0 0",
+                  fontStyle: "normal",
                 }}
               >
-                S
-              </div>
-              <div>
-                <div style={{ fontWeight: 600 }}>Sundra Group</div>
-                <div style={{ fontSize: "0.875rem", color: `${C.ink}99` }}>
-                  Kanpur, U.P.
+                "{t("testimonial.1.quote")}
+                <em style={{ fontStyle: "italic", color: C.forest }}>
+                  {t("testimonial.2.quote")}{" "}
+                </em>
+                {t("testimonial.3.quote")}"
+              </blockquote>
+              <div
+                style={{
+                  marginTop: 32,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 16,
+                }}
+              >
+                <div
+                  style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: "50%",
+                    background: C.forest,
+                    color: C.cream,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontFamily: "Georgia, serif",
+                    fontSize: "1.25rem",
+                    flexShrink: 0,
+                  }}
+                >
+                  S
+                </div>
+                <div>
+                  <div style={{ fontWeight: 600 }}>Sundra Group</div>
+                  <div style={{ fontSize: "0.875rem", color: `${C.ink}99` }}>
+                    Kanpur, U.P.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── CTA BAND ─────────────────────────────────────────────────────── */}
-      {/* <section
-        style={{ maxWidth: 1180, margin: "80px auto", padding: "0 32px 80px" }}
-      >
-        <div
-          className="cta-band-grid"
+        <section
           style={{
-            background: C.cream2,
-            border: `1px solid ${C.line}`,
-            borderRadius: 28,
-            padding: "56px",
-            display: "grid",
-            gridTemplateColumns: "8fr 4fr",
-            gap: 32,
-            alignItems: "center",
+            maxWidth: 1180,
+            margin: "80px auto",
+            padding: "0 32px 80px",
           }}
         >
-          <div>
-            <div style={kicker}>Partner with Sundra Group</div>
-            <h2
-              style={{
-                fontFamily: "Georgia, serif",
-                fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-                lineHeight: 1.2,
-                marginTop: 16,
-              }}
-            >
-              Grow a profitable feed business in your region.
-            </h2>
-            <p style={{ marginTop: 16, color: `${C.ink}b3`, maxWidth: 600 }}>
-              Distribute trusted, fast-moving feed across your district. Apply
-              to become an authorised Barsana dealer in just a few clicks.
-            </p>
-          </div>
           <div
+            className="cta-band-grid"
             style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              gap: 12,
-              flexWrap: "wrap",
+              background: C.cream2,
+              border: `1px solid ${C.line}`,
+              borderRadius: 28,
+              padding: "56px",
+              display: "grid",
+              gridTemplateColumns: "8fr 4fr",
+              gap: 32,
+              alignItems: "center",
             }}
           >
-            <Link to="/dealers" style={btnPrimary} data-testid="cta-dealer-btn">
-              Apply now <ArrowRight size={16} />
-            </Link>
-            <Link to="/contact" style={btnGhost} data-testid="cta-contact-btn">
-              Contact sales
-            </Link>
-          </div>
-        </div>
-      </section> */}
-
-      <section
-        style={{ maxWidth: 1180, margin: "80px auto", padding: "0 32px 80px" }}
-      >
-        <div
-          className="cta-band-grid"
-          style={{
-            background: C.cream2,
-            border: `1px solid ${C.line}`,
-            borderRadius: 28,
-            padding: "56px",
-            display: "grid",
-            gridTemplateColumns: "8fr 4fr",
-            gap: 32,
-            alignItems: "center",
-          }}
-        >
-          <div>
-            <div style={kicker}>{t("dealer.label")}</div>
-            <h2
+            <div>
+              <div style={kicker}>{t("dealer.label")}</div>
+              <h2
+                style={{
+                  fontFamily: "Georgia, serif",
+                  fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
+                  lineHeight: 1.2,
+                  marginTop: 16,
+                }}
+              >
+                {t("dealer.headline")}
+              </h2>
+              <p style={{ marginTop: 16, color: `${C.ink}b3`, maxWidth: 600 }}>
+                {t("dealer.description")}
+              </p>
+            </div>
+            <div
               style={{
-                fontFamily: "Georgia, serif",
-                fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-                lineHeight: 1.2,
-                marginTop: 16,
+                display: "flex",
+                justifyContent: "flex-end",
+                gap: 12,
+                flexWrap: "wrap",
               }}
             >
-              {t("dealer.headline")}
-            </h2>
-            <p style={{ marginTop: 16, color: `${C.ink}b3`, maxWidth: 600 }}>
-              {t("dealer.description")}
-            </p>
+              <Link
+                to="/dealers"
+                style={btnPrimary}
+                data-testid="cta-dealer-btn"
+              >
+                {t("dealer.apply")} <ArrowRight size={16} />
+              </Link>
+              <Link
+                to="/contact"
+                style={btnGhost}
+                data-testid="cta-contact-btn"
+              >
+                {t("dealer.contact")}
+              </Link>
+            </div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              gap: 12,
-              flexWrap: "wrap",
-            }}
-          >
-            <Link to="/dealers" style={btnPrimary} data-testid="cta-dealer-btn">
-              {t("dealer.apply")} <ArrowRight size={16} />
-            </Link>
-            <Link to="/contact" style={btnGhost} data-testid="cta-contact-btn">
-              {t("dealer.contact")}
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Keyframes + Responsive CSS ───────────────────────────────────── */}
-      <style>{`
+        {/* ── Keyframes + Responsive CSS ───────────────────────────────────── */}
+        <style>{`
         @keyframes float  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
         @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
@@ -1082,6 +847,7 @@ export default function Home({ lang }) {
           }
         }
       `}</style>
-    </main>
+      </main>
+    </>
   );
 }

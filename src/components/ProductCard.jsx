@@ -324,16 +324,21 @@ function ProductCard({ product }) {
 
         @media (max-width: 767px) {
           .product-card {
-            height: 360px;
+            height: 400px;
           }
 
           .product-image {
-            height: 190px;
+            height: 240px;
           }
 
           .product-content {
-            padding: 10px 12px;
-          }
+             flex: 1;
+             display: flex;
+             flex-direction: column;
+             justify-content: flex-start; 
+             padding: 16px;
+             gap: 8px; 
+           }
 
           .product-title {
             font-size: 14px;
