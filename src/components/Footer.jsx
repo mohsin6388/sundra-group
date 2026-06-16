@@ -16,9 +16,12 @@ function Footer() {
     name: "Sundra Group",
     founder: "Deific Digital",
     established: "2010",
-    regOffice: "Kanpur, Uttar Pradesh, India",
-    email: "info@barsana.com",
-    phones: ["+91 9876543210"],
+    regOffice:
+      "307, 10/433 Ratan Shanti Apartment, Khalasi Line, Kanpur, 208001",
+    email: "info@sundragroup.com",
+    phones_1: ["+91-9554588775"],
+    phones_2: ["+91-"],
+    phones_3: ["+91-9554588775"],
   };
 
   return (
@@ -131,7 +134,6 @@ function Footer() {
 
       <footer className="footer">
         <div className="footer-container">
-
           <div>
             <div className="footer-logo">
               <Logo />
@@ -145,21 +147,39 @@ function Footer() {
           <div>
             <h3>Explore</h3>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/products">Products</Link></li>
-              <li><Link to="/gallery">Gallery</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/products">Products</Link>
+              </li>
+              <li>
+                <Link to="/gallery">Gallery</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3>Products</h3>
             <ul>
-              <li><Link to="/products">Cattle Feed</Link></li>
-              <li><Link to="/products">Milk Booster</Link></li>
-              <li><Link to="/products">Mineral Mixture</Link></li>
-              <li><Link to="/products">Calf Starter</Link></li>
+              <li>
+                <Link to="/products">Cattle Feed</Link>
+              </li>
+              <li>
+                <Link to="/products">Milk Booster</Link>
+              </li>
+              <li>
+                <Link to="/products">Mineral Mixture</Link>
+              </li>
+              <li>
+                <Link to="/products">Calf Starter</Link>
+              </li>
             </ul>
           </div>
 
@@ -173,30 +193,39 @@ function Footer() {
 
             <div className="contact-item">
               <Phone size={18} style={{ flexShrink: 0, marginTop: 2 }} />
-              <a href={`tel:${COMPANY.phones[0]}`}>
-                {COMPANY.phones[0]}
-              </a>
+              <a href={`tel:${COMPANY.phones_1[0]}`}>{COMPANY.phones_1[0]}</a>
             </div>
 
             <div className="contact-item">
               <Mail size={18} style={{ flexShrink: 0, marginTop: 2 }} />
-              <a href={`mailto:${COMPANY.email}`} style={{ wordBreak: "break-all" }}>
+              <a
+                href={`mailto:${COMPANY.email}`}
+                style={{ wordBreak: "break-all" }}
+              >
                 {COMPANY.email}
               </a>
             </div>
 
             <div className="social-icons">
-              <a href="#"><Facebook size={18} /></a>
-              <a href="#"><Instagram size={18} /></a>
-              <a href="#"><Youtube size={18} /></a>
-              <a href="#"><Linkedin size={18} /></a>
+              <a href="#">
+                <Facebook size={18} />
+              </a>
+              <a href="#">
+                <Instagram size={18} />
+              </a>
+              <a href="#">
+                <Youtube size={18} />
+              </a>
+              <a href="#">
+                <Linkedin size={18} />
+              </a>
             </div>
           </div>
-
         </div>
 
         <div className="footer-bottom">
-          © {new Date().getFullYear()} {COMPANY.name} | Designed by {COMPANY.founder}
+          © {new Date().getFullYear()} {COMPANY.name} | Designed by{" "}
+          {COMPANY.founder}
         </div>
       </footer>
     </>

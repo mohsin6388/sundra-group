@@ -20,11 +20,12 @@ export const COMPANY = {
   established: "2010",
   tagline: "Madhur Swad, Behti Doodh Dhar",
   taglineHi: "मधुर स्वाद, बहती दूध धार",
-  regOffice: "Kanpur, Uttar Pradesh, India",
+  regOffice: "307, 10/433 Ratan Shanti Apartment, Khalasi Line, Kanpur, 208001",
   unit: "Kanpur Dehat, Uttar Pradesh, India",
-  email: "info@barsana.com",
-  phones: ["+91 9876543210", "+91 9876543211"],
-  whatsapp: "919876543210",
+  email: ["info@barsana.com"],
+  email_1: ["sundragroup@gmail.com"],
+  phones: ["+91 7571001640", "+91 9554588775"],
+  whatsapp: "919554588775",
 };
 
 // ── Gallery Images ─────────────────────────────────────────────────────────────

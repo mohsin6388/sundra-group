@@ -74,14 +74,26 @@ const ContactCard = ({ t }) => (
       <span>{t("dealer.contact.hq")}</span>
     </div>
     <p className="text-gray-700 leading-relaxed mb-4">{COMPANY.regOffice}</p>
-    
-    <a  href={`tel:${COMPANY.phones[0].replace(/\D/g, "")}`}
-      className="inline-flex items-center gap-2 text-2xl font-bold text-green-700 
+
+    <div className="flex flex-col">
+      <a
+        href={`tel:${COMPANY.phones[0].replace(/\D/g, "")}`}
+        className="inline-flex items-center gap-2 text-xl font-bold text-green-700 
                  hover:text-green-800 transition-colors"
-    >
-      {COMPANY.phones[0]}
-      <ArrowRight size={20} className="text-green-600" />
-    </a>
+      >
+        {COMPANY.phones[0]}
+        <ArrowRight size={20} className="text-green-600" />
+      </a>
+
+      <a
+        href={`tel:${COMPANY.phones[1].replace(/\D/g, "")}`}
+        className="inline-flex items-center gap-2 text-xl font-bold text-green-700 
+                 hover:text-green-800 transition-colors"
+      >
+        {COMPANY.phones[1]}
+        <ArrowRight size={20} className="text-green-600" />
+      </a>
+    </div>
   </div>
 );
 

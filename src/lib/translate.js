@@ -40,7 +40,7 @@ export const content = {
   // Brand & Contact
   "brand.name": { hi: "सुंदरा ग्रुप", en: "Sundra Group" },
   "product.name": { hi: "बरसाना पशु आहार", en: "Barsana Pashu Aahar" },
-  "contact.phone": { hi: "+91 9876543210", en: "+91 9876543210" },
+  "contact.phone": { hi: "+91 9554588775", en: "+91 9554588775" },
 
   //3rd Section
   // About Section
