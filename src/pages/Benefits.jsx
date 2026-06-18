@@ -85,11 +85,11 @@ export default function Benefits({ lang}) {
     <div className="main-hero">
       {/* ═══ HERO ═══ */}
       <section
-        style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 32px 60px" }}
+        style={{ maxWidth: 1180, margin: "0 auto", padding: "160px 32px 60px" }}
       >
         <div
           style={{
-            fontSize: "0.7rem",
+            fontSize: "1rem",
             fontWeight: 700,
             // letterSpacing: "0.2em",
             textTransform: "uppercase",

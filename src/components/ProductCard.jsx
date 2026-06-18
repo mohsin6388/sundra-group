@@ -378,9 +378,9 @@ function ProductCard({ product }) {
           }}
         >
           <img src={product.image} alt={product.name} loading="lazy" />
-          <span className="product-tag" style={{ background: product.accent }}>
+          {/* <span className="product-tag" style={{ background: product.accent }}>
             {product.tag}
-          </span>
+          </span> */}
         </div>
 
         <div className="product-content">

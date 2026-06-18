@@ -6,7 +6,9 @@ import ProductCard from "../components/ProductCard";
 import banner1 from "../assets/banner-main.webp";
 import banner2 from "../assets/Sundra-banner.webp";
 import farmer from "../assets/products-cat.webp";
-import {content} from "../lib/translate"
+import cow from "../assets/cow-use.png";
+import {content} from "../lib/translate";
+import {reviews} from "../lib/translate"
 
 
 const banners = [banner1, banner2, banner1, banner2];
@@ -155,11 +157,27 @@ export default function Home({ lang }) {
           
         }
 
+        .inside-section-2-1{
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap:50px;
+        }
+
         @media (max-width: 786px){
         .section-2{
           padding: 0px 50px;
           width: 100%;
         }
+
+        .inside-section-2-1 {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;  /* space-between → center, kyunki column mein better lagta hai */
+           gap: 10px;                /* 50px → 20px, column mein itna gap zyada lagta hai */
+         }
+
         }
     
 
@@ -211,59 +229,70 @@ export default function Home({ lang }) {
           className="section-2"
           style={{
             padding: "64px 42px",
-            maxWidth: "960px",
+            maxWidth: "1160px",
             margin: "0 auto",
             fontFamily: "'Inter', sans-serif",
             lineHeight: 1.8,
           }}
         >
           <div>
-            {/* Tag */}
-            <p
-              style={{
-                fontSize: "12px",
-                textTransform: "uppercase",
-                color: C.gold,
-                fontWeight: 500,
-                marginBottom: "16px",
-              }}
-            >
-              {t("hero.tagline")}
-              {/* Trusted by thousands */}
-            </p>
+            <div className="inside-section-2-1">
+              <div>
+                {/* Tag */}
+                <p
+                  style={{
+                    fontSize: "12px",
+                    textTransform: "uppercase",
+                    color: C.gold,
+                    fontWeight: 500,
+                    marginBottom: "16px",
+                  }}
+                >
+                  {t("hero.tagline")}
+                  {/* Trusted by thousands */}
+                </p>
 
-            {/* Heading */}
-            <h2
-              style={{
-                fontSize:
-                  lang === "hi"
-                    ? "clamp(24px, 3.5vw, 35px)"
-                    : "clamp(28px, 4vw, 42px)",
-                fontWeight: 500,
-                color: "#111",
-                lineHeight: lang === "hi" ? 1.5 : 1,
-                marginBottom: "16px",
-              }}
-            >
-              {t("hero.headline_1")}
-              {/* Pashu ka doodh badhe, */}
-              <br />
-              {t("hero.headline_2")}
-              <span style={{ color: "#2D6A3E" }}> {t("hero.headline_3")}</span>
-            </h2>
+                {/* Heading */}
+                <h2
+                  style={{
+                    fontSize:
+                      lang === "hi"
+                        ? "clamp(24px, 3.5vw, 35px)"
+                        : "clamp(20px, 3vw, 30px)",
+                    fontWeight: 500,
+                    color: "#111",
+                    lineHeight: lang === "hi" ? 1.5 : 1.2,
+                    marginBottom: "16px",
+                  }}
+                >
+                  {t("hero.headline_1")}
+                  {/* Pashu ka doodh badhe, */}
+                  <br />
+                  {/* {t("hero.headline_2")} */}
+                  <span style={{ color: "#2D6A3E" }}>
+                    {" "}
+                    {t("hero.headline_3")}
+                  </span>
+                </h2>
 
-            {/* Subtext */}
-            <p
-              style={{
-                fontSize: "15px",
-                color: "#666",
-                lineHeight: 1.7,
-                maxWidth: "480px",
-                marginBottom: "48px",
-              }}
-            >
-              {t("hero.description")}
-            </p>
+                {/* Subtext */}
+                <p
+                  style={{
+                    fontSize: "15px",
+                    color: "#666",
+                    lineHeight: 1.7,
+                    maxWidth: "480px",
+                    marginBottom: "48px",
+                  }}
+                >
+                  {t("hero.description")}
+                </p>
+              </div>
+
+              <div className="section-2-img">
+                <img src={cow} alt="" />
+              </div>
+            </div>
 
             {/* Divider */}
             <div
@@ -320,39 +349,78 @@ export default function Home({ lang }) {
         />
 
         <section
-          style={{ maxWidth: 1180, margin: "0 auto", padding: "70px 32px" }}
+          style={{
+            maxWidth: 1180,
+            margin: "0 auto",
+            padding: "70px 32px",
+            fontFamily: "'Inter', sans-serif",
+          }}
         >
           <div
             className="value-header-grid"
             style={{
               display: "grid",
-              gridTemplateColumns: "7fr 5fr",
+              gridTemplateColumns: "8fr 2fr",
               gap: 40,
               alignItems: "flex-end",
               marginBottom: 48,
               lineHeight: 1.8,
             }}
           >
-            <div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={kicker}>{t("about.label")}</div>
               <h2
                 style={{
-                  fontFamily: "Georgia, serif",
                   fontSize:
                     lang === "hi"
-                      ? "clamp(2rem, 4vw, 2.5rem)"
-                      : "clamp(2rem, 4vw, 3rem)",
+                      ? "clamp(1.3rem, 3vw, 2rem)"
+                      : "clamp(1.3rem, 3vw, 2rem)",
                   color: C.ink,
                   lineHeight: 1.2,
                   marginTop: 16,
+                  fontWeight: 500,
                 }}
               >
+                <span style={{ color: "#2D6A3E" }}>
+                  {t("about.first_headline")}
+                </span>{" "}
                 {t("about.headline")}
               </h2>
+              <div
+                style={{
+                  color: `${C.ink}b3`,
+                  lineHeight: 1.65,
+                  padding: "30px 10px 20px 10px",
+                }}
+              >
+                {t("about.description")}
+              </div>
+              <div
+                style={{
+                  color: `${C.ink}b3`,
+                  lineHeight: 1.65,
+                  padding: "20px 10px 20px 10px",
+                }}
+              >
+                {t("about.short_description")}
+              </div>
+
+              <div style={{ display: "flex", paddingLeft: "10px" }}>
+                <div
+                  style={{
+                    lineHeight: 1.65,
+                    padding: "10px 10px 10px 10px",
+                    background: "#e8f5e9",
+                    borderLeft: "4px solid #1b5e20",
+                    color: "#1b5e20",
+                    fontWeight: 500,
+                    fontSize: "15px",
+                  }}
+                >
+                  {t("about.tag_line")}
+                </div>
+              </div>
             </div>
-            <p style={{ color: `${C.ink}b3`, lineHeight: 1.65 }}>
-              {t("about.description")}
-            </p>
           </div>
 
           <div
@@ -457,8 +525,7 @@ export default function Home({ lang }) {
               <div style={kicker}>{t("range.label")}</div>
               <h2
                 style={{
-                  fontFamily: "Georgia, serif",
-                  fontSize: isMobile ? "1.6rem" : "clamp(2rem, 4vw, 3rem)",
+                  fontSize: isMobile ? "1.6rem" : "clamp(2rem, 3vw, 2rem)",
                   color: C.ink,
                   marginTop: 16,
                 }}
@@ -549,13 +616,12 @@ export default function Home({ lang }) {
             }}
           >
             <div>
-              <div style={{ ...kicker, color: C.gold2 }}>
+              {/* <div style={{ ...kicker, color: C.gold2 }}>
                 {t("science.label")}
-              </div>
+              </div> */}
               <h2
                 style={{
-                  fontFamily: "Georgia, serif",
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  fontSize: "clamp(2rem, 3vw, 2.5rem)",
                   lineHeight: 1.2,
                   marginTop: 16,
                 }}
@@ -617,7 +683,7 @@ export default function Home({ lang }) {
                     </div>
                     <div
                       style={{
-                        fontFamily: "Georgia, serif",
+                        
                         fontSize: "1.5rem",
                         marginTop: 4,
                       }}
@@ -632,98 +698,298 @@ export default function Home({ lang }) {
         </section>
 
         {/* ── TESTIMONIAL ──────────────────────────────────────────────────── */}
-        <section
-          style={{ maxWidth: 1180, margin: "0 auto", padding: "96px 36px" }}
-        >
+
+        <section style={{ padding: "96px 120px" }}>
           <div
-            className="testimonial-grid"
             style={{
-              display: "grid",
-              gridTemplateColumns: "5fr 7fr",
-              gap: 48,
-              alignItems: "center",
+              maxWidth: 1180,
+              margin: "0 auto",
+              padding: "0 0 40px 0px",
             }}
           >
             <div
               style={{
-                aspectRatio: "1/1",
-                borderRadius: 28,
-                overflow: "hidden",
-                border: `1px solid ${C.line}`,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#fff",
+                fontSize: "clamp(1rem, 1vw, 20px)",
+                fontWeight: 600,
+                color: "#B47D1A",
+
+                textTransform: "uppercase",
+                marginBottom: 20,
               }}
             >
-              <img
-                src={farmer}
-                alt="Farmer"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "center 20%",
-                }}
-              />
+              {t("testimonial.label")}
             </div>
-
-            <div>
-              <div style={kicker}>{t("testimonial.label")}</div>
-              <blockquote
-                style={{
-                  fontFamily: "Georgia, serif",
-                  fontSize:
-                    lang === "hi"
-                      ? "clamp(1.2rem, 2.2vw, 1.6rem)"
-                      : "clamp(1.6rem, 3vw, 2.25rem)",
-                  lineHeight: 1.35,
-                  color: C.ink,
-                  margin: "16px 0 0",
-                  fontStyle: "normal",
-                }}
-              >
-                "{t("testimonial.1.quote")}
-                <em style={{ fontStyle: "italic", color: C.forest }}>
-                  {t("testimonial.2.quote")}{" "}
-                </em>
-                {t("testimonial.3.quote")}"
-              </blockquote>
-              <div
-                style={{
-                  marginTop: 32,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 16,
-                }}
-              >
-                <div
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: "50%",
-                    background: C.forest,
-                    color: C.cream,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "Georgia, serif",
-                    fontSize: "1.25rem",
-                    flexShrink: 0,
-                  }}
-                >
-                  S
-                </div>
-                <div>
-                  <div style={{ fontWeight: 600 }}>Sundra Group</div>
-                  <div style={{ fontSize: "0.875rem", color: `${C.ink}99` }}>
-                    Kanpur, U.P.
-                  </div>
-                </div>
-              </div>
+            <div
+              style={{
+                fontSize: "clamp(2rem, 3vw, 2.5rem)",
+                fontWeight: 500,
+                color: C.ink,
+                marginBottom: 32,
+                color: "#1F4D2C",
+              }}
+            >
+              {lang === "hi"
+                ? "जो नतीजे बोलते हैं"
+                : "Results That Speak for Themselves"}
             </div>
           </div>
+
+          <div
+            style={{
+              overflow: "hidden",
+              maxWidth: 1180,
+              margin: "0 auto",
+              paddingLeft: 36,
+            }}
+          >
+            <div
+              className="marquee-track"
+              style={{
+                display: "flex",
+                gap: 16,
+                width: "max-content",
+                animation: "scrollLeft 32s linear infinite",
+              }}
+            >
+              {[...reviews, ...reviews].map((r, i) => (
+                <div
+                  key={i}
+                  style={{
+                    width: 300,
+                    flexShrink: 0,
+                    background: "#fff",
+                    border: `1px solid ${C.line}`,
+                    borderRadius: 16,
+                    padding: "20px 22px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 12,
+                  }}
+                >
+                  <div style={{ display: "flex", gap: 3 }}>
+                    {[...Array(5)].map((_, si) => (
+                      <span key={si} style={{ color: "#BA7517", fontSize: 14 }}>
+                        ★
+                      </span>
+                    ))}
+                  </div>
+
+                  <p
+                    style={{
+                      fontSize: 13.5,
+                      lineHeight: 1.7,
+                      color: `${C.ink}b3`,
+                      margin: 0,
+                      flex: 1,
+                    }}
+                  >
+                    "{r.quote[lang]}"
+                  </p>
+
+                  <div style={{ height: "0.5px", background: C.line }} />
+
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 10 }}
+                  >
+                    <div
+                      style={{
+                        width: 36,
+                        height: 36,
+                        borderRadius: "50%",
+                        background: "#EAF3DE",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: 13,
+                        fontWeight: 500,
+                        color: "#3B6D11",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {r.initials}
+                    </div>
+                    <div>
+                      <div
+                        style={{
+                          fontSize: 13,
+                          fontWeight: 500,
+                          color: C.ink,
+                          margin: 0,
+                        }}
+                      >
+                        {r.name}
+                      </div>
+                      <div
+                        style={{ fontSize: 11, color: `${C.ink}99`, margin: 0 }}
+                      >
+                        {r.location}{" "}
+                        <span
+                          style={{
+                            background: "#EAF3DE",
+                            color: "#3B6D11",
+                            padding: "2px 8px",
+                            borderRadius: 999,
+                            fontSize: 11,
+                            marginLeft: 4,
+                          }}
+                        >
+                          {r.product}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <style>{`
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+  `}</style>
         </section>
+
+        {/* <section style={{ overflow: "hidden", padding: "96px 0" }}>
+          <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 36px" }}>
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 500,
+                color: "#B47D1A",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                marginBottom: 8,
+              }}
+            >
+              {t("testimonial.label")}
+            </div>
+            <div
+              style={{
+                fontSize: 22,
+                fontWeight: 500,
+                color: C.ink,
+                marginBottom: 32,
+              }}
+            >
+              {lang === "hi"
+                ? "जो नतीजे बोलते हैं"
+                : "Results that speak for themselves"}
+            </div>
+          </div>
+
+          <div style={{ overflow: "hidden", width: "100%", padding: "0 40px" }}>
+            <div
+              className="marquee-track"
+              style={{
+                display: "flex",
+                gap: 16,
+                width: "max-content",
+                animation: "scrollLeft 32s linear infinite",
+              }}
+            >
+              {[...reviews, ...reviews].map((r, i) => (
+                <div
+                  key={i}
+                  style={{
+                    width: 300,
+                    flexShrink: 0,
+                    background: "#fff",
+                    border: `1px solid ${C.line}`,
+                    borderRadius: 16,
+                    padding: "20px 22px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 12,
+                  }}
+                >
+                  <div style={{ display: "flex", gap: 3 }}>
+                    {[...Array(5)].map((_, si) => (
+                      <span key={si} style={{ color: "#BA7517", fontSize: 14 }}>
+                        ★
+                      </span>
+                    ))}
+                  </div>
+
+                  <p
+                    style={{
+                      fontSize: 13.5,
+                      lineHeight: 1.7,
+                      color: `${C.ink}b3`,
+                      margin: 0,
+                      flex: 1,
+                    }}
+                  >
+                    "{r.quote[lang]}"
+                  </p>
+
+                  <div style={{ height: "0.5px", background: C.line }} />
+
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 10 }}
+                  >
+                    <div
+                      style={{
+                        width: 36,
+                        height: 36,
+                        borderRadius: "50%",
+                        background: "#EAF3DE",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: 13,
+                        fontWeight: 500,
+                        color: "#3B6D11",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {r.initials}
+                    </div>
+                    <div>
+                      <div
+                        style={{
+                          fontSize: 13,
+                          fontWeight: 500,
+                          color: C.ink,
+                          margin: 0,
+                        }}
+                      >
+                        {r.name}
+                      </div>
+                      <div
+                        style={{ fontSize: 11, color: `${C.ink}99`, margin: 0 }}
+                      >
+                        {r.location}{" "}
+                        <span
+                          style={{
+                            background: "#EAF3DE",
+                            color: "#3B6D11",
+                            padding: "2px 8px",
+                            borderRadius: 999,
+                            fontSize: 11,
+                            marginLeft: 4,
+                          }}
+                        >
+                          {r.product}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <style>{`
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+  `}</style>
+        </section> */}
 
         <section
           style={{
@@ -750,7 +1016,7 @@ export default function Home({ lang }) {
               <h2
                 style={{
                   fontFamily: "Georgia, serif",
-                  fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
+                  fontSize: "clamp(1.75rem, 2vw, 2rem)",
                   lineHeight: 1.2,
                   marginTop: 16,
                 }}

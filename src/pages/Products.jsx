@@ -4,15 +4,15 @@ import { PRODUCTS } from "../lib/products";
 
 export default function Products({lang}) {
   return (
-    
     <div className="Main">
       {/* HEADER */}
 
       <section
         style={{
-          maxWidth: "1300px",
+          maxWidth: "1180px",
+          fontFamily: "'Inter', sans-serif",
           margin: "0 auto",
-          padding: "100px 40px 40px",
+          padding: "160px 40px 40px",
         }}
       >
         <div
@@ -31,18 +31,18 @@ export default function Products({lang}) {
           className="products-header-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "1.5fr 1fr",
+            gridTemplateColumns: "1fr",
             gap: "50px",
             alignItems: "end",
           }}
         >
           <h1
             style={{
-              fontSize: "clamp(2.2rem, 6vw, 64px)",
-              lineHeight: "1.1",
+              fontSize: "clamp(1.5rem, 3vw, 40px)",
+              lineHeight: "1.5",
               margin: 0,
               color: "#222",
-              fontWeight: "700",
+              fontWeight: "600",
             }}
           >
             {lang == "hi" ? "नौ प्रीमियम फ़ीड" : "Nine premium feeds."}
@@ -50,10 +50,10 @@ export default function Products({lang}) {
             <span
               style={{
                 color: "#1f4d2c",
-                fontStyle: "italic",
+                // fontStyle: "italic",
               }}
             >
-              {lang == "hi" ? "एक वादा।" : "One promise."}
+              {lang == "hi" ? "एक भरोसेमंद गुणवत्ता।" : "One promise."}
             </span>
           </h1>
 
@@ -64,13 +64,9 @@ export default function Products({lang}) {
               color: "#666",
             }}
           >
-            
-            { lang == "hi"?
-            "रोज़ाना के राशन से लेकर विशेष भैंस फ़ॉर्मूलेशन तक, बरसाना पशु आहार का हर वेरिएंट एक खास उत्पादन क्षमता और जीवन-अवस्था के लिए तैयार किया गया है।"
-            :
-            "From everyday rations to specialised buffalo formulations, every variant of Barsana Pashu Aahar is engineered for a specific yield range and life-stage."
-            
-            }
+            {lang == "hi"
+              ? "बरसाना पशु आहार की हर फ़ीड वर्षों के अनुभव और वैज्ञानिक पोषण अनुसंधान पर आधारित है, ताकि पशुओं को हर जीवन-अवस्था में सर्वोत्तम स्वास्थ्य, शक्ति और उत्पादन क्षमता मिल सके।"
+              : "Every Barsana Animal Feed product is backed by years of experience and scientific nutritional research, helping livestock achieve optimal health, greater strength, and enhanced productivity throughout every stage of life."}
           </p>
         </div>
       </section>

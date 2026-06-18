@@ -11,20 +11,20 @@ export const content = {
   // Hero Section
   "hero.tagline": { hi: "हजारों लोगों का भरोसा", en: "Trusted by Thousands" },
   "hero.headline_1": {
-    hi: "पशु का दूध बढ़े,",
-    en: "Increase your animal's milk,",
+    hi: "असीमित विश्वास,",
+    en: "Unlimited trust,",
   },
-  "hero.headline_2": {
-    hi: "किसान की",
-    en: "and the farmer's",
-  },
+  // "hero.headline_2": {
+  //   hi: "किसान की",
+  //   en: "and the farmer's",
+  // },
   "hero.headline_3": {
-    hi: "आमदनी भी",
-    en: "income too",
+    hi: "हर पशु का खास",
+    en: "special for every animal",
   },
   "hero.description": {
-    hi: "बरसाना पशु आहार — वैज्ञानिक रूप से तैयार पशु चारा जो आपके पशु को स्वस्थ रखता है और अधिकतम दूध उत्पादन देता है।",
-    en: "Barsana Pashu Aahar — scientifically formulated cattle feed that keeps your animal healthy and gives maximum milk yield.",
+    hi: "परिणाम जो दिखें और सुधार जो ठहरें—यही है बरसाना का वादा। हर बैच में ज़्यादा दूध, मज़बूत पशु और बेहतर प्रजनन। शुद्धता का अर्थ: न कोई आर्टिफिशियल केमिकल, न कोई अवैज्ञानिक शॉर्टकट।",
+    en: "Results that show and improvements that last—that's the promise of Barsana. More milk in every batch, stronger animals, and better reproduction. The meaning of purity: no artificial chemicals, no unscientific shortcuts.",
   },
 
   // Stats
@@ -32,7 +32,7 @@ export const content = {
   "stats.farmers_label": { hi: "किसान परिवार", en: "Farmer Families" },
   "stats.milk_increase": { hi: "22%", en: "22%" },
   "stats.milk_label": { hi: "ज़्यादा दूध", en: "More Milk" },
-  "stats.experience": { hi: "12+", en: "12+" },
+  "stats.experience": { hi: "11+", en: "11+" },
   "stats.experience_label": { hi: "साल का अनुभव", en: "Years of Experience" },
   "stats.dealers_count": { hi: "200+", en: "200+" },
   "stats.dealers_label": { hi: "डीलर्स ऑल इंडिया", en: "Dealers All India" },
@@ -45,13 +45,25 @@ export const content = {
   //3rd Section
   // About Section
   "about.label": { hi: "हमारे बारे में", en: "About Us" },
+  "about.first_headline": {
+    hi: "बरसाना:",
+    en: "Barsana:",
+  },
   "about.headline": {
-    hi: "संपूर्ण पोषण। असली नतीजे, दूध की बाल्टी में।",
-    en: "Complete nutrition. Real results in the milking pail.",
+    hi: "परंपरा से आधुनिकता तक का शुद्ध सफर",
+    en: "A pure journey from tradition to modernity.",
   },
   "about.description": {
-    hi: "बरसाना के हर बैच को मापने योग्य परिणाम के लिए तैयार किया जाता है — ज़्यादा दूध, मज़बूत पशु और बेहतर प्रजनन। कोई आर्टिफिशियल केमिकल नहीं। कोई अवैज्ञानिक शॉर्टकट नहीं।",
-    en: "Every batch of Barsana feed is engineered for a measurable outcome — more milk, stronger animals and timelier reproduction. No artificial chemicals. No unscientific shortcuts.",
+    hi: "बरसाना दशकों से हर गाँव और शहर की डेयरियों में पशुओं के पोषण का आधार बना हुआ है। हमने पुरानी विरासत को आधुनिक विज्ञान से जोड़कर एक ऐसा आहार तैयार किया है, जो न केवल पशुओं को मज़बूत बनाता है, बल्कि परिवारों को मिलता है विकास और बेहतर मुनाफ़ा।",
+    en: "For decades, Barsana has been the foundation of animal nutrition in dairies across every village and city. By blending age-old heritage with modern science, we've crafted a feed that not only strengthens livestock — but also brings growth and better profits to families.",
+  },
+  "about.short_description": {
+    hi: "हमारा वादा है: हर पशु के लिए, हर उत्पादन के लिए—मापने योग्य परिणाम। न कोई आर्टिफिशियल केमिकल, न कोई अवैज्ञानिक शॉर्टकट। सिर्फ़ शुद्ध पोषण जो बढ़ाये दूध की मात्रा और पशुओं की रोग-प्रतिरोधक क्षमता।",
+    en: "Our promise: measurable results for every animal, every yield — no artificial chemicals, no unscientific shortcuts. Just pure nutrition that boosts milk production and strengthens your livestock's immunity.",
+  },
+  "about.tag_line": {
+    hi: "बरसाना: पोषण जो बदले डेरी का भविष्य।",
+    en: "Barsana: Nutrition that transforms the future of dairy.",
   },
 
   // Feature Cards
@@ -89,12 +101,12 @@ export const content = {
 
   //Sciend Band
   // Science Section
-  "science.label": { hi: "विज्ञान", en: "The Science" },
-  "science.headline_1": { hi: "संरचना जो", en: "Composition that" },
-  "science.headline_2": { hi: "असर दिखाती है", en: "delivers" },
+  // "science.label": { hi: "विज्ञान", en: "The Science" },
+  "science.headline_1": { hi: "विज्ञान, जो परिणामों में", en: "Science, That Shows" },
+  "science.headline_2": { hi: "दिखता है", en: "In Results." },
   "science.description": {
-    hi: "हर उत्पाद वेरिएंट एक विशिष्ट उत्पादन श्रेणी के लिए तैयार किया गया है। रोज़ाना के Supreme+ से लेकर उच्च स्तरीय Barsana 8000 तक — हर बैग में संतुलित ऊर्जा, क्रूड प्रोटीन और फाइबर मिलता है।",
-    en: "Every product variant is calibrated for a specific yield range. From the everyday Supreme+ to the elite Barsana 8000, you get balanced energy, crude protein and fibre — every single bag.",
+    hi: "बरसाना का हर उत्पाद एक विशिष्ट वैज्ञानिक फॉर्मूले पर आधारित है। हमारे रोज़ाना के Supreme+ से लेकर प्रीमियम Barsana 8000 तक, हर बैग में ऊर्जा, प्रोटीन और फाइबर का एक सटीक संतुलन है। यह केवल चारा नहीं, बल्कि आपके पशुओं के स्वास्थ्य और उत्पादन में होने वाला एक सटीक निवेश है।",
+    en: "Every Barsana product is built on a precise scientific formula. From our everyday Supreme+ to the premium Barsana 8000, each bag contains an exact balance of energy, protein, and fiber. This isn't just feed — it's a precise investment in your livestock's health and productivity.",
   },
   "science.cta": { hi: "पूरे फायदे देखें", en: "See full benefits" },
 
@@ -131,6 +143,7 @@ export const content = {
     hi: " और वसा प्रतिशत भी लगातार बेहतर रहा है।",
     en: " and the fat percentage is consistently higher.",
   },
+
 
   // Dealer CTA Section
   "dealer.label": {
@@ -226,7 +239,7 @@ export const content = {
 
   // Journey
   "about.journey.tag": { hi: "हमारी यात्रा", en: "Our Journey" },
-  "about.journey.title_1": { hi: "25 वर्षों की", en: "25 years of" },
+  "about.journey.title_1": { hi: "11 वर्षों की", en: "11 years of" },
   "about.journey.title_2": { hi: "विकास", en: "growth" },
   "about.journey.title_3": { hi: "और नवाचार", en: "& innovation" },
   "about.journey.desc": {
@@ -720,3 +733,86 @@ export const content = {
   },
 };
 
+
+export const reviews = [
+  {
+    quote: {
+      hi: "बरसाना सुपर अपनाने के बाद हमारी गायों ने रोज़ 2–3 लीटर ज़्यादा दूध देना शुरू किया, और वसा प्रतिशत भी लगातार बेहतर रहा है।",
+      en: "Since switching to Barsana Super, our cows give 2–3 litres more milk daily and fat percentage is consistently higher.",
+    },
+    initials: "RS",
+    name: "रामसिंह यादव",
+    location: "कानपुर, U.P.",
+    product: "Supreme+",
+  },
+  {
+    quote: {
+      hi: "भैंसों का स्वास्थ्य पहले से काफ़ी बेहतर हुआ है। बीमारियाँ कम हुई हैं और दूध का रंग व गाढ़ापन भी अच्छा हो गया।",
+      en: "Our buffaloes are much healthier. Fewer illnesses and noticeably richer, thicker milk.",
+    },
+    initials: "MK",
+    name: "महेश कुमार",
+    location: "लखनऊ, U.P.",
+    product: "Barsana 8000",
+  },
+  {
+    quote: {
+      hi: "पहले कई ब्रांड आज़माए, लेकिन बरसाना जैसा असर किसी में नहीं मिला। दूध उत्पादन 20% बढ़ा।",
+      en: "Tried many brands before, but nothing matched Barsana. Milk production went up by 20%.",
+    },
+    initials: "SP",
+    name: "सुरेश पटेल",
+    location: "आगरा, U.P.",
+    product: "Supreme+",
+  },
+  {
+    quote: {
+      hi: "गाय के ब्याने के बाद बरसाना 8000 दिया, रिकवरी बहुत जल्दी हुई। अगले सीज़न में दूध भी पिछले साल से ज़्यादा मिला।",
+      en: "After calving, Barsana 8000 helped our cow recover fast. Next season's milk was even better.",
+    },
+    initials: "DV",
+    name: "दिनेश वर्मा",
+    location: "वाराणसी, U.P.",
+    product: "Barsana 8000",
+  },
+  {
+    quote: {
+      hi: "गर्मियों में जब दूध कम होने लगता है, तब भी बरसाना से उत्पादन स्थिर रहा।",
+      en: "Even in summer when milk usually drops, Barsana kept our production stable.",
+    },
+    initials: "BT",
+    name: "भगवान तिवारी",
+    location: "झाँसी, U.P.",
+    product: "Supreme+",
+  },
+  {
+    quote: {
+      hi: "मेरी डेयरी में 3 साल से बरसाना चल रहा है। ग्राहक खुद कहते हैं हमारा दूध सबसे गाढ़ा और मीठा होता है।",
+      en: "Using Barsana for 3 years. Customers say our milk is the richest and sweetest around.",
+    },
+    initials: "NS",
+    name: "नरेंद्र सिंह",
+    location: "अलीगढ़, U.P.",
+    product: "Barsana 8000",
+  },
+  {
+    quote: {
+      hi: "पहले महीने में ही फ़र्क दिखा। गाय का वज़न बढ़ा, आँखों में चमक आई और वसा 5.8% से 6.4% हो गई।",
+      en: "Saw a difference in the first month itself. Weight gained, brighter eyes, and fat rose from 5.8% to 6.4%.",
+    },
+    initials: "AK",
+    name: "अशोक कुमार",
+    location: "इटावा, U.P.",
+    product: "Barsana 8000",
+  },
+  {
+    quote: {
+      hi: "डेयरी में 15 भैंस हैं, सबको Supreme+ खिलाता हूँ। मुनाफ़ा बढ़ा है क्योंकि दूध ज़्यादा और पशु कम बीमार पड़ते हैं।",
+      en: "I have 15 buffaloes, all on Supreme+. Better profits — more milk, fewer vet bills.",
+    },
+    initials: "HG",
+    name: "हरीश गुप्ता",
+    location: "मेरठ, U.P.",
+    product: "Supreme+",
+  },
+];

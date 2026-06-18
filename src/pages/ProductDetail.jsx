@@ -78,12 +78,12 @@ export default function ProductDetail({ lang }) {
 
           {/* Info */}
           <div>
-            <span
+            {/* <span
               className="text-[11px] uppercase font-semibold rounded-full px-3 py-1 text-white"
               style={{ background: product.accent }}
             >
               {t.tag}
-            </span>
+            </span> */}
 
             <h1
               className="font-bold mt-5"
