@@ -1,13 +1,13 @@
 import BarsanaPacketYellow from "../assets/Barsana-D.webp"
 import BarsanaPacketPink from "../assets/BarsanaPink.webp"
 import BarsanaPacketRed from "../assets/Barsana-Packet.webp"
-import BuffSpecial from "../assets/Buff-Special.webp"
+import BuffSpecial from "../assets/buff-special.jpeg"
 import Churi from "../assets/Churi.webp"
-import MultiGranChukar from "../assets/Multigran-Chokar.webp"
+import MultiGranChukar from "../assets/multi-grain-chokar.jpeg"
 import RoyalMixture from "../assets/Royal-Mixture.webp"
 import Sudarshan from "../assets/Sudarshan.webp"
-import Super from "../assets/Super.webp"
-import SupremePlus from "../assets/Supremeplus.webp"
+import Super from "../assets/super.webp"
+import SupremePlus from "../assets/supreme-plus.jpeg"
 import eightThousand from "../assets/8000.webp"
 
 
@@ -577,7 +577,7 @@ export const HERO_PRODUCTS = [
 
   // BarsanaPacketPink
   {
-    slug: "barsana-gold",
+    slug: "barsana-super",
     name: "Barsana Super",
     nameHi: "बरसाना सुपर",
     tag: "Premium",
