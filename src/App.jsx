@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LoadingSpinner from "./components/LoadingSpinner";
 import InvestorDetails from "./pages/InvestorDetails";
+import TermsAndConditions from "./pages/Termandcondition";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -92,6 +93,7 @@ function App() {
               <Route path="/investor" element={<Investor lang={lang}/>} />
               <Route path="/investors/:slug" element={<InvestorDetails lang={lang} />} />
               <Route path="/contact" element={<Contact lang={lang} />} />
+              <Route path="/terms-condition" element={<TermsAndConditions/>} />
             </Routes>
           </Suspense>
           <Footer />

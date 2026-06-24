@@ -160,7 +160,7 @@ export default function Contact({ lang = "en" }) {
   return (
     <>
       <Toaster position="top-center" richColors />
-      <main className="min-h-screen bg-[#f5f0e8] px-6">
+      <main className="min-h-screen bg-[#f5f0e8]">
         {/* ── HERO ───────────────────────────────────────── */}
         <section className="relative bg-white border-b border-gray-100">
           <div
@@ -218,7 +218,7 @@ export default function Contact({ lang = "en" }) {
         </section>
 
         {/* ── BODY ───────────────────────────────────────── */}
-        <section className="max-w-6xl mx-auto py-10 pb-20">
+        <section className="max-w-6xl mx-auto py-10 pb-20 px-6 md:px-0">
 
 
           <div className="grid lg:grid-cols-[340px_1fr] gap-16">
@@ -453,7 +453,9 @@ export default function Contact({ lang = "en" }) {
           </div>
         </section>
 
-          <div className=" lg:max-w-6xl md:h-[300px] mx-auto mb-10 bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-lg">
+          <div className="lg:max-w-6xl md:h-[300px] mx-auto px-6 md:px-0">
+
+            <div className=" mb-10 bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7142.167424098154!2d80.32406929196739!3d26.485249392845475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c39c2d0211f15%3A0xd3cdae546f5aa789!2sRatan%20Shanti!5e0!3m2!1sen!2sin!4v1781592592323!5m2!1sen!2sin"
                   className="w-full h-[300px] block transition-all duration-500"
@@ -479,6 +481,9 @@ export default function Contact({ lang = "en" }) {
                   </a>
                 </div>
               </div>
+
+
+          </div>
       </main>
     </>
   );

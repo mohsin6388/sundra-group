@@ -706,7 +706,7 @@ export default function Home({ lang }) {
 
         {/* ── TESTIMONIAL ──────────────────────────────────────────────────── */}
 
-        <section style={{ padding: "96px 120px" }}>
+        <section className="review-section" style={{ padding: "96px 30px" }}>
           <div
             style={{
               maxWidth: 1180,
@@ -1064,6 +1064,10 @@ export default function Home({ lang }) {
         <style>{`
         @keyframes float  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
         @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+        .review-section{
+           padding: "96px 120px";
+        }
 
         /* Value props header: stack on mobile */
         @media (max-width: 768px) {

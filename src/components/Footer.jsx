@@ -6,8 +6,6 @@ import {
   MapPin,
   Facebook,
   Instagram,
-  Youtube,
-  Linkedin,
 } from "lucide-react";
 import Logo from "./Logo";
 
@@ -20,25 +18,23 @@ function Footer() {
       "307, 10/433 Ratan Shanti Apartment, Khalasi Line, Kanpur, 208001",
     email: "sundragroup@gmail.com",
     phones_1: ["+91-9554588775"],
-    phones_2: ["+91-"],
-    phones_3: ["+91-9554588775"],
   };
 
   return (
     <>
       <style>{`
         .footer{
-          background:#1d1d1d;
-          color:#fff;
+          background:#16261b;
+          color:#f8f1e1;
           margin-top:80px;
         }
 
         .footer-container{
           max-width:1200px;
           margin:auto;
-          padding:60px 20px;
+          padding:60px 20px 40px;
           display:grid;
-          grid-template-columns:repeat(4,1fr);
+          grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
           gap:40px;
         }
 
@@ -50,12 +46,17 @@ function Footer() {
         }
 
         .footer p{
-          color:#ccc;
+          color:rgba(248,241,225,0.65);
           line-height:1.7;
+          font-size:14px;
         }
 
         .footer h3{
-          margin-bottom:20px;
+          margin:0 0 20px;
+          font-size:15px;
+          font-weight:600;
+          color:#f8f1e1;
+          letter-spacing:0.02em;
         }
 
         .footer ul{
@@ -65,61 +66,73 @@ function Footer() {
         }
 
         .footer li{
-          margin-bottom:10px;
-          
+          margin-bottom:12px;
         }
 
         .footer a{
-          color:#ddd;
+          color:rgba(248,241,225,0.75);
           text-decoration:none;
-          transition:.3s;
+          transition:.2s;
+          font-size:14px;
         }
 
         .footer a:hover{
-          color:#d89b25;
+          color:#c9871f;
         }
 
         .contact-item{
           display:flex;
           gap:10px;
-          margin-bottom:15px;
+          margin-bottom:16px;
           align-items:flex-start;
+          color:rgba(248,241,225,0.75);
+          font-size:14px;
+        }
+
+        .contact-item svg{
+          color:#c9871f;
         }
 
         .social-icons{
-          display:flex;
-          gap:10px;
-          margin-top:20px;
-          flex-wrap:wrap;
+          margin-top:24px;
         }
 
-        .social-icons a{
-          width:40px;
-          height:40px;
-          border:1px solid #444;
+        .social-icons-label{
+          font-size:13px;
+          font-weight:600;
+          color:#f8f1e1;
+          margin-bottom:10px;
+        }
+
+        .social-icons-row{
+          display:flex;
+          gap:10px;
+        }
+
+        .social-icons-row a{
+          width:36px;
+          height:36px;
+          border:1px solid rgba(248,241,225,0.25);
           border-radius:50%;
           display:flex;
           align-items:center;
           justify-content:center;
           flex-shrink:0;
+          color:#f8f1e1;
         }
 
-        .social-icons a:hover{
-          background:#d89b25;
-          border-color:#d89b25;
-          color:#fff;
+        .social-icons-row a:hover{
+          background:#c9871f;
+          border-color:#c9871f;
+          color:#16261b;
         }
 
         .footer-bottom{
-          border-top:1px solid #333;
+          border-top:1px solid rgba(248,241,225,0.12);
           text-align:center;
           padding:20px;
-          color:#999;
-          font-size:14px;
-        }
-
-        .footer-head li{
-          color:#999;
+          color:rgba(248,241,225,0.5);
+          font-size:13px;
         }
 
         @media(max-width:992px){
@@ -144,14 +157,14 @@ function Footer() {
               <Logo />
             </div>
 
-            <p style={{ marginTop: "20px" }}>
+            <p style={{ marginTop: "20px", marginRight: "120px"}}>
               Premium animal feed trusted by dairy farmers across India.
             </p>
           </div>
 
           <div>
-            <h3>Explore</h3>
-            <ul className="footer-head">
+            <h3>Other Pages</h3>
+            <ul>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -160,6 +173,12 @@ function Footer() {
               </li>
               <li>
                 <Link to="/products">Products</Link>
+              </li>
+              <li>
+                <Link to="/benefits">Why Barsana</Link>
+              </li>
+              <li>
+                <Link to="/dealers">Dealers</Link>
               </li>
               <li>
                 <Link to="/investor">Investor</Link>
@@ -171,36 +190,41 @@ function Footer() {
           </div>
 
           <div>
-            <h3>Products</h3>
+            <h3>Quick Links</h3>
             <ul>
               <li>
-                <Link to="/products">Dairy Special</Link>
+                <Link to="/terms-condition">Terms &amp; conditions</Link>
               </li>
               <li>
-                <Link to="/products">Buff Special</Link>
+                <Link to="/privacy-policy">Privacy policy</Link>
               </li>
               <li>
-                <Link to="/products">Royal Mixture</Link>
+                <Link to="/payment-policy">Payment policy</Link>
               </li>
               <li>
-                <Link to="/products">Sudarshan</Link>
-              </li>
-              <li>
-                <Link to="/products">Super</Link>
-              </li>
-              <li>
-                <Link to="/products">Supreme Plus</Link>
-              </li>
-               <li>
-                <Link to="/products">Multigran Chukar</Link>
-              </li>
-               <li>
-                <Link to="/products">Churi</Link>
-              </li>
-              <li>
-                <Link to="/products">Eight Thousand</Link>
+                <Link to="/refund-policy">Return &amp; refund policy</Link>
               </li>
             </ul>
+
+            <div className="social-icons">
+              <div className="social-icons-label">Follow us</div>
+              <div className="social-icons-row">
+                <a
+                  href="https://www.facebook.com/share/1D7oLv5jyi/?mibextid=wwXIfr"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={18} />
+                </a>
+                <a
+                  href="https://www.instagram.com/barsanapashuaahar?igsh=eXMwMzBjc2Y3cGln&utm_source=qr"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={18} />
+                </a>
+
+               
+              </div>
+            </div>
           </div>
 
           <div>
@@ -225,21 +249,6 @@ function Footer() {
                 {COMPANY.email}
               </a>
             </div>
-
-            <div className="social-icons">
-              <a href="https://www.facebook.com/share/1D7oLv5jyi/?mibextid=wwXIfr">
-                <Facebook size={18} />
-              </a>
-              <a href="https://www.instagram.com/barsanapashuaahar?igsh=eXMwMzBjc2Y3cGln&utm_source=qr">
-                <Instagram size={18} />
-              </a>
-              {/* <a href="#">
-                <Youtube size={18} />
-              </a>
-              <a href="#">
-                <Linkedin size={18} />
-              </a> */}
-            </div>
           </div>
         </div>
 
@@ -253,3 +262,308 @@ function Footer() {
 }
 
 export default Footer;
+
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import {
+//   Mail,
+//   Phone,
+//   MapPin,
+//   Facebook,
+//   Instagram,
+//   Youtube,
+//   Linkedin,
+// } from "lucide-react";
+// import Logo from "./Logo";
+
+// function Footer() {
+//   const COMPANY = {
+//     name: "Sundra Group",
+//     founder: "Deific Digital",
+//     established: "2010",
+//     regOffice:
+//       "307, 10/433 Ratan Shanti Apartment, Khalasi Line, Kanpur, 208001",
+//     email: "sundragroup@gmail.com",
+//     phones_1: ["+91-9554588775"],
+//     phones_2: ["+91-"],
+//     phones_3: ["+91-9554588775"],
+//   };
+
+//   return (
+//     <>
+//       <style>{`
+//         .footer{
+//           background:#1d1d1d;
+//           color:#fff;
+//           margin-top:80px;
+//         }
+
+//         .footer-container{
+//           max-width:1200px;
+//           margin:auto;
+//           padding:60px 20px;
+//           display:grid;
+//           grid-template-columns:repeat(4,1fr);
+//           gap:40px;
+//         }
+
+//         .footer-logo{
+//           background:#fff;
+//           padding:10px;
+//           border-radius:12px;
+//           display:inline-block;
+//         }
+
+//         .footer p{
+//           color:#ccc;
+//           line-height:1.7;
+//         }
+
+//         .footer h3{
+//           margin-bottom:20px;
+//         }
+
+//         .footer ul{
+//           list-style:none;
+//           padding:0;
+//           margin:0;
+//         }
+
+//         .footer li{
+//           margin-bottom:10px;
+          
+//         }
+
+//         .footer a{
+//           color:#ddd;
+//           text-decoration:none;
+//           transition:.3s;
+//         }
+
+//         .footer a:hover{
+//           color:#d89b25;
+//         }
+
+//         .contact-item{
+//           display:flex;
+//           gap:10px;
+//           margin-bottom:15px;
+//           align-items:flex-start;
+//         }
+
+//         .social-icons{
+//           display:flex;
+//           flex-direction: column;
+//           gap:10px;
+//           paddingTop: "10px";
+//           margin-top:20px;
+//           flex-wrap:wrap;
+//         }
+
+//         .social-icons a{
+//           width:40px;
+//           height:40px;
+//           border:1px solid #444;
+//           border-radius:50%;
+//           display:flex;
+//           align-items:center;
+//           justify-content:center;
+//           flex-shrink:0;
+//         }
+
+//         .social-icons a:hover{
+//           background:#d89b25;
+//           border-color:#d89b25;
+//           color:#fff;
+//         }
+
+//         .footer-bottom{
+//           border-top:1px solid #333;
+//           text-align:center;
+//           padding:20px;
+//           color:#999;
+//           font-size:14px;
+//         }
+
+//         .footer-head li{
+//           color:#999;
+//         }
+
+//         @media(max-width:992px){
+//           .footer-container{
+//             grid-template-columns:1fr 1fr;
+//           }
+//         }
+
+//         @media(max-width:600px){
+//           .footer-container{
+//             grid-template-columns:1fr;
+//             padding:40px 20px;
+//             gap:32px;
+//           }
+//         }
+//       `}</style>
+
+//       <footer className="footer">
+//         <div className="footer-container">
+//           <div>
+//             <div className="footer-logo">
+//               <Logo />
+//             </div>
+
+//             <p style={{ marginTop: "20px" }}>
+//               Premium animal feed trusted by dairy farmers across India.
+//             </p>
+//           </div>
+
+//           <div>
+            
+//             <ul className="footer-head">
+//               <li>
+//                 <Link to="/">Home</Link>
+//               </li>
+//               <li>
+//                 <Link to="/about">About</Link>
+//               </li>
+//               <li>
+//                 <Link to="/products">Products</Link>
+//               </li>
+//                <li>
+//                 <Link to="/benefits">Why Barsana</Link>
+//               </li>
+//                <li>
+//                 <Link to="/dealers">Dealers</Link>
+//               </li>
+//               <li>
+//                 <Link to="/investor">Investor</Link>
+//               </li>
+//               <li>
+//                 <Link to="/contact">Contact</Link>
+//               </li>
+//             </ul>
+//           </div>
+
+
+
+//           <div>
+//             {/* <h3>Quick Links</h3> */}
+//             <ul className="footer-head">
+//               <li>
+//                 <Link to="/">Terms & conditions</Link>
+//               </li>
+//               <li>
+//                 <Link to="/about">Privacy policy</Link>
+//               </li>
+//               <li>
+//                 <Link to="/products">Payment policy</Link>
+//               </li>
+//                <li>
+//                 <Link to="/benefits">Return & refund policy</Link>
+//               </li>
+//                {/* <li>
+//                 <Link to="/dealers">Dealers</Link>
+//               </li>
+//               <li>
+//                 <Link to="/investor">Investor</Link>
+//               </li>
+//               <li>
+//                 <Link to="/contact">Contact</Link>
+//               </li> */}
+//             </ul>
+//           </div>
+
+
+
+
+
+//           {/* <div>
+//             <h3>Products</h3>
+//             <ul>
+//               <li>
+//                 <Link to="/products">Dairy Special</Link>
+//               </li>
+//               <li>
+//                 <Link to="/products">Buff Special</Link>
+//               </li>
+//               <li>
+//                 <Link to="/products">Royal Mixture</Link>
+//               </li>
+//               <li>
+//                 <Link to="/products">Sudarshan</Link>
+//               </li>
+//               <li>
+//                 <Link to="/products">Super</Link>
+//               </li>
+//               <li>
+//                 <Link to="/products">Supreme Plus</Link>
+//               </li>
+//                <li>
+//                 <Link to="/products">Multigran Chukar</Link>
+//               </li>
+//                <li>
+//                 <Link to="/products">Churi</Link>
+//               </li>
+//               <li>
+//                 <Link to="/products">Eight Thousand</Link>
+//               </li>
+//             </ul>
+//           </div> */}
+
+//           <div>
+//             <h3>Contact Us</h3>
+
+//             <div className="contact-item">
+//               <MapPin size={18} style={{ flexShrink: 0, marginTop: 2 }} />
+//               <span>{COMPANY.regOffice}</span>
+//             </div>
+
+//             <div className="contact-item">
+//               <Phone size={18} style={{ flexShrink: 0, marginTop: 2 }} />
+//               <a href={`tel:${COMPANY.phones_1[0]}`}>{COMPANY.phones_1[0]}</a>
+//             </div>
+
+//             <div className="contact-item">
+//               <Mail size={18} style={{ flexShrink: 0, marginTop: 2 }} />
+//               <a
+//                 href={`mailto:${COMPANY.email}`}
+//                 style={{ wordBreak: "break-all" }}
+//               >
+//                 {COMPANY.email}
+//               </a>
+//             </div>
+
+//             <div className="social-icons">
+
+//               <div>Follow Us</div>
+//               <div style={{display: "flex", gap: "10px", paddingTop: "5px"}}>
+//                 <a href="https://www.facebook.com/share/1D7oLv5jyi/?mibextid=wwXIfr">
+//                 <Facebook size={18} />
+//               </a>
+//               <a href="https://www.instagram.com/barsanapashuaahar?igsh=eXMwMzBjc2Y3cGln&utm_source=qr">
+//                 <Instagram size={18} />
+//               </a>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="footer-bottom">
+//           © {new Date().getFullYear()} {COMPANY.name} | Designed by{" "}
+//           {COMPANY.founder}
+//         </div>
+//       </footer>
+//     </>
+//   );
+// }
+
+// export default Footer;
