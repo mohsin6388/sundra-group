@@ -18,7 +18,7 @@ function Footer() {
     established: "2010",
     regOffice:
       "307, 10/433 Ratan Shanti Apartment, Khalasi Line, Kanpur, 208001",
-    email: "info@sundragroup.com",
+    email: "sundragroup@gmail.com",
     phones_1: ["+91-9554588775"],
     phones_2: ["+91-"],
     phones_3: ["+91-9554588775"],
@@ -66,6 +66,7 @@ function Footer() {
 
         .footer li{
           margin-bottom:10px;
+          
         }
 
         .footer a{
@@ -117,6 +118,10 @@ function Footer() {
           font-size:14px;
         }
 
+        .footer-head li{
+          color:#999;
+        }
+
         @media(max-width:992px){
           .footer-container{
             grid-template-columns:1fr 1fr;
@@ -146,7 +151,7 @@ function Footer() {
 
           <div>
             <h3>Explore</h3>
-            <ul>
+            <ul className="footer-head">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -169,16 +174,31 @@ function Footer() {
             <h3>Products</h3>
             <ul>
               <li>
-                <Link to="/products">Cattle Feed</Link>
+                <Link to="/products">Dairy Special</Link>
               </li>
               <li>
-                <Link to="/products">Milk Booster</Link>
+                <Link to="/products">Buff Special</Link>
               </li>
               <li>
-                <Link to="/products">Mineral Mixture</Link>
+                <Link to="/products">Royal Mixture</Link>
               </li>
               <li>
-                <Link to="/products">Calf Starter</Link>
+                <Link to="/products">Sudarshan</Link>
+              </li>
+              <li>
+                <Link to="/products">Super</Link>
+              </li>
+              <li>
+                <Link to="/products">Supreme Plus</Link>
+              </li>
+               <li>
+                <Link to="/products">Multigran Chukar</Link>
+              </li>
+               <li>
+                <Link to="/products">Churi</Link>
+              </li>
+              <li>
+                <Link to="/products">Eight Thousand</Link>
               </li>
             </ul>
           </div>
@@ -207,10 +227,10 @@ function Footer() {
             </div>
 
             <div className="social-icons">
-              <a href="#">
+              <a href="https://www.facebook.com/share/1D7oLv5jyi/?mibextid=wwXIfr">
                 <Facebook size={18} />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/barsanapashuaahar?igsh=eXMwMzBjc2Y3cGln&utm_source=qr">
                 <Instagram size={18} />
               </a>
               <a href="#">

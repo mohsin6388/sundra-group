@@ -14,7 +14,8 @@ const NAV = [
   { to: "/products", label: "Products" },
   { to: "/benefits", label: "Why Barsana" },
   { to: "/dealers", label: "Dealers" },
-  { to: "/gallery", label: "Gallery" },
+  // { to: "/gallery", label: "Gallery" },
+  { to:"/investor", label: "Investor"},
   { to: "/contact", label: "Contact" },
 ];
 

@@ -61,6 +61,59 @@ export const content = {
     hi: "हमारा वादा है: हर पशु के लिए, हर उत्पादन के लिए—मापने योग्य परिणाम। न कोई आर्टिफिशियल केमिकल, न कोई अवैज्ञानिक शॉर्टकट। सिर्फ़ शुद्ध पोषण जो बढ़ाये दूध की मात्रा और पशुओं की रोग-प्रतिरोधक क्षमता।",
     en: "Our promise: measurable results for every animal, every yield — no artificial chemicals, no unscientific shortcuts. Just pure nutrition that boosts milk production and strengthens your livestock's immunity.",
   },
+
+  "about.year_timeline_head": {
+    en: "Our journey, year by year",
+    hi: "हमारी यात्रा, वर्ष दर वर्ष",
+  },
+
+  "about.year_timeline_desc": {
+    en: "From a single village formula to a feed trusted nationwide — here's the road we've walked, with the data to prove it.",
+    hi: "एक गाँव के नुस्खे से लेकर देशभर में भरोसेमंद फ़ीड बनने तक — यह वह रास्ता है जो हमने तय किया है, आंकड़ों के साथ।"
+  },
+
+  "about.one_step_head":{
+    hi: "ग्रामीण आधार",
+    en: "Village roots",
+  },
+
+  "about.one_step_desc": {
+    hi: "हमारी शुरुआत एक परंपरागत फॉर्मूले से हुई — जिसे हमारे मूल गांव की डेयरियों के लिए विशेष रूप से हाथों से तैयार किया गया।",
+    en: "Started with a single traditional formula, hand-mixed for dairies in our home village.",
+  },
+
+  "about.second_step_head":{
+    hi: "क्षेत्रीय विश्वास",
+    en: "Regional trust",
+  },
+
+  "about.second_step_desc": {
+    hi: "जैसे-जैसे पशुओं का स्वास्थ्य बेहतर होता गया, मौखिक प्रचार से बरसाना पड़ोसी गांवों तक पहुंचने लगा।",
+    en: "Word-of-mouth carried Barsana to neighbouring villages as herds visibly grew healthier.",
+  },
+
+  "about.third_step_head":{
+    hi: "विज्ञान का समावेश",
+    en: "Science enters the mix",
+  },
+
+  "about.third_step_desc": {
+    hi: "पोषण प्रयोगशालाओं के साथ साझेदारी की, ताकि हर बैच की जांच और मानकीकरण किया जा सके — अब कोई अनुमान नहीं।",
+    en: "Partnered with nutrition labs to test and standardise every batch — no more guesswork.",
+  },
+
+   "about.four_step_head":{
+    hi: "शहरी स्तर की डेयरियां",
+    en: "City-scale dairies",
+  },
+
+  "about.four_step_desc": {
+    hi: "बड़े शहरी डेयरियों तक विस्तार किया, साथ ही दूध उत्पादन और पशु प्रतिरक्षा में स्पष्ट रूप से मापने योग्य सुधार।",
+    en: "Scaled to serve large city dairies, with measurable gains in milk yield and herd immunity.",
+  },
+
+
+
   "about.tag_line": {
     hi: "बरसाना: पोषण जो बदले डेरी का भविष्य।",
     en: "Barsana: Nutrition that transforms the future of dairy.",
@@ -250,34 +303,34 @@ export const content = {
   // Journey items
   "about.j1.title": { hi: "स्थापना", en: "Foundation" },
   "about.j1.desc": {
-    hi: "सुंदरा ग्रुप की स्थापना उत्तर प्रदेश में एक निर्माण इकाई के साथ हुई, भारत में डेयरी पोषण में क्रांति लाने के विज़न के साथ।",
-    en: "Sundra Group was established with a single manufacturing unit in Uttar Pradesh, with a vision to revolutionize dairy nutrition in India.",
+    hi: "सुंद्रा ग्रुप की स्थापना 2015 में उत्तर प्रदेश में एक मात्र निर्माण इकाई के साथ हुई थी, और इसकी शुरुआत पोल्ट्री फीड उद्योग में एक छोटे स्तर से हुई, जिसके बाद इसने पशुओं और पोल्ट्री क्षेत्र की व्यापक आवश्यकताओं को पूरा करने के लिए डेयरी पोषण (dairy nutrition) क्षेत्र में सफलतापूर्वक विस्तार किया।",
+    en: "Sundra Group was established in 2015 with a single manufacturing unit in Uttar Pradesh, with a humble beginning in the poultry feed industry before successfully expanding into dairy nutrition to fulfill the broader needs of the cattle and poultry sectors",
   },
-  "about.j2.title": { hi: "ISO प्रमाणन", en: "ISO Certification" },
+  "about.j2.title": { hi: "क्षेत्र विस्तार", en: "Sector Expansion" },
   "about.j2.desc": {
-    hi: "ISO 9001 प्रमाणन प्राप्त किया, उत्तर भारत में पशु आहार उद्योग के लिए नई गुणवत्ता मानक स्थापित किए।",
-    en: "Achieved ISO 9001 certification, setting new quality benchmarks for the animal feed industry in northern India.",
+    hi: "पशु आहार क्षेत्र (Cattle feed sector) में प्रवेश किया गया और प्रीमियम ब्रांड 'बरसाना पशु आहार' लॉन्च किया गया।",
+    en: "Cattle feed sector mein entry hui aur premium brand 'Barsana Pashu Aahar' launch kiya gaya.",
   },
-  "about.j3.title": { hi: "अखिल भारतीय विस्तार", en: "Pan-India Expansion" },
+  "about.j3.title": { hi: "बड़ा विस्तार", en: "Scaling Up" },
   "about.j3.desc": {
-    hi: "6 राज्यों में परिचालन का विस्तार, 5,000 से अधिक किसानों की सेवा करने वाला मजबूत डीलर नेटवर्क स्थापित किया।",
-    en: "Expanded operations across 6 states, establishing a robust dealer network serving over 5,000 farmers.",
+    hi: "कंपनी ने कानपुर के रानिया औद्योगिक क्षेत्र में स्थित अपने मुख्य मैन्युफैक्चरिंग प्लांट का बड़े पैमाने पर विस्तार किया।",
+    en: "The company successfully executed a major expansion of its core manufacturing plant located in the Rania Industrial Area of Kanpur.",
   },
-  "about.j4.title": { hi: "R&D लैब की शुरुआत", en: "R&D Lab Launch" },
+  "about.j4.title": { hi: "शहरी विस्तार", en: "Urban Expansion" },
   "about.j4.desc": {
-    hi: "अत्याधुनिक इन-हाउस अनुसंधान प्रयोगशाला का उद्घाटन किया, जो सटीक पोषण फार्मूलेशन को सक्षम बनाती है।",
-    en: "Inaugurated a state-of-the-art in-house research laboratory, enabling precision nutrition formulation.",
+    hi: "ग्रुप ने बड़े स्तर की शहरी डेयरियों में अपने कॉर्पोरेट विस्तार को गति देने के लिए सुन्द्रा न्यूट्री फीड लिमिटेड की स्थापना की।",
+    en: "The group strategically incorporated Sundra Nutri Feed Limited to drive high-impact corporate expansion into large-scale urban dairies.",
   },
-  "about.j5.title": { hi: "स्थिरता पहल", en: "Sustainability Initiative" },
-  "about.j5.desc": {
-    hi: "हमारा टिकाऊ सोर्सिंग कार्यक्रम शुरू किया, स्थानीय किसानों के साथ पर्यावरण अनुकूल कृषि पद्धतियों को बढ़ावा देने के लिए।",
-    en: "Launched our sustainable sourcing program, partnering with local farmers to promote eco-friendly agricultural practices.",
-  },
-  "about.j6.title": { hi: "ग्रीनफील्ड संयंत्र", en: "Greenfield Plant" },
-  "about.j6.desc": {
-    hi: "50,000 MT/वर्ष क्षमता का नया संयंत्र निर्माणाधीन — भारत के बढ़ते डेयरी क्षेत्र की सेवा करने की हमारी क्षमता दोगुनी करते हुए।",
-    en: "New 50,000 MT/year capacity plant under construction — doubling our ability to serve India's growing dairy sector.",
-  },
+  // "about.j5.title": { hi: "स्थिरता पहल", en: "Sustainability Initiative" },
+  // "about.j5.desc": {
+  //   hi: "हमारा टिकाऊ सोर्सिंग कार्यक्रम शुरू किया, स्थानीय किसानों के साथ पर्यावरण अनुकूल कृषि पद्धतियों को बढ़ावा देने के लिए।",
+  //   en: "Launched our sustainable sourcing program, partnering with local farmers to promote eco-friendly agricultural practices.",
+  // },
+  // "about.j6.title": { hi: "ग्रीनफील्ड संयंत्र", en: "Greenfield Plant" },
+  // "about.j6.desc": {
+  //   hi: "50,000 MT/वर्ष क्षमता का नया संयंत्र निर्माणाधीन — भारत के बढ़ते डेयरी क्षेत्र की सेवा करने की हमारी क्षमता दोगुनी करते हुए।",
+  //   en: "New 50,000 MT/year capacity plant under construction — doubling our ability to serve India's growing dairy sector.",
+  // },
 
   // Products Highlight
   "about.products.tag": { hi: "हम क्या बनाते हैं", en: "What We Make" },
@@ -644,7 +697,9 @@ export const content = {
     en: "Mon–Sat: 9 AM – 7 PM",
   },
 
-  "contact.details.title": { hi: "संपर्क विवरण", en: "Contact details" },
+  "contact.details.title": { hi: "शिकायत के लिए संपर्क करें", en: "Compliance Contact" },
+  "contact.sales.title": { hi: "खरीदारी के लिए संपर्क करें", en: "Sales Contact" },
+  "contact.customer.title": { hi: "सहायता के लिए संपर्क करें", en: "Customer Contact" },
   "contact.details.phone": { hi: "फ़ोन", en: "Phone" },
   "contact.details.whatsapp": { hi: "व्हाट्सएप", en: "WhatsApp" },
   "contact.details.whatsapp.cta": {

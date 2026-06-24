@@ -5,6 +5,7 @@ import { Toaster } from "sonner";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LoadingSpinner from "./components/LoadingSpinner";
+import InvestorDetails from "./pages/InvestorDetails";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -15,6 +16,7 @@ const Benefits = lazy(() => import("./pages/Benefits"));
 const Dealers = lazy(() => import("./pages/Dealers"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Investor = lazy(() => import("./pages/Investor"));
 
 // Scroll to top component
 function ScrollToTop() {
@@ -86,7 +88,9 @@ function App() {
               />
               <Route path="/benefits" element={<Benefits lang={lang} />} />
               <Route path="/dealers" element={<Dealers lang={lang} />} />
-              <Route path="/gallery" element={<Gallery lang={lang} />} />
+              {/* <Route path="/gallery" element={<Gallery lang={lang} />} /> */}
+              <Route path="/investor" element={<Investor lang={lang}/>} />
+              <Route path="/investors/:slug" element={<InvestorDetails lang={lang} />} />
               <Route path="/contact" element={<Contact lang={lang} />} />
             </Routes>
           </Suspense>

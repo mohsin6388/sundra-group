@@ -9,6 +9,7 @@ import farmer from "../assets/products-cat.webp";
 import cow from "../assets/cow-use.png";
 import {content} from "../lib/translate";
 import {reviews} from "../lib/translate"
+import BarsanaAbout from "../components/BarsanaAbout";
 
 
 const banners = [banner1, banner2, banner1, banner2];
@@ -348,7 +349,9 @@ export default function Home({ lang }) {
           }}
         />
 
-        <section
+        <BarsanaAbout lang={lang}/>
+
+        {/* <section
           style={{
             maxWidth: 1180,
             margin: "0 auto",
@@ -395,7 +398,11 @@ export default function Home({ lang }) {
               >
                 {t("about.description")}
               </div>
-              <div
+
+
+
+
+              {/* <div
                 style={{
                   color: `${C.ink}b3`,
                   lineHeight: 1.65,
@@ -403,9 +410,9 @@ export default function Home({ lang }) {
                 }}
               >
                 {t("about.short_description")}
-              </div>
+              </div> */}
 
-              <div style={{ display: "flex", paddingLeft: "10px" }}>
+              {/* <div style={{ display: "flex", paddingLeft: "10px" }}>
                 <div
                   style={{
                     lineHeight: 1.65,
@@ -419,7 +426,7 @@ export default function Home({ lang }) {
                 >
                   {t("about.tag_line")}
                 </div>
-              </div>
+              </div> 
             </div>
           </div>
 
@@ -489,7 +496,7 @@ export default function Home({ lang }) {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <div
           style={{

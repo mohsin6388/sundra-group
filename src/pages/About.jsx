@@ -17,6 +17,9 @@ import {
 } from "lucide-react";
 import { GALLERY_IMAGES } from "../lib/products";
 import {content} from "../lib/translate";
+import farmer_1 from "../assets/farmer-1.jpg"
+import farmer_2 from "../assets/farmer-2.jpg"
+import farmer_3 from "../assets/farmer-3.jpg"
 
 const Gold = ({ children }) => (
   <span style={{ color: "#c9871f" }}>{children}</span>
@@ -45,12 +48,12 @@ export default function AboutSections({ lang = "en" }) {
   ];
 
   const JOURNEY = [
-    { year: "1998", title: t("about.j1.title"), desc: t("about.j1.desc") },
-    { year: "2005", title: t("about.j2.title"), desc: t("about.j2.desc") },
-    { year: "2012", title: t("about.j3.title"), desc: t("about.j3.desc") },
-    { year: "2018", title: t("about.j4.title"), desc: t("about.j4.desc") },
-    { year: "2021", title: t("about.j5.title"), desc: t("about.j5.desc") },
-    { year: "2025", title: t("about.j6.title"), desc: t("about.j6.desc") },
+    { year: "2015", title: t("about.j1.title"), desc: t("about.j1.desc") },
+    { year: "2017", title: t("about.j2.title"), desc: t("about.j2.desc") },
+    { year: "2019", title: t("about.j3.title"), desc: t("about.j3.desc") },
+    // { year: "2018", title: t("about.j4.title"), desc: t("about.j4.desc") },
+    // { year: "2021", title: t("about.j5.title"), desc: t("about.j5.desc") },
+    { year: "2025", title: t("about.j4.title"), desc: t("about.j4.desc") },
   ];
 
   const TEAM = [
@@ -58,19 +61,19 @@ export default function AboutSections({ lang = "en" }) {
       name: "Dr. Arvind Sharma",
       role: "Chief Nutritionist",
       exp: "20+ years in bovine nutrition research",
-      img: "https://i.pravatar.cc/200?img=11",
+      img: farmer_1,
     },
     {
-      name: "Priya Mehta",
+      name: "Arvind Sahu",
       role: "Head of Operations",
       exp: "ISO compliance & supply chain specialist",
-      img: "https://i.pravatar.cc/200?img=47",
+      img: farmer_2,
     },
     {
       name: "Rajesh Gupta",
       role: "Field Agronomy Lead",
       exp: "Farmer outreach across 8 states",
-      img: "https://i.pravatar.cc/200?img=15",
+      img: farmer_3,
     },
   ];
 
@@ -209,7 +212,7 @@ export default function AboutSections({ lang = "en" }) {
           color: #fff; font-weight: 800; font-size: 11px; font-family: 'DM Sans', sans-serif;
           flex-shrink: 0; box-shadow: 0 0 0 6px rgba(201,135,31,0.15); z-index: 1;
         }
-        .timeline-year { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: #c9871f; }
+        .timeline-year { font-family: 'Inter', serif; font-size: 28px; font-weight: 900; color: #1f4d2c; }
         .timeline-card { background: #f8f5ef; border-radius: 16px; padding: 20px 24px; border-left: 3px solid #c9871f; }
         .timeline-card h4 { margin: 0 0 8px; font-size: 15px; font-weight: 700; color: #1a2e1e; }
         .timeline-card p { margin: 0; font-size: 13.5px; color: #666; line-height: 1.7; }
@@ -243,14 +246,26 @@ export default function AboutSections({ lang = "en" }) {
         .facility-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #444; line-height: 1.6; }
         .facility-img { width: 100%; height: 500px; object-fit: cover; border-radius: 28px; display: block; }
         .team-section { background: #1a2e1e; padding: 90px 30px; }
-        .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
         .team-card {
+          width: fit-content;
+          margin: 0 auto;
           background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 24px; padding: 36px 28px; text-align: center;
+          border-radius: 50%;  padding: 20px;  text-align: center;
           transition: background 0.2s ease, transform 0.2s ease;
         }
         .team-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-4px); }
-        .team-img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; margin: 0 auto 18px; display: block; border: 3px solid #c9871f; }
+
+        .team-img {
+         width: 180px; 
+        height: 180px; 
+        border-radius: 50%; 
+        object-fit: cover;
+        
+         display: block; 
+        border: 3px solid #c9871f; }
+
+
         .team-name { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; font-weight: 700; margin: 0 0 6px; }
         .team-role { color: #c9871f; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
         .team-exp { color: rgba(255,255,255,0.5); font-size: 13px; line-height: 1.6; }
@@ -499,6 +514,10 @@ export default function AboutSections({ lang = "en" }) {
           </div>
         </section>
 
+
+
+
+
         {/* ═══ JOURNEY — TIMELINE ═══ */}
         <section className="journey-section">
           <div className="section-inner">
@@ -533,6 +552,12 @@ export default function AboutSections({ lang = "en" }) {
             </div>
           </div>
         </section>
+
+
+
+
+
+
 
         {/* ═══ PRODUCTS HIGHLIGHT ═══ */}
         <section className="products-section">
@@ -754,12 +779,16 @@ export default function AboutSections({ lang = "en" }) {
             </div>
             <div className="team-grid">
               {TEAM.map(({ name, role, exp, img }) => (
-                <div key={name} className="team-card">
+                <div style={{textAlign: "center",}}>
+                  <div key={name} className="team-card">
                   <img src={img} alt={name} className="team-img" />
+                   </div>
+                 <div style={{paddingTop: "10px"}}>
                   <div className="team-name">{name}</div>
-                  <div className="team-role">{role}</div>
-                  <p className="team-exp">{exp}</p>
-                </div>
+                  {/* <div className="team-role">{role}</div>
+                  <p className="team-exp">{exp}</p> */}
+                 </div>
+                  </div>
               ))}
             </div>
           </div>
@@ -789,11 +818,11 @@ export default function AboutSections({ lang = "en" }) {
             <h2 className="cta-title">{t("about.cta.title")}</h2>
             <p className="cta-desc">{t("about.cta.desc")}</p>
             <div className="cta-contact-row">
-              <a href="tel:+919876543210" className="contact-pill">
-                <Phone size={15} /> +91 9876543210
+              <a href="tel:+919554588775" className="contact-pill">
+                <Phone size={15} /> +91 9554588775
               </a>
               <a href="mailto:info@barsana.com" className="contact-pill">
-                <Globe2 size={15} /> info@barsana.com
+                <Globe2 size={15} /> sundragroup@gmail.com
               </a>
             </div>
           </div>

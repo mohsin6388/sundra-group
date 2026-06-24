@@ -160,7 +160,7 @@ export default function Contact({ lang = "en" }) {
   return (
     <>
       <Toaster position="top-center" richColors />
-      <main className="min-h-screen bg-[#f7f8f6]">
+      <main className="min-h-screen bg-[#f5f0e8] px-6">
         {/* ── HERO ───────────────────────────────────────── */}
         <section className="relative bg-white border-b border-gray-100">
           <div
@@ -191,7 +191,7 @@ export default function Contact({ lang = "en" }) {
             </div>
 
             {/* quick-contact strip */}
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
+            {/* <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
               {COMPANY.phones?.map((p, i) => (
                 <a
                   key={i}
@@ -213,104 +213,108 @@ export default function Contact({ lang = "en" }) {
               <span className="flex items-center gap-1.5 text-gray-400">
                 <Clock size={13} /> {t("contact.hero.hours")}
               </span>
-            </div>
+            </div> */}
           </div>
         </section>
 
         {/* ── BODY ───────────────────────────────────────── */}
-        <section className="max-w-6xl mx-auto px-6 py-10 pb-20">
-          <div className="grid lg:grid-cols-[340px_1fr] gap-6">
+        <section className="max-w-6xl mx-auto py-10 pb-20">
+
+
+          <div className="grid lg:grid-cols-[340px_1fr] gap-16">
+
+
             {/* ── LEFT SIDEBAR ─────────────────────────── */}
             <aside className="space-y-4">
-              {/* Contact details card */}
-              <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
+              {/* Complain details card */}
+              <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-lg">
                 <p
                   className="text-[11px] font-semibold uppercase tracking-widest
-                              text-gray-400 mb-3"
+                              text-gray-800 mb-3"
                 >
                   {t("contact.details.title")}
                 </p>
 
                 <Row
                   icon={Phone}
-                  label={"For Sales"}
+                  href={`tel: +91914701306`}
+                >
+                  {" +91 914701306"}
+                </Row>
+
+                
+
+               
+              </div>
+
+               {/* Sales details card */}
+              <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-lg">
+                <p
+                  className="text-[11px] font-semibold uppercase tracking-widest
+                              text-gray-800 mb-3"
+                >
+                  {t("contact.sales.title")}
+                </p>
+
+                <Row
+                  icon={Phone}
+                  href={`tel:+917571001620`}
+                >
+                  {"+91 7571001640"}
+                </Row>
+
+                
+
+               
+              </div>
+
+
+              
+               {/* Customer details card */}
+              <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-lg">
+                <p
+                  className="text-[11px] font-semibold uppercase tracking-widest
+                              text-gray-800 mb-3"
+                >
+                  {t("contact.customer.title")}
+                </p>
+
+                <Row
+                  icon={Phone}
                   href={`tel:+917571001620`}
                 >
                   {"+91 7571001620"}
                 </Row>
 
-                <Row
-                  icon={Phone}
-                  label={"For Customer"}
-                  href={`tel:+917571001640`}
-                >
-                  {"+91 7571001640"}
-                </Row>
+                
 
-                {/* <Row
-                  icon={Phone}
-                  label={"For Compliance"}
-                  href={`tel:${COMPANY.phones?.[1]?.replace(/\D/g, "")}`}
-                >
-                  {"+91 914701306"}
-                </Row> */}
+               
+              </div>
 
-                <Row
-                  icon={MessageCircle}
-                  label={t("contact.details.whatsapp")}
-                  href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(
-                    "Hello Sundra Group, I'd like to enquire about Barsana Pashu Aahar.",
-                  )}`}
-                >
-                  {t("contact.details.whatsapp.cta")}
-                </Row>
+
+              <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-lg">
+               
+
+
 
                 <Row
                   icon={Mail}
                   label={t("contact.details.email")}
                   href={`mailto:${COMPANY.email}`}
                 >
-                  {COMPANY.email}
-                  {COMPANY.email_1 && (
-                    <>
-                      <br />
-                      {COMPANY.email_1}
-                    </>
-                  )}
+                  {COMPANY.email_1}
+                  
+                  
                 </Row>
 
                 <Row icon={MapPin} label={t("contact.details.reg")}>
                   {COMPANY.regOffice}
                 </Row>
 
-                {/* <Row icon={MapPin} label={t("contact.details.unit")}>
-                  {COMPANY.unit}
-                </Row> */}
+               
               </div>
 
-              {/* Business hours card */}
-              {/* <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
-                <div className="flex items-center gap-2 mb-3">
-                  <Clock size={14} className="text-emerald-600" />
-                  <p className="text-[11px] font-semibold uppercase tracking-widest text-gray-400">
-                    {t("contact.hours.title")}
-                  </p>
-                </div>
-                <HourRow
-                  day={t("contact.hours.weekday")}
-                  time={t("contact.hours.weekday.time")}
-                />
-                <HourRow
-                  day={t("contact.hours.saturday")}
-                  time={t("contact.hours.saturday.time")}
-                />
-                <HourRow
-                  day={t("contact.hours.sunday")}
-                  time={t("contact.hours.sunday.time")}
-                  closed
-                />
-              </div> */}
-
+{/* 
               <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7142.167424098154!2d80.32406929196739!3d26.485249392845475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c39c2d0211f15%3A0xd3cdae546f5aa789!2sRatan%20Shanti!5e0!3m2!1sen!2sin!4v1781592592323!5m2!1sen!2sin"
@@ -336,43 +340,15 @@ export default function Contact({ lang = "en" }) {
                     <ArrowRight size={12} />
                   </a>
                 </div>
-              </div>
-
-              {/* Map card */}
-              {/* <div
-                className="bg-white rounded-2xl border border-gray-100
-                              overflow-hidden shadow-sm"
-              >
-
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.357494304767!2d80.32408077425667!3d26.48523677833264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c39c2d0211f15%3A0xd3cdae546f5aa789!2sRatan%20Shanti!5e1!3m2!1sen!2sin!4v1781590452080!5m2!1sen!2sin"
-                  width="100%"
-                  height="200"
-                  style={{ border: 0, display: "block" }}
-                  allowFullScreen
-                  loading="lazy"
-                  title="Company Location"
-                  className="grayscale hover:grayscale-0 transition-all duration-500"
-                />
-                <div className="px-4 py-3 border-t border-gray-100">
-                  <a
-                    href={`https://maps.google.com/?q=${COMPANY.regOffice}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-medium
-                               text-emerald-600 hover:text-emerald-700 transition-colors"
-                  >
-                    <MapPin size={12} /> {t("contact.map.open")}
-                    <ArrowRight size={12} />
-                  </a>
-                </div>
               </div> */}
+
+              
             </aside>
 
             {/* ── FORM ─────────────────────────────────── */}
             <div
               className="bg-white rounded-2xl border border-gray-100
-                            shadow-sm p-7 lg:p-8 h-fit"
+                            shadow-lg p-7 lg:p-12 h-fit "
             >
               <div className="mb-6 pb-5 border-b border-gray-100">
                 <h2 className="text-xl font-bold text-gray-900 mb-1">
@@ -470,8 +446,39 @@ export default function Contact({ lang = "en" }) {
                 </div>
               </form>
             </div>
+
+          
+
+
           </div>
         </section>
+
+          <div className=" lg:max-w-6xl md:h-[300px] mx-auto mb-10 bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7142.167424098154!2d80.32406929196739!3d26.485249392845475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c39c2d0211f15%3A0xd3cdae546f5aa789!2sRatan%20Shanti!5e0!3m2!1sen!2sin!4v1781592592323!5m2!1sen!2sin"
+                  className="w-full h-[300px] block transition-all duration-500"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Company Location"
+                />
+
+                <div className="px-4 py-3 border-t border-gray-100">
+                  <a
+                    href={`https://maps.google.com/?q=${encodeURIComponent(
+                      COMPANY.regOffice,
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs font-medium text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <MapPin size={12} />
+                    {t("contact.map.open")}
+                    <ArrowRight size={12} />
+                  </a>
+                </div>
+              </div>
       </main>
     </>
   );

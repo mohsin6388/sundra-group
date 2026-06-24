@@ -45,7 +45,7 @@ export default function Products({lang}) {
               fontWeight: "600",
             }}
           >
-            {lang == "hi" ? "नौ प्रीमियम फ़ीड" : "Nine premium feeds."}
+            {lang == "hi" ? "हर ज़रूरत के लिए प्रीमियम फ़ीड्स" : "A wide range of premium feeds."}
             <br />
             <span
               style={{
