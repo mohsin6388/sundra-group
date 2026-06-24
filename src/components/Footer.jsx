@@ -162,7 +162,7 @@ function Footer() {
                 <Link to="/products">Products</Link>
               </li>
               <li>
-                <Link to="/gallery">Gallery</Link>
+                <Link to="/investor">Investor</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
@@ -233,12 +233,12 @@ function Footer() {
               <a href="https://www.instagram.com/barsanapashuaahar?igsh=eXMwMzBjc2Y3cGln&utm_source=qr">
                 <Instagram size={18} />
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <Youtube size={18} />
               </a>
               <a href="#">
                 <Linkedin size={18} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

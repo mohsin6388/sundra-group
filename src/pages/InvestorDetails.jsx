@@ -55,7 +55,7 @@ const InvestorDetails = ({ lang = "hi" }) => {
         }
         .investor-back-link:hover { text-decoration: underline; }
         .investor-details-title {
-          font-family: Georgia, serif;
+          font-family: Intern, serif;
           color: #16261b;
           font-size: clamp(26px, 4vw, 36px);
           margin: 24px 0 16px;
