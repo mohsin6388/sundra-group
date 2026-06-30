@@ -303,8 +303,8 @@ export const content = {
   // Journey items
   "about.j1.title": { hi: "स्थापना", en: "Foundation" },
   "about.j1.desc": {
-    hi: "सुंद्रा ग्रुप की स्थापना 2015 में उत्तर प्रदेश में एक मात्र निर्माण इकाई के साथ हुई थी, और इसकी शुरुआत पोल्ट्री फीड उद्योग में एक छोटे स्तर से हुई, जिसके बाद इसने पशुओं और पोल्ट्री क्षेत्र की व्यापक आवश्यकताओं को पूरा करने के लिए डेयरी पोषण (dairy nutrition) क्षेत्र में सफलतापूर्वक विस्तार किया।",
-    en: "Sundra Group was established in 2015 with a single manufacturing unit in Uttar Pradesh, with a humble beginning in the poultry feed industry before successfully expanding into dairy nutrition to fulfill the broader needs of the cattle and poultry sectors",
+    hi: "सुन्दरा ग्रुप की स्थापना वर्ष 2015 में प्रमुख पेपर उद्यमी एवं चार्टर्ड अकाउंटेंट श्री संजीव अग्रवाल द्वारा की गयी।",
+    en: "Sundra Group was established in 2015 by Mr. Sanjeev Agarwal, a leading paper entrepreneur and Chartered Accountant.",
   },
   "about.j2.title": { hi: "क्षेत्र विस्तार", en: "Sector Expansion" },
   "about.j2.desc": {

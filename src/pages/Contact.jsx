@@ -160,7 +160,7 @@ export default function Contact({ lang = "en" }) {
   return (
     <>
       <Toaster position="top-center" richColors />
-      <main className="min-h-screen bg-[#f5f0e8]">
+      <main className="min-h-screen bg-[#f5f0e8] mb-20">
         {/* ── HERO ───────────────────────────────────────── */}
         <section className="relative bg-white border-b border-gray-100">
           <div

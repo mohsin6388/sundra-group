@@ -2,7 +2,7 @@ import BarsanaPacketYellow from "../assets/Barsana-D.webp"
 import BarsanaPacketPink from "../assets/BarsanaPink.webp"
 import BarsanaPacketRed from "../assets/Barsana-Packet.webp"
 import BuffSpecial from "../assets/buff-special.jpeg"
-import Churi from "../assets/Churi.webp"
+import Churi from "../assets/Churi.png"
 import MultiGranChukar from "../assets/multi-grain-chokar.jpeg"
 import RoyalMixture from "../assets/Royal-Mixture.webp"
 // import Sudarshan from "../assets/Sudarshan.webp"
@@ -11,7 +11,7 @@ import SupremePlus from "../assets/supreme-plus.jpeg"
 // import eightThousand from "../assets/8000.webp"
 import eightThousand from "../assets/eigth-thousand.png"
 import sudarshan from "../assets/barsana-sudarshan.png"
-import churi from "../assets/barsana-churi.png"
+import gold from "../assets/gold.webp"
 
 
 // ── Company Info ──────────────────────────────────────────────────────────────
@@ -35,11 +35,12 @@ export const COMPANY = {
 export const GALLERY_IMAGES = [
   BarsanaPacketRed,
   BuffSpecial,
-  churi,
+  Churi,
   MultiGranChukar,
   RoyalMixture,
   sudarshan,
   Super,
+  gold,
   SupremePlus,
   eightThousand
 ];
@@ -48,116 +49,10 @@ export const GALLERY_IMAGES = [
 
 export const PRODUCTS = [
 
-  // Special Dairy
-  {
-    slug: "barsana-dairy-special",
-    name: " Dairy Special",
-    nameHi: " डेयरी स्पेशल",
-    tag: "Special",
-    tagHi: "स्पेशल",
-    accent: "#8a2a1a",
-    image: BarsanaPacketRed,
-    summary:
-      "Formulated for easy digestion and better nutrient absorption — extremely important for animals producing more than 15 litres of milk per day.",
-    summaryHi:
-      "आसान पाचन और बेहतर पोषक तत्व अवशोषण के लिए तैयार किया गया — उन पशुओं के लिए अत्यंत आवश्यक जो प्रतिदिन 15 लीटर से अधिक दूध देते हैं।",
-    yield: "15+ L/day",
-    yieldHi: "15+ लीटर/दिन",
-    protein: "22%",
-    fat: "3.5%",
-    benefits: [
-      "Targets 15+ L/day milk production",
-      "Easy digestion, better nutrient absorption",
-      "Supports overall well-being",
-      "Strengthens immune system",
-      "Balanced energy for daily lactation",
-      "Ideal for everyday dairy herds",
-    ],
-    benefitsHi: [
-      "15+ लीटर/दिन दुग्ध उत्पादन का लक्ष्य",
-      "आसान पाचन, बेहतर पोषक तत्व अवशोषण",
-      "समग्र स्वास्थ्य को सहारा",
-      "रोग-प्रतिरोधक क्षमता को मजबूत करता है",
-      "दैनिक दुग्ध उत्पादन के लिए संतुलित ऊर्जा",
-      "रोज़ाना डेयरी पशुओं के लिए आदर्श",
-    ],
-  },
-  
-
-  // BuffSpecial
-  {
-    slug: "barsana-buff-special",
-    name: "Buff Speciale",
-    nameHi: "बफ स्पेशल",
-    tag: "Buffalo Specialist",
-    tagHi: "भैंस विशेषज्ञ",
-    accent: "#2d6a3e",
-    image: BuffSpecial,
-    summary:
-      "Formulated specifically for Murrah, Surti and other buffalo breeds to maximise fat-rich milk production.",
-    summaryHi:
-      "मुर्रा, सुरती और अन्य भैंस नस्लों के लिए विशेष रूप से तैयार, वसायुक्त दूध उत्पादन को अधिकतम करने के लिए।",
-    yield: "15–22 L/day",
-    yieldHi: "15–22 लीटर/दिन",
-    protein: "22%",
-    fat: "6.5%",
-    benefits: [
-      "Buffalo-optimised mineral mix",
-      "Higher butterfat yield",
-      "Improves coat and health",
-      "Supports heavy body buffaloes",
-      "Reduces heat stress",
-      "Proven across U.P. & Punjab farms",
-    ],
-    benefitsHi: [
-      "भैंस के लिए अनुकूलित मिनरल मिक्स",
-      "अधिक बटरफैट उत्पादन",
-      "त्वचा और स्वास्थ्य में सुधार",
-      "भारी शरीर वाली भैंसों को सहारा",
-      "गर्मी के तनाव को कम करता है",
-      "यू.पी. और पंजाब के फार्मों पर सिद्ध",
-    ],
-  },
-
-  // RoyalMixture
-  {
-    slug: "barsana-royal-mixture",
-    name: "Royal Mixture",
-    nameHi: "रॉयल मिक्सचर",
-    tag: "Supplement",
-    tagHi: "सप्लीमेंट",
-    accent: "#1565c0",
-    image: RoyalMixture,
-    summary:
-      "Concentrated mineral and vitamin supplement to correct deficiencies and maintain year-round herd health.",
-    summaryHi:
-      "कमियों को दूर करने और साल भर झुंड के स्वास्थ्य को बनाए रखने के लिए केंद्रित खनिज और विटामिन सप्लीमेंट।",
-    yield: "—",
-    yieldHi: "—",
-    protein: "—",
-    fat: "—",
-    benefits: [
-      "Corrects calcium & phosphorus imbalances",
-      "Prevents milk fever",
-      "Improves conception rates",
-      "Zinc & copper for hoof health",
-      "Daily 50–80g dosing",
-      "Compatible with all Barsana feeds",
-    ],
-    benefitsHi: [
-      "कैल्शियम और फास्फोरस असंतुलन को ठीक करता है",
-      "मिल्क फीवर को रोकता है",
-      "गर्भाधान दर में सुधार करता है",
-      "खुर स्वास्थ्य के लिए जिंक और कॉपर",
-      "दैनिक 50–80g खुराक",
-      "सभी बरसाना फीड के साथ संगत",
-    ],
-  },
-
-
+ 
   // Super
   {
-    slug: "barsana-super-economy",
+    slug: "barsana-super",
     name: "Super",
     nameHi: "सुपर",
     tag: "New",
@@ -165,318 +60,338 @@ export const PRODUCTS = [
     accent: "#4a148c",
     image: Super,
     summary:
-      "A high-energy, cost-efficient formula designed to sustain baseline daily milk production and maintain healthy cattle body weight.",
+      "Barsana's newest mash formula, launched on popular customer demand for cattle with a daily milk yield of 6-7 litres, delivering balanced protein and fat for top-grade health and productivity.",
     summaryHi:
-      "एक उच्च-ऊर्जा, लागत-कुशल फॉर्मूला जो बेसलाइन दैनिक दूध उत्पादन को बनाए रखने और स्वस्थ पशु शरीर भार को बनाए रखने के लिए डिज़ाइन किया गया है।",
-    yield: "14–20 L/day",
-    yieldHi: "14–20 लीटर/दिन",
-    protein: "21%",
-    fat: "4.0%",
+      "ग्राहकों की भारी माँग पर लॉन्च किया गया बरसाना का नवीनतम मैश फॉर्मूला, 6-7 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए, जो स्वास्थ्य और उत्पादकता के लिए संतुलित प्रोटीन और फैट प्रदान करता है।",
+    yield: "6–7 L/day",
+    yieldHi: "6–7 लीटर/दिन",
+    protein: "18%",
+    fat: "2.5%",
     benefits: [
-      "Provides sustained daily energy",
-      "Highly palatable mash texture",
-      "Supports stable milk fat levels",
-      "Maintains optimal body condition",
-      "Enriched with standard trace minerals",
-      "Budget-friendly commercial feed option",
+      "Balanced 2.5% fat content",
+      "18% protein for healthy lactation",
+      "Ideal for cattle yielding 6-7 L/day",
+      "Newest product launched on customer demand",
+      "Highly important for daily cattle nutrition",
+      "Top-grade quality in its category",
     ],
     benefitsHi: [
-      "निरंतर दैनिक ऊर्जा प्रदान करता है",
-      "अत्यधिक स्वादिष्ट मैश टेक्सचर",
-      "स्थिर मिल्क फैट स्तर को सहारा देता है",
-      "इष्टतम शारीरिक स्थिति बनाए रखता है",
-      "मानक ट्रेस मिनरल्स से समृद्ध",
-      "बजट-अनुकूल व्यावसायिक चारा विकल्प",
+      "संतुलित 2.5% फैट सामग्री",
+      "स्वस्थ दुधारूपन के लिए 18% प्रोटीन",
+      "6-7 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "ग्राहकों की माँग पर लॉन्च किया गया नवीनतम प्रोडक्ट",
+      "रोज़ाना पशु पोषण के लिए अत्यंत महत्वपूर्ण",
+      "इस श्रेणी में सर्वोच्च गुणवत्ता",
     ],
-  },
+},
+  
 
-  // Sudarshan
+  //supreme plus
   {
-    slug: "barsana-sudarshan",
-    name: "Sudarshan",
-    nameHi: "सुदर्शन",
-    tag: "Organic",
-    tagHi: "ऑर्गेनिक",
-    accent: "#558b2f",
-    image: sudarshan,
-    summary:
-      "Certified organic cattle feed for farms targeting organic dairy certification. No synthetic additives or preservatives.",
-    summaryHi:
-      "ऑर्गेनिक डेयरी प्रमाणीकरण के लक्ष्य रखने वाले फार्मों के लिए प्रमाणित ऑर्गेनिक पशु आहार। कोई सिंथेटिक एडिटिव या परिरक्षक नहीं।",
-    yield: "16–22 L/day",
-    yieldHi: "16–22 लीटर/दिन",
-    protein: "21%",
-    fat: "4.5%",
-    benefits: [
-      "Organic India certified",
-      "Zero synthetic additives",
-      "Non-GMO ingredients",
-      "Ideal for organic dairy farms",
-      "Supports premium milk pricing",
-      "Sustainably sourced grains",
-    ],
-    benefitsHi: [
-      "ऑर्गेनिक इंडिया प्रमाणित",
-      "शून्य सिंथेटिक एडिटिव",
-      "नॉन-GMO सामग्री",
-      "ऑर्गेनिक डेयरी फार्मों के लिए आदर्श",
-      "प्रीमियम दूध मूल्य निर्धारण को सहारा",
-      "टिकाऊ रूप से प्राप्त अनाज",
-    ],
-  },
-
-
-  // SupremePlus
-  {
-    slug: "barsana-supreme-plus-advanced",
-    name: "Supreme Plus",
+    slug: "barsana-supreme-plus",
+    name: "Supreme +",
     nameHi: "सुप्रीम प्लस",
     tag: "New",
     tagHi: "नया",
-    accent: "#7b1fa2",
+    accent: "#4a148c",
     image: SupremePlus,
     summary:
-      "An advanced mid-tier feed specifically calibrated with an enhanced protein profile to improve overall milk solids-not-fat (SNF) percentages.",
+      "Barsana's newest mash formula, launched on popular customer demand for cattle with a daily milk yield of 6-7 litres, delivering balanced protein and fat for top-grade health and productivity.",
     summaryHi:
-      "एक उन्नत मिड-टियर फीड जो समग्र मिल्क सॉलिड्स-नॉट-फैट (SNF) प्रतिशत में सुधार के लिए बेहतर प्रोटीन प्रोफाइल के साथ विशेष रूप से कैलिब्रेट किया गया है।",
-    yield: "18–24 L/day",
-    yieldHi: "18–24 लीटर/दिन",
-    protein: "23%",
-    fat: "5.5%",
+      "ग्राहकों की भारी माँग पर लॉन्च किया गया बरसाना का नवीनतम मैश फॉर्मूला, 6-7 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए, जो स्वास्थ्य और उत्पादकता के लिए संतुलित प्रोटीन और फैट प्रदान करता है।",
+    yield: "6–7 L/day",
+    yieldHi: "6–7 लीटर/दिन",
+    protein: "18%",
+    fat: "2.5%",
     benefits: [
-      "Significantly improves SNF levels",
-      "Balanced calcium-to-phosphorus ratio",
-      "Boosts immunity against local diseases",
-      "Optimized for seasonal transition periods",
-      "Contains gut-friendly live yeast cultures",
-      "Ideal for commercial crossbreed cows",
+      "Balanced 2.5% fat content",
+      "18% protein for healthy lactation",
+      "Ideal for cattle yielding 6-7 L/day",
+      "Newest product launched on customer demand",
+      "Highly important for daily cattle nutrition",
+      "Top-grade quality in its category",
     ],
     benefitsHi: [
-      "SNF स्तर में उल्लेखनीय सुधार",
-      "संतुलित कैल्शियम-से-फास्फोरस अनुपात",
-      "स्थानीय बीमारियों के खिलाफ प्रतिरोधक क्षमता बढ़ाता है",
-      "मौसमी संक्रमण काल के लिए अनुकूलित",
-      "आंत-अनुकूल लाइव यीस्ट कल्चर युक्त",
-      "व्यावसायिक क्रॉसब्रीड गायों के लिए आदर्श",
+      "संतुलित 2.5% फैट सामग्री",
+      "स्वस्थ दुधारूपन के लिए 18% प्रोटीन",
+      "6-7 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "ग्राहकों की माँग पर लॉन्च किया गया नवीनतम प्रोडक्ट",
+      "रोज़ाना पशु पोषण के लिए अत्यंत महत्वपूर्ण",
+      "इस श्रेणी में सर्वोच्च गुणवत्ता",
     ],
-  },
-   // Multigran Chokar
-  {
-    slug: "barsana-multi-gran-chokar",
-    name: "Multi Gran Chokar",
-    nameHi: "मल्टी ग्रान चोकर",
-    tag: "Young Stock",
-    tagHi: "युवा पशु",
-    accent: "#6d4c41",
-    image: MultiGranChukar,
-    summary:
-      "Purpose-built starter feed for calves from 2 weeks to 3 months. Supports rumen development and healthy early growth.",
-    summaryHi:
-      "2 सप्ताह से 3 महीने तक के बछड़ों के लिए विशेष रूप से बना स्टार्टर फीड। रूमेन विकास और स्वस्थ प्रारंभिक वृद्धि को सहारा देता है।",
-    yield: "—",
-    yieldHi: "—",
-    protein: "22%",
-    fat: "4%",
-    benefits: [
-      "Accelerates rumen development",
-      "High palatability for young stock",
-      "Probiotics for gut health",
-      "Reduces weaning stress",
-      "Pellet form for easy intake",
-      "For calves 2 weeks–3 months",
-    ],
-    benefitsHi: [
-      "रूमेन विकास को तेज करता है",
-      "युवा पशुओं के लिए उच्च स्वादिष्टता",
-      "आंत स्वास्थ्य के लिए प्रोबायोटिक्स",
-      "दूध छुड़ाने के तनाव को कम करता है",
-      "आसान सेवन के लिए पेलेट फॉर्म",
-      "2 सप्ताह–3 महीने के बछड़ों के लिए",
-    ],
-  },
+},
 
-   {
+
+// Churi
+    {
     slug: "barsana-churi",
     name: "Churi",
-    nameHi: " चुरी",
+    nameHi: "चूरी",
     tag: "Essential",
     tagHi: "आवश्यक",
     accent: "#8a2a1a",
-    image: churi,
+    image: Churi,
     summary:
-      "A cost-effective everyday feed designed for animals with a milk production capacity of 10–12 litres per day, supporting steady energy and digestion.",
+      "A mineral-enriched everyday feed for cattle with a daily milk yield of 10-12 litres, boosting milk production capacity while strengthening disease resistance.",
     summaryHi:
-      "10–12 लीटर प्रतिदिन दुग्ध उत्पादन क्षमता वाले पशुओं के लिए एक किफायती दैनिक आहार, जो निरंतर ऊर्जा और पाचन को सहारा देता है।",
+      "10-12 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए एक मिनरल-समृद्ध दैनिक आहार, जो दूध उत्पादन की शक्ति बढ़ाने के साथ-साथ रोग प्रतिरोधक क्षमता को भी मज़बूत करता है।",
     yield: "10–12 L/day",
     yieldHi: "10–12 लीटर/दिन",
     protein: "20%",
     fat: "3%",
     benefits: [
-      "Targets 10–12 L/day milk production",
-      "Cost-effective everyday nutrition",
-      "Supports steady energy levels",
-      "Easy to digest, gentle on the gut",
-      "Maintains consistent milk quality",
-      "Ideal for regular dairy households",
+      "Balanced 3% fat content",
+      "20% protein for higher lactation",
+      "Ideal for cattle yielding 10-12 L/day",
+      "Boosts milk production capacity",
+      "Strengthens disease resistance",
+      "Enriched with essential minerals, calcium and phosphorus",
     ],
     benefitsHi: [
-      "10–12 लीटर/दिन दुग्ध उत्पादन का लक्ष्य",
-      "किफायती दैनिक पोषण",
-      "स्थिर ऊर्जा स्तर को सहारा",
-      "आसानी से पचने वाला, पाचन तंत्र के लिए सरल",
-      "दूध की निरंतर गुणवत्ता बनाए रखता है",
-      "नियमित डेयरी परिवारों के लिए आदर्श",
+      "संतुलित 3% फैट सामग्री",
+      "अधिक दुधारूपन के लिए 20% प्रोटीन",
+      "10-12 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "दूध उत्पादन की शक्ति बढ़ाता है",
+      "रोग प्रतिरोधक क्षमता को मज़बूत करता है",
+      "आवश्यक मिनरल्स, कैल्शियम और फॉस्फोरस से समृद्ध",
     ],
-  },
+},
 
-  // eightThousand
+
+// BuffSpecial
   {
-    slug: "barsana-eight-thousand-buffalo",
-    name: "Eight Thousand",
-    nameHi: "8000",
-    tag: "New",
-    tagHi: "नया",
-    accent: "#e91e63",
-    image: eightThousand,
+    slug: "barsana-buff-special",
+    name: "Buff Special",
+    nameHi: "भैंस स्पेशल",
+    tag: "Buffalo Specialist",
+    tagHi: "भैंस विशेषज्ञ",
+    accent: "#2d6a3e",
+    image: BuffSpecial,
     summary:
-      "Our elite, high-fat formulation engineered specifically for high-potential Murrah buffaloes to maximize thick A2 fat-rich milk production.",
+      "Extremely important for cattle with a daily milk yield of more than 15 litres, enriched with a variety of vitamins for top-grade health and productivity.",
     summaryHi:
-      "हमारा एलीट, उच्च-वसा फॉर्मूलेशन विशेष रूप से उच्च-क्षमता वाली मुर्रा भैंसों के लिए तैयार किया गया है, जो गाढ़े A2 वसायुक्त दूध उत्पादन को अधिकतम करता है।",
-    yield: "20–28 L/day",
-    yieldHi: "20–28 लीटर/दिन",
-    protein: "25%",
-    fat: "7.5%",
+      "उन पशुओं के लिए अत्यंत महत्वपूर्ण जिनकी दुधारू क्षमता प्रतिदिन 15 लीटर से अधिक है, विभिन्न प्रकार के विटामिन से युक्त, उत्तम स्वास्थ्य और उत्पादकता के लिए।",
+    yield: ">15 L/day",
+    yieldHi: ">15 लीटर/दिन",
+    protein: "22%",
+    fat: "7%",
     benefits: [
-      "Maximises heavy A2 fat output",
-      "Rumen-protected bypass fat infusion",
-      "Supports heavy prolonged lactation cycles",
-      "Improves buffalo body condition score",
-      "Advanced chelated zinc & copper complex",
-      "Newly launching across U.P. & Bihar markets",
+      "Extremely important for >15 L/day cattle",
+      "Fat content up to 7%",
+      "Minimum crude protein of 22%",
+      "Enriched with a variety of vitamins",
+      "Top-grade quality in its category",
+      "Highest-grade product of its kind",
     ],
     benefitsHi: [
-      "भारी A2 फैट आउटपुट को अधिकतम करता है",
-      "रूमेन-प्रोटेक्टेड बाईपास फैट इन्फ्यूजन",
-      "लंबे दुग्धकाल चक्र को सहारा देता है",
-      "भैंस के शारीरिक स्कोर में सुधार",
-      "उन्नत चीलेटेड जिंक और कॉपर कॉम्प्लेक्स",
-      "यू.पी. और बिहार बाजारों में नई लॉन्च",
+      "15 लीटर/दिन से अधिक देने वाले पशुओं के लिए अत्यंत महत्वपूर्ण",
+      "फैट की मात्रा 7% तक",
+      "क्रूड प्रोटीन न्यूनतम 22%",
+      "विभिन्न प्रकार के विटामिन से युक्त",
+      "इस श्रेणी में सर्वोत्तम गुणवत्ता",
+      "अपनी श्रेणी का सर्वाधिक उच्च कोटि का उत्पाद",
     ],
-  },
-];
+},
 
 
-export const HERO_PRODUCTS = [
-  // Special Dairy
-  {
+// Special Dairy
+{
     slug: "barsana-dairy-special",
-    name: " Dairy Special",
+    name: "Dairy Special",
     nameHi: "डेयरी स्पेशल",
     tag: "Special",
     tagHi: "स्पेशल",
     accent: "#8a2a1a",
     image: BarsanaPacketRed,
     summary:
-      "Formulated for easy digestion and better nutrient absorption — extremely important for animals producing more than 15 litres of milk per day.",
+      "Extremely important for cattle with a daily milk yield of 15-18 litres, boosting milk-yielding capacity while improving the cow's reproductive cycle.",
     summaryHi:
-      "आसान पाचन और बेहतर पोषक तत्व अवशोषण के लिए तैयार किया गया — उन पशुओं के लिए अत्यंत आवश्यक जो प्रतिदिन 15 लीटर से अधिक दूध देते हैं।",
-    yield: "15+ L/day",
-    yieldHi: "15+ लीटर/दिन",
-    protein: "22%",
+      "उन पशुओं के लिए अत्यंत महत्वपूर्ण जिनकी दुधारू क्षमता 15-18 लीटर प्रतिदिन की है, जो दुधारू क्षमता बढ़ाने के साथ-साथ गाय के प्रजनन चक्र को भी बेहतर बनाता है।",
+    yield: "15–18 L/day",
+    yieldHi: "15–18 लीटर/दिन",
+    protein: "21%",
     fat: "3.5%",
     benefits: [
-      "Targets 15+ L/day milk production",
-      "Easy digestion, better nutrient absorption",
-      "Supports overall well-being",
-      "Strengthens immune system",
-      "Balanced energy for daily lactation",
-      "Ideal for everyday dairy herds",
+      "Fat content up to 3.5%",
+      "Minimum crude protein of 21%",
+      "Maximum crude fibre of 11%",
+      "Vitamin A enriched at 7000 IU/KG",
+      "Maximum moisture of 12%",
+      "Improves the cow's reproductive cycle",
+      "Enriched with all essential minerals",
     ],
     benefitsHi: [
-      "15+ लीटर/दिन दुग्ध उत्पादन का लक्ष्य",
-      "आसान पाचन, बेहतर पोषक तत्व अवशोषण",
-      "समग्र स्वास्थ्य को सहारा",
-      "रोग-प्रतिरोधक क्षमता को मजबूत करता है",
-      "दैनिक दुग्ध उत्पादन के लिए संतुलित ऊर्जा",
-      "रोज़ाना डेयरी पशुओं के लिए आदर्श",
+      "फैट की मात्रा 3.5% तक",
+      "क्रूड प्रोटीन न्यूनतम 21%",
+      "क्रूड फाइबर अधिकतम 11%",
+      "विटामिन A-7000 IU/KG से समृद्ध",
+      "नमी अधिकतम 12%",
+      "गाय का प्रजनन चक्र बेहतर बनाता है",
+      "सभी आवश्यक मिनरल्स से युक्त",
     ],
-  },
-  
+},
 
-  // BuffSpecial
-  {
-    slug: "barsana-buff-special",
-    name: "Buff Speciale",
-    nameHi: "बफ स्पेशल",
-    tag: "Buffalo Specialist",
-    tagHi: "भैंस विशेषज्ञ",
-    accent: "#2d6a3e",
-    image: BuffSpecial,
+
+
+// Barsana GOld 
+
+{
+    slug: "barsana-gold",
+    name: "Gold",
+    nameHi: "गोल्ड",
+    tag: "Premium",
+    tagHi: "प्रीमियम",
+    accent: "#c9650a",
+    image: gold,
     summary:
-      "Formulated specifically for Murrah, Surti and other buffalo breeds to maximise fat-rich milk production.",
+      "Also known as Barsana 'HiPro', formulated for cattle with a daily milk yield of more than 18-20 litres, delivering the highest-grade quality enriched with a variety of vitamins.",
     summaryHi:
-      "मुर्रा, सुरती और अन्य भैंस नस्लों के लिए विशेष रूप से तैयार, वसायुक्त दूध उत्पादन को अधिकतम करने के लिए।",
-    yield: "15–22 L/day",
-    yieldHi: "15–22 लीटर/दिन",
+      "बरसाना 'हाइप्रो' के नाम से भी जाना जाता है, उन पशुओं के लिए तैयार किया गया जिनकी दुधारू क्षमता प्रतिदिन 18-20 लीटर से अधिक है, जो विभिन्न प्रकार के विटामिन से युक्त सर्वोच्च गुणवत्ता प्रदान करता है।",
+    yield: "18–20+ L/day",
+    yieldHi: "18–20+ लीटर/दिन",
     protein: "22%",
-    fat: "6.5%",
+    fat: "4%",
     benefits: [
-      "Buffalo-optimised mineral mix",
-      "Higher butterfat yield",
-      "Improves coat and health",
-      "Supports heavy body buffaloes",
-      "Reduces heat stress",
-      "Proven across U.P. & Punjab farms",
+      "Also known as Barsana 'HiPro'",
+      "Balanced 4% fat content",
+      "22% protein for higher lactation",
+      "Ideal for cattle yielding 18-20+ L/day",
+      "Top-grade quality in its category",
+      "Enriched with a variety of vitamins",
     ],
     benefitsHi: [
-      "भैंस के लिए अनुकूलित मिनरल मिक्स",
-      "अधिक बटरफैट उत्पादन",
-      "त्वचा और स्वास्थ्य में सुधार",
-      "भारी शरीर वाली भैंसों को सहारा",
-      "गर्मी के तनाव को कम करता है",
-      "यू.पी. और पंजाब के फार्मों पर सिद्ध",
+      "बरसाना 'हाइप्रो' के नाम से भी जाना जाता है",
+      "संतुलित 4% फैट सामग्री",
+      "अधिक दुधारूपन के लिए 22% प्रोटीन",
+      "18-20+ लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "इस श्रेणी में सर्वोच्च गुणवत्ता",
+      "विभिन्न प्रकार के विटामिन से युक्त",
     ],
-  },
+},
+
+
+
+// Eight Thousand 
+
+{
+    slug: "barsana-8000",
+    name: "8000",
+    nameHi: "8000",
+    tag: "Most Popular",
+    tagHi: "सबसे लोकप्रिय",
+    accent: "#c9650a",
+    image: eightThousand,
+    summary:
+      "Barsana's most preferred and highest-demand product, formulated for cattle with a daily milk yield of 20-25 litres, fulfilling essential nutrient deficiencies and supporting overall body development.",
+    summaryHi:
+      "बरसाना का सबसे ज्यादा पसंद किया जाने वाला और सर्वाधिक मांग वाला उत्पाद, उन पशुओं के लिए तैयार किया गया जिनकी दुधारू क्षमता 20-25 लीटर प्रतिदिन की है, जो आवश्यक तत्वों की कमी को पूरा करता है और शरीर के सम्पूर्ण विकास को सहारा देता है।",
+    yield: "20–25 L/day",
+    yieldHi: "20–25 लीटर/दिन",
+    protein: "24%",
+    fat: "5%",
+    benefits: [
+      "Balanced 5% fat content",
+      "24% protein for higher lactation",
+      "Ideal for cattle yielding 20-25 L/day",
+      "Fulfils essential nutrient deficiencies",
+      "Supports complete body development",
+      "Most preferred, highest-demand product",
+    ],
+    benefitsHi: [
+      "संतुलित 5% फैट सामग्री",
+      "अधिक दुधारूपन के लिए 24% प्रोटीन",
+      "20-25 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "आवश्यक तत्वों की कमी को पूरा करता है",
+      "शरीर का सम्पूर्ण विकास करता है",
+      "सबसे ज्यादा पसंद किया जाने वाला, सर्वाधिक मांग वाला उत्पाद",
+    ],
+},
+
+
+
+
 
   // RoyalMixture
   {
     slug: "barsana-royal-mixture",
     name: "Royal Mixture",
     nameHi: "रॉयल मिक्सचर",
-    tag: "Supplement",
-    tagHi: "सप्लीमेंट",
-    accent: "#1565c0",
+    tag: "Royal",
+    tagHi: "रॉयल",
+    accent: "#a89a3a",
     image: RoyalMixture,
     summary:
-      "Concentrated mineral and vitamin supplement to correct deficiencies and maintain year-round herd health.",
+      "A steam-cooked feed made from a blend of cotton cake, cotton seed and mustard cake, designed for high digestion, better health and improved reproduction in cattle.",
     summaryHi:
-      "कमियों को दूर करने और साल भर झुंड के स्वास्थ्य को बनाए रखने के लिए केंद्रित खनिज और विटामिन सप्लीमेंट।",
-    yield: "—",
-    yieldHi: "—",
-    protein: "—",
-    fat: "—",
+      "कपास खली, कपास बीज और सरसों खली के मिश्रण से बना एक स्टीम से पका हुआ आहार, जो पशुओं में उच्च पाचन, बेहतर स्वास्थ्य और बेहतर प्रजनन के लिए तैयार किया गया है।",
+    yield: "N/A",
+    yieldHi: "N/A",
+    protein: "N/A",
+    fat: "N/A",
     benefits: [
-      "Corrects calcium & phosphorus imbalances",
-      "Prevents milk fever",
-      "Improves conception rates",
-      "Zinc & copper for hoof health",
-      "Daily 50–80g dosing",
-      "Compatible with all Barsana feeds",
+      "Supports high digestion",
+      "Improves overall health",
+      "Steam-cooked for better quality",
+      "Supports timely reproduction",
+      "Increases milk yield",
+      "Made from cotton cake, cotton seed and mustard cake",
     ],
     benefitsHi: [
-      "कैल्शियम और फास्फोरस असंतुलन को ठीक करता है",
-      "मिल्क फीवर को रोकता है",
-      "गर्भाधान दर में सुधार करता है",
-      "खुर स्वास्थ्य के लिए जिंक और कॉपर",
-      "दैनिक 50–80g खुराक",
-      "सभी बरसाना फीड के साथ संगत",
+      "उच्च पाचन को सहारा देता है",
+      "बेहतर स्वास्थ्य प्रदान करता है",
+      "बेहतर गुणवत्ता के लिए स्टीम से पका हुआ",
+      "समय से प्रजनन को सहारा देता है",
+      "अधिक दूध उत्पादन",
+      "कपास खली, कपास बीज और सरसों खली से निर्मित",
     ],
-  },
+},
 
+
+  
+
+   // Multigran Chokar
+   {
+    slug: "barsana-multigrain-chokar",
+    name: "Multigrain Chokar",
+    nameHi: "मल्टीग्रेन चोकर",
+    tag: "Multigrain",
+    tagHi: "मल्टीग्रेन",
+    accent: "#a89a3a",
+    image: MultiGranChukar,
+    summary:
+      "A steam-cooked feed made from a blend of sorghum, maize and mustard cake, designed for high digestion, better health and improved reproduction in cattle.",
+    summaryHi:
+      "ज्वार, मक्का और सरसों खली के मिश्रण से बना एक स्टीम से पका हुआ आहार, जो पशुओं में उच्च पाचन, बेहतर स्वास्थ्य और बेहतर प्रजनन के लिए तैयार किया गया है।",
+    yield: "N/A",
+    yieldHi: "N/A",
+    protein: "N/A",
+    fat: "N/A",
+    benefits: [
+      "Supports high digestion",
+      "Improves overall health",
+      "Steam-cooked for better quality",
+      "Supports timely reproduction",
+      "Increases milk yield",
+      "Made from sorghum, maize and mustard cake",
+    ],
+    benefitsHi: [
+      "उच्च पाचन को सहारा देता है",
+      "बेहतर स्वास्थ्य प्रदान करता है",
+      "बेहतर गुणवत्ता के लिए स्टीम से पका हुआ",
+      "समय से प्रजनन को सहारा देता है",
+      "अधिक दूध उत्पादन",
+      "ज्वार, मक्का और सरसों खली से निर्मित",
+    ],
+},
+  
+];
+
+
+export const HERO_PRODUCTS = [
 
   // Super
   {
-    slug: "barsana-super-economy",
+    slug: "barsana-super",
     name: "Super",
     nameHi: "सुपर",
     tag: "New",
@@ -484,205 +399,662 @@ export const HERO_PRODUCTS = [
     accent: "#4a148c",
     image: Super,
     summary:
-      "A high-energy, cost-efficient formula designed to sustain baseline daily milk production and maintain healthy cattle body weight.",
+      "Barsana's newest mash formula, launched on popular customer demand for cattle with a daily milk yield of 6-7 litres, delivering balanced protein and fat for top-grade health and productivity.",
     summaryHi:
-      "एक उच्च-ऊर्जा, लागत-कुशल फॉर्मूला जो बेसलाइन दैनिक दूध उत्पादन को बनाए रखने और स्वस्थ पशु शरीर भार को बनाए रखने के लिए डिज़ाइन किया गया है।",
-    yield: "14–20 L/day",
-    yieldHi: "14–20 लीटर/दिन",
-    protein: "21%",
-    fat: "4.0%",
+      "ग्राहकों की भारी माँग पर लॉन्च किया गया बरसाना का नवीनतम मैश फॉर्मूला, 6-7 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए, जो स्वास्थ्य और उत्पादकता के लिए संतुलित प्रोटीन और फैट प्रदान करता है।",
+    yield: "6–7 L/day",
+    yieldHi: "6–7 लीटर/दिन",
+    protein: "18%",
+    fat: "2.5%",
     benefits: [
-      "Provides sustained daily energy",
-      "Highly palatable mash texture",
-      "Supports stable milk fat levels",
-      "Maintains optimal body condition",
-      "Enriched with standard trace minerals",
-      "Budget-friendly commercial feed option",
+      "Balanced 2.5% fat content",
+      "18% protein for healthy lactation",
+      "Ideal for cattle yielding 6-7 L/day",
+      "Newest product launched on customer demand",
+      "Highly important for daily cattle nutrition",
+      "Top-grade quality in its category",
     ],
     benefitsHi: [
-      "निरंतर दैनिक ऊर्जा प्रदान करता है",
-      "अत्यधिक स्वादिष्ट मैश टेक्सचर",
-      "स्थिर मिल्क फैट स्तर को सहारा देता है",
-      "इष्टतम शारीरिक स्थिति बनाए रखता है",
-      "मानक ट्रेस मिनरल्स से समृद्ध",
-      "बजट-अनुकूल व्यावसायिक चारा विकल्प",
+      "संतुलित 2.5% फैट सामग्री",
+      "स्वस्थ दुधारूपन के लिए 18% प्रोटीन",
+      "6-7 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "ग्राहकों की माँग पर लॉन्च किया गया नवीनतम प्रोडक्ट",
+      "रोज़ाना पशु पोषण के लिए अत्यंत महत्वपूर्ण",
+      "इस श्रेणी में सर्वोच्च गुणवत्ता",
     ],
-  },
+},
+  
 
-  // Sudarshan
+  //supreme plus
   {
-    slug: "barsana-sudarshan",
-    name: "Sudarshan",
-    nameHi: "सुदर्शन",
-    tag: "Organic",
-    tagHi: "ऑर्गेनिक",
-    accent: "#558b2f",
-    image: sudarshan,
-    summary:
-      "Certified organic cattle feed for farms targeting organic dairy certification. No synthetic additives or preservatives.",
-    summaryHi:
-      "ऑर्गेनिक डेयरी प्रमाणीकरण के लक्ष्य रखने वाले फार्मों के लिए प्रमाणित ऑर्गेनिक पशु आहार। कोई सिंथेटिक एडिटिव या परिरक्षक नहीं।",
-    yield: "16–22 L/day",
-    yieldHi: "16–22 लीटर/दिन",
-    protein: "21%",
-    fat: "4.5%",
-    benefits: [
-      "Organic India certified",
-      "Zero synthetic additives",
-      "Non-GMO ingredients",
-      "Ideal for organic dairy farms",
-      "Supports premium milk pricing",
-      "Sustainably sourced grains",
-    ],
-    benefitsHi: [
-      "ऑर्गेनिक इंडिया प्रमाणित",
-      "शून्य सिंथेटिक एडिटिव",
-      "नॉन-GMO सामग्री",
-      "ऑर्गेनिक डेयरी फार्मों के लिए आदर्श",
-      "प्रीमियम दूध मूल्य निर्धारण को सहारा",
-      "टिकाऊ रूप से प्राप्त अनाज",
-    ],
-  },
-
-
-  // SupremePlus
-  {
-    slug: "barsana-supreme-plus-advanced",
-    name: "Supreme Plus",
+    slug: "barsana-supreme-plus",
+    name: "Supreme +",
     nameHi: "सुप्रीम प्लस",
     tag: "New",
     tagHi: "नया",
-    accent: "#7b1fa2",
+    accent: "#4a148c",
     image: SupremePlus,
     summary:
-      "An advanced mid-tier feed specifically calibrated with an enhanced protein profile to improve overall milk solids-not-fat (SNF) percentages.",
+      "Barsana's newest mash formula, launched on popular customer demand for cattle with a daily milk yield of 6-7 litres, delivering balanced protein and fat for top-grade health and productivity.",
     summaryHi:
-      "एक उन्नत मिड-टियर फीड जो समग्र मिल्क सॉलिड्स-नॉट-फैट (SNF) प्रतिशत में सुधार के लिए बेहतर प्रोटीन प्रोफाइल के साथ विशेष रूप से कैलिब्रेट किया गया है।",
-    yield: "18–24 L/day",
-    yieldHi: "18–24 लीटर/दिन",
-    protein: "23%",
-    fat: "5.5%",
+      "ग्राहकों की भारी माँग पर लॉन्च किया गया बरसाना का नवीनतम मैश फॉर्मूला, 6-7 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए, जो स्वास्थ्य और उत्पादकता के लिए संतुलित प्रोटीन और फैट प्रदान करता है।",
+    yield: "6–7 L/day",
+    yieldHi: "6–7 लीटर/दिन",
+    protein: "18%",
+    fat: "2.5%",
     benefits: [
-      "Significantly improves SNF levels",
-      "Balanced calcium-to-phosphorus ratio",
-      "Boosts immunity against local diseases",
-      "Optimized for seasonal transition periods",
-      "Contains gut-friendly live yeast cultures",
-      "Ideal for commercial crossbreed cows",
+      "Balanced 2.5% fat content",
+      "18% protein for healthy lactation",
+      "Ideal for cattle yielding 6-7 L/day",
+      "Newest product launched on customer demand",
+      "Highly important for daily cattle nutrition",
+      "Top-grade quality in its category",
     ],
     benefitsHi: [
-      "SNF स्तर में उल्लेखनीय सुधार",
-      "संतुलित कैल्शियम-से-फास्फोरस अनुपात",
-      "स्थानीय बीमारियों के खिलाफ प्रतिरोधक क्षमता बढ़ाता है",
-      "मौसमी संक्रमण काल के लिए अनुकूलित",
-      "आंत-अनुकूल लाइव यीस्ट कल्चर युक्त",
-      "व्यावसायिक क्रॉसब्रीड गायों के लिए आदर्श",
+      "संतुलित 2.5% फैट सामग्री",
+      "स्वस्थ दुधारूपन के लिए 18% प्रोटीन",
+      "6-7 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "ग्राहकों की माँग पर लॉन्च किया गया नवीनतम प्रोडक्ट",
+      "रोज़ाना पशु पोषण के लिए अत्यंत महत्वपूर्ण",
+      "इस श्रेणी में सर्वोच्च गुणवत्ता",
     ],
-  },
-   // Multigran Chokar
-  {
-    slug: "barsana-multi-gran-chokar",
-    name: "Multi Gran Chokar",
-    nameHi: "मल्टी ग्रान चोकर",
-    tag: "Young Stock",
-    tagHi: "युवा पशु",
-    accent: "#6d4c41",
-    image: MultiGranChukar,
-    summary:
-      "Purpose-built starter feed for calves from 2 weeks to 3 months. Supports rumen development and healthy early growth.",
-    summaryHi:
-      "2 सप्ताह से 3 महीने तक के बछड़ों के लिए विशेष रूप से बना स्टार्टर फीड। रूमेन विकास और स्वस्थ प्रारंभिक वृद्धि को सहारा देता है।",
-    yield: "—",
-    yieldHi: "—",
-    protein: "22%",
-    fat: "4%",
-    benefits: [
-      "Accelerates rumen development",
-      "High palatability for young stock",
-      "Probiotics for gut health",
-      "Reduces weaning stress",
-      "Pellet form for easy intake",
-      "For calves 2 weeks–3 months",
-    ],
-    benefitsHi: [
-      "रूमेन विकास को तेज करता है",
-      "युवा पशुओं के लिए उच्च स्वादिष्टता",
-      "आंत स्वास्थ्य के लिए प्रोबायोटिक्स",
-      "दूध छुड़ाने के तनाव को कम करता है",
-      "आसान सेवन के लिए पेलेट फॉर्म",
-      "2 सप्ताह–3 महीने के बछड़ों के लिए",
-    ],
-  },
+},
 
-  // barsanaChuri
-  {
+
+// Churi
+    {
     slug: "barsana-churi",
     name: "Churi",
-    nameHi: "चुरी",
+    nameHi: "चूरी",
     tag: "Essential",
     tagHi: "आवश्यक",
     accent: "#8a2a1a",
-    image: churi,
+    image: Churi,
     summary:
-      "A cost-effective everyday feed designed for animals with a milk production capacity of 10–12 litres per day, supporting steady energy and digestion.",
+      "A mineral-enriched everyday feed for cattle with a daily milk yield of 10-12 litres, boosting milk production capacity while strengthening disease resistance.",
     summaryHi:
-      "10–12 लीटर प्रतिदिन दुग्ध उत्पादन क्षमता वाले पशुओं के लिए एक किफायती दैनिक आहार, जो निरंतर ऊर्जा और पाचन को सहारा देता है।",
+      "10-12 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए एक मिनरल-समृद्ध दैनिक आहार, जो दूध उत्पादन की शक्ति बढ़ाने के साथ-साथ रोग प्रतिरोधक क्षमता को भी मज़बूत करता है।",
     yield: "10–12 L/day",
     yieldHi: "10–12 लीटर/दिन",
     protein: "20%",
     fat: "3%",
     benefits: [
-      "Targets 10–12 L/day milk production",
-      "Cost-effective everyday nutrition",
-      "Supports steady energy levels",
-      "Easy to digest, gentle on the gut",
-      "Maintains consistent milk quality",
-      "Ideal for regular dairy households",
+      "Balanced 3% fat content",
+      "20% protein for higher lactation",
+      "Ideal for cattle yielding 10-12 L/day",
+      "Boosts milk production capacity",
+      "Strengthens disease resistance",
+      "Enriched with essential minerals, calcium and phosphorus",
     ],
     benefitsHi: [
-      "10–12 लीटर/दिन दुग्ध उत्पादन का लक्ष्य",
-      "किफायती दैनिक पोषण",
-      "स्थिर ऊर्जा स्तर को सहारा",
-      "आसानी से पचने वाला, पाचन तंत्र के लिए सरल",
-      "दूध की निरंतर गुणवत्ता बनाए रखता है",
-      "नियमित डेयरी परिवारों के लिए आदर्श",
+      "संतुलित 3% फैट सामग्री",
+      "अधिक दुधारूपन के लिए 20% प्रोटीन",
+      "10-12 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "दूध उत्पादन की शक्ति बढ़ाता है",
+      "रोग प्रतिरोधक क्षमता को मज़बूत करता है",
+      "आवश्यक मिनरल्स, कैल्शियम और फॉस्फोरस से समृद्ध",
     ],
-  },
+},
 
-  // eightThousand
+
+// BuffSpecial
   {
-    slug: "barsana-eight-thousand-buffalo",
-    name: "Eight Thousand",
+    slug: "barsana-buff-special",
+    name: "Buff Special",
+    nameHi: "भैंस स्पेशल",
+    tag: "Buffalo Specialist",
+    tagHi: "भैंस विशेषज्ञ",
+    accent: "#2d6a3e",
+    image: BuffSpecial,
+    summary:
+      "Extremely important for cattle with a daily milk yield of more than 15 litres, enriched with a variety of vitamins for top-grade health and productivity.",
+    summaryHi:
+      "उन पशुओं के लिए अत्यंत महत्वपूर्ण जिनकी दुधारू क्षमता प्रतिदिन 15 लीटर से अधिक है, विभिन्न प्रकार के विटामिन से युक्त, उत्तम स्वास्थ्य और उत्पादकता के लिए।",
+    yield: ">15 L/day",
+    yieldHi: ">15 लीटर/दिन",
+    protein: "22%",
+    fat: "7%",
+    benefits: [
+      "Extremely important for >15 L/day cattle",
+      "Fat content up to 7%",
+      "Minimum crude protein of 22%",
+      "Enriched with a variety of vitamins",
+      "Top-grade quality in its category",
+      "Highest-grade product of its kind",
+    ],
+    benefitsHi: [
+      "15 लीटर/दिन से अधिक देने वाले पशुओं के लिए अत्यंत महत्वपूर्ण",
+      "फैट की मात्रा 7% तक",
+      "क्रूड प्रोटीन न्यूनतम 22%",
+      "विभिन्न प्रकार के विटामिन से युक्त",
+      "इस श्रेणी में सर्वोत्तम गुणवत्ता",
+      "अपनी श्रेणी का सर्वाधिक उच्च कोटि का उत्पाद",
+    ],
+},
+
+
+// Special Dairy
+{
+    slug: "barsana-dairy-special",
+    name: "Dairy Special",
+    nameHi: "डेयरी स्पेशल",
+    tag: "Special",
+    tagHi: "स्पेशल",
+    accent: "#8a2a1a",
+    image: BarsanaPacketRed,
+    summary:
+      "Extremely important for cattle with a daily milk yield of 15-18 litres, boosting milk-yielding capacity while improving the cow's reproductive cycle.",
+    summaryHi:
+      "उन पशुओं के लिए अत्यंत महत्वपूर्ण जिनकी दुधारू क्षमता 15-18 लीटर प्रतिदिन की है, जो दुधारू क्षमता बढ़ाने के साथ-साथ गाय के प्रजनन चक्र को भी बेहतर बनाता है।",
+    yield: "15–18 L/day",
+    yieldHi: "15–18 लीटर/दिन",
+    protein: "21%",
+    fat: "3.5%",
+    benefits: [
+      "Fat content up to 3.5%",
+      "Minimum crude protein of 21%",
+      "Maximum crude fibre of 11%",
+      "Vitamin A enriched at 7000 IU/KG",
+      "Maximum moisture of 12%",
+      "Improves the cow's reproductive cycle",
+      "Enriched with all essential minerals",
+    ],
+    benefitsHi: [
+      "फैट की मात्रा 3.5% तक",
+      "क्रूड प्रोटीन न्यूनतम 21%",
+      "क्रूड फाइबर अधिकतम 11%",
+      "विटामिन A-7000 IU/KG से समृद्ध",
+      "नमी अधिकतम 12%",
+      "गाय का प्रजनन चक्र बेहतर बनाता है",
+      "सभी आवश्यक मिनरल्स से युक्त",
+    ],
+},
+
+
+
+// Barsana GOld 
+
+{
+    slug: "barsana-gold",
+    name: "Gold",
+    nameHi: "गोल्ड",
+    tag: "Premium",
+    tagHi: "प्रीमियम",
+    accent: "#c9650a",
+    image: gold,
+    summary:
+      "Also known as Barsana 'HiPro', formulated for cattle with a daily milk yield of more than 18-20 litres, delivering the highest-grade quality enriched with a variety of vitamins.",
+    summaryHi:
+      "बरसाना 'हाइप्रो' के नाम से भी जाना जाता है, उन पशुओं के लिए तैयार किया गया जिनकी दुधारू क्षमता प्रतिदिन 18-20 लीटर से अधिक है, जो विभिन्न प्रकार के विटामिन से युक्त सर्वोच्च गुणवत्ता प्रदान करता है।",
+    yield: "18–20+ L/day",
+    yieldHi: "18–20+ लीटर/दिन",
+    protein: "22%",
+    fat: "4%",
+    benefits: [
+      "Also known as Barsana 'HiPro'",
+      "Balanced 4% fat content",
+      "22% protein for higher lactation",
+      "Ideal for cattle yielding 18-20+ L/day",
+      "Top-grade quality in its category",
+      "Enriched with a variety of vitamins",
+    ],
+    benefitsHi: [
+      "बरसाना 'हाइप्रो' के नाम से भी जाना जाता है",
+      "संतुलित 4% फैट सामग्री",
+      "अधिक दुधारूपन के लिए 22% प्रोटीन",
+      "18-20+ लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "इस श्रेणी में सर्वोच्च गुणवत्ता",
+      "विभिन्न प्रकार के विटामिन से युक्त",
+    ],
+},
+
+
+
+// Eight Thousand 
+
+{
+    slug: "barsana-8000",
+    name: "8000",
     nameHi: "8000",
-    tag: "New",
-    tagHi: "नया",
-    accent: "#e91e63",
+    tag: "Most Popular",
+    tagHi: "सबसे लोकप्रिय",
+    accent: "#c9650a",
     image: eightThousand,
     summary:
-      "Our elite, high-fat formulation engineered specifically for high-potential Murrah buffaloes to maximize thick A2 fat-rich milk production.",
+      "Barsana's most preferred and highest-demand product, formulated for cattle with a daily milk yield of 20-25 litres, fulfilling essential nutrient deficiencies and supporting overall body development.",
     summaryHi:
-      "हमारा एलीट, उच्च-वसा फॉर्मूलेशन विशेष रूप से उच्च-क्षमता वाली मुर्रा भैंसों के लिए तैयार किया गया है, जो गाढ़े A2 वसायुक्त दूध उत्पादन को अधिकतम करता है।",
-    yield: "20–28 L/day",
-    yieldHi: "20–28 लीटर/दिन",
-    protein: "25%",
-    fat: "7.5%",
+      "बरसाना का सबसे ज्यादा पसंद किया जाने वाला और सर्वाधिक मांग वाला उत्पाद, उन पशुओं के लिए तैयार किया गया जिनकी दुधारू क्षमता 20-25 लीटर प्रतिदिन की है, जो आवश्यक तत्वों की कमी को पूरा करता है और शरीर के सम्पूर्ण विकास को सहारा देता है।",
+    yield: "20–25 L/day",
+    yieldHi: "20–25 लीटर/दिन",
+    protein: "24%",
+    fat: "5%",
     benefits: [
-      "Maximises heavy A2 fat output",
-      "Rumen-protected bypass fat infusion",
-      "Supports heavy prolonged lactation cycles",
-      "Improves buffalo body condition score",
-      "Advanced chelated zinc & copper complex",
-      "Newly launching across U.P. & Bihar markets",
+      "Balanced 5% fat content",
+      "24% protein for higher lactation",
+      "Ideal for cattle yielding 20-25 L/day",
+      "Fulfils essential nutrient deficiencies",
+      "Supports complete body development",
+      "Most preferred, highest-demand product",
     ],
     benefitsHi: [
-      "भारी A2 फैट आउटपुट को अधिकतम करता है",
-      "रूमेन-प्रोटेक्टेड बाईपास फैट इन्फ्यूजन",
-      "लंबे दुग्धकाल चक्र को सहारा देता है",
-      "भैंस के शारीरिक स्कोर में सुधार",
-      "उन्नत चीलेटेड जिंक और कॉपर कॉम्प्लेक्स",
-      "यू.पी. और बिहार बाजारों में नई लॉन्च",
+      "संतुलित 5% फैट सामग्री",
+      "अधिक दुधारूपन के लिए 24% प्रोटीन",
+      "20-25 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+      "आवश्यक तत्वों की कमी को पूरा करता है",
+      "शरीर का सम्पूर्ण विकास करता है",
+      "सबसे ज्यादा पसंद किया जाने वाला, सर्वाधिक मांग वाला उत्पाद",
     ],
-  },
+},
+
+
+
+
+
+  // RoyalMixture
+  {
+    slug: "barsana-royal-mixture",
+    name: "Royal Mixture",
+    nameHi: "रॉयल मिक्सचर",
+    tag: "Royal",
+    tagHi: "रॉयल",
+    accent: "#a89a3a",
+    image: RoyalMixture,
+    summary:
+      "A steam-cooked feed made from a blend of cotton cake, cotton seed and mustard cake, designed for high digestion, better health and improved reproduction in cattle.",
+    summaryHi:
+      "कपास खली, कपास बीज और सरसों खली के मिश्रण से बना एक स्टीम से पका हुआ आहार, जो पशुओं में उच्च पाचन, बेहतर स्वास्थ्य और बेहतर प्रजनन के लिए तैयार किया गया है।",
+    yield: "N/A",
+    yieldHi: "N/A",
+    protein: "N/A",
+    fat: "N/A",
+    benefits: [
+      "Supports high digestion",
+      "Improves overall health",
+      "Steam-cooked for better quality",
+      "Supports timely reproduction",
+      "Increases milk yield",
+      "Made from cotton cake, cotton seed and mustard cake",
+    ],
+    benefitsHi: [
+      "उच्च पाचन को सहारा देता है",
+      "बेहतर स्वास्थ्य प्रदान करता है",
+      "बेहतर गुणवत्ता के लिए स्टीम से पका हुआ",
+      "समय से प्रजनन को सहारा देता है",
+      "अधिक दूध उत्पादन",
+      "कपास खली, कपास बीज और सरसों खली से निर्मित",
+    ],
+},
+
+
+  
+
+   // Multigran Chokar
+   {
+    slug: "barsana-multigrain-chokar",
+    name: "Multigrain Chokar",
+    nameHi: "मल्टीग्रेन चोकर",
+    tag: "Multigrain",
+    tagHi: "मल्टीग्रेन",
+    accent: "#a89a3a",
+    image: MultiGranChukar,
+    summary:
+      "A steam-cooked feed made from a blend of sorghum, maize and mustard cake, designed for high digestion, better health and improved reproduction in cattle.",
+    summaryHi:
+      "ज्वार, मक्का और सरसों खली के मिश्रण से बना एक स्टीम से पका हुआ आहार, जो पशुओं में उच्च पाचन, बेहतर स्वास्थ्य और बेहतर प्रजनन के लिए तैयार किया गया है।",
+    yield: "N/A",
+    yieldHi: "N/A",
+    protein: "N/A",
+    fat: "N/A",
+    benefits: [
+      "Supports high digestion",
+      "Improves overall health",
+      "Steam-cooked for better quality",
+      "Supports timely reproduction",
+      "Increases milk yield",
+      "Made from sorghum, maize and mustard cake",
+    ],
+    benefitsHi: [
+      "उच्च पाचन को सहारा देता है",
+      "बेहतर स्वास्थ्य प्रदान करता है",
+      "बेहतर गुणवत्ता के लिए स्टीम से पका हुआ",
+      "समय से प्रजनन को सहारा देता है",
+      "अधिक दूध उत्पादन",
+      "ज्वार, मक्का और सरसों खली से निर्मित",
+    ],
+},
+  
+
+//   // Super
+//   {
+//     slug: "barsana-super",
+//     name: "Super",
+//     nameHi: "सुपर",
+//     tag: "New",
+//     tagHi: "नया",
+//     accent: "#4a148c",
+//     image: Super,
+//     summary:
+//       "Barsana's newest mash formula, launched on popular customer demand for cattle with a daily milk yield of 6-7 litres, delivering balanced protein and fat for top-grade health and productivity.",
+//     summaryHi:
+//       "ग्राहकों की भारी माँग पर लॉन्च किया गया बरसाना का नवीनतम मैश फॉर्मूला, 6-7 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए, जो स्वास्थ्य और उत्पादकता के लिए संतुलित प्रोटीन और फैट प्रदान करता है।",
+//     yield: "6–7 L/day",
+//     yieldHi: "6–7 लीटर/दिन",
+//     protein: "18%",
+//     fat: "2.5%",
+//     benefits: [
+//       "Balanced 2.5% fat content",
+//       "18% protein for healthy lactation",
+//       "Ideal for cattle yielding 6-7 L/day",
+//       "Newest product launched on customer demand",
+//       "Highly important for daily cattle nutrition",
+//       "Top-grade quality in its category",
+//     ],
+//     benefitsHi: [
+//       "संतुलित 2.5% फैट सामग्री",
+//       "स्वस्थ दुधारूपन के लिए 18% प्रोटीन",
+//       "6-7 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+//       "ग्राहकों की माँग पर लॉन्च किया गया नवीनतम प्रोडक्ट",
+//       "रोज़ाना पशु पोषण के लिए अत्यंत महत्वपूर्ण",
+//       "इस श्रेणी में सर्वोच्च गुणवत्ता",
+//     ],
+// },
+  
+
+//   //supreme plus
+//   {
+//     slug: "barsana-super",
+//     name: "Super",
+//     nameHi: "सुपर",
+//     tag: "New",
+//     tagHi: "नया",
+//     accent: "#4a148c",
+//     image: Super,
+//     summary:
+//       "Barsana's newest mash formula, launched on popular customer demand for cattle with a daily milk yield of 6-7 litres, delivering balanced protein and fat for top-grade health and productivity.",
+//     summaryHi:
+//       "ग्राहकों की भारी माँग पर लॉन्च किया गया बरसाना का नवीनतम मैश फॉर्मूला, 6-7 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए, जो स्वास्थ्य और उत्पादकता के लिए संतुलित प्रोटीन और फैट प्रदान करता है।",
+//     yield: "6–7 L/day",
+//     yieldHi: "6–7 लीटर/दिन",
+//     protein: "18%",
+//     fat: "2.5%",
+//     benefits: [
+//       "Balanced 2.5% fat content",
+//       "18% protein for healthy lactation",
+//       "Ideal for cattle yielding 6-7 L/day",
+//       "Newest product launched on customer demand",
+//       "Highly important for daily cattle nutrition",
+//       "Top-grade quality in its category",
+//     ],
+//     benefitsHi: [
+//       "संतुलित 2.5% फैट सामग्री",
+//       "स्वस्थ दुधारूपन के लिए 18% प्रोटीन",
+//       "6-7 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+//       "ग्राहकों की माँग पर लॉन्च किया गया नवीनतम प्रोडक्ट",
+//       "रोज़ाना पशु पोषण के लिए अत्यंत महत्वपूर्ण",
+//       "इस श्रेणी में सर्वोच्च गुणवत्ता",
+//     ],
+// },
+
+
+// // Churi
+//     {
+//     slug: "barsana-churi",
+//     name: "Churi",
+//     nameHi: "चूरी",
+//     tag: "Essential",
+//     tagHi: "आवश्यक",
+//     accent: "#8a2a1a",
+//     image: Churi,
+//     summary:
+//       "A mineral-enriched everyday feed for cattle with a daily milk yield of 10-12 litres, boosting milk production capacity while strengthening disease resistance.",
+//     summaryHi:
+//       "10-12 लीटर प्रतिदिन दूध देने वाले पशुओं के लिए एक मिनरल-समृद्ध दैनिक आहार, जो दूध उत्पादन की शक्ति बढ़ाने के साथ-साथ रोग प्रतिरोधक क्षमता को भी मज़बूत करता है।",
+//     yield: "10–12 L/day",
+//     yieldHi: "10–12 लीटर/दिन",
+//     protein: "20%",
+//     fat: "3%",
+//     benefits: [
+//       "Balanced 3% fat content",
+//       "20% protein for higher lactation",
+//       "Ideal for cattle yielding 10-12 L/day",
+//       "Boosts milk production capacity",
+//       "Strengthens disease resistance",
+//       "Enriched with essential minerals, calcium and phosphorus",
+//     ],
+//     benefitsHi: [
+//       "संतुलित 3% फैट सामग्री",
+//       "अधिक दुधारूपन के लिए 20% प्रोटीन",
+//       "10-12 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+//       "दूध उत्पादन की शक्ति बढ़ाता है",
+//       "रोग प्रतिरोधक क्षमता को मज़बूत करता है",
+//       "आवश्यक मिनरल्स, कैल्शियम और फॉस्फोरस से समृद्ध",
+//     ],
+// },
+
+
+// // BuffSpecial
+//   {
+//     slug: "barsana-buff-special",
+//     name: "Buff Special",
+//     nameHi: "भैंस स्पेशल",
+//     tag: "Buffalo Specialist",
+//     tagHi: "भैंस विशेषज्ञ",
+//     accent: "#2d6a3e",
+//     image: Super,
+//     summary:
+//       "Extremely important for cattle with a daily milk yield of more than 15 litres, enriched with a variety of vitamins for top-grade health and productivity.",
+//     summaryHi:
+//       "उन पशुओं के लिए अत्यंत महत्वपूर्ण जिनकी दुधारू क्षमता प्रतिदिन 15 लीटर से अधिक है, विभिन्न प्रकार के विटामिन से युक्त, उत्तम स्वास्थ्य और उत्पादकता के लिए।",
+//     yield: ">15 L/day",
+//     yieldHi: ">15 लीटर/दिन",
+//     protein: "22%",
+//     fat: "7%",
+//     benefits: [
+//       "Extremely important for >15 L/day cattle",
+//       "Fat content up to 7%",
+//       "Minimum crude protein of 22%",
+//       "Enriched with a variety of vitamins",
+//       "Top-grade quality in its category",
+//       "Highest-grade product of its kind",
+//     ],
+//     benefitsHi: [
+//       "15 लीटर/दिन से अधिक देने वाले पशुओं के लिए अत्यंत महत्वपूर्ण",
+//       "फैट की मात्रा 7% तक",
+//       "क्रूड प्रोटीन न्यूनतम 22%",
+//       "विभिन्न प्रकार के विटामिन से युक्त",
+//       "इस श्रेणी में सर्वोत्तम गुणवत्ता",
+//       "अपनी श्रेणी का सर्वाधिक उच्च कोटि का उत्पाद",
+//     ],
+// },
+
+
+// // Special Dairy
+// {
+//     slug: "barsana-dairy-special",
+//     name: "Dairy Special",
+//     nameHi: "डेयरी स्पेशल",
+//     tag: "Special",
+//     tagHi: "स्पेशल",
+//     accent: "#8a2a1a",
+//     image: Super,
+//     summary:
+//       "Extremely important for cattle with a daily milk yield of 15-18 litres, boosting milk-yielding capacity while improving the cow's reproductive cycle.",
+//     summaryHi:
+//       "उन पशुओं के लिए अत्यंत महत्वपूर्ण जिनकी दुधारू क्षमता 15-18 लीटर प्रतिदिन की है, जो दुधारू क्षमता बढ़ाने के साथ-साथ गाय के प्रजनन चक्र को भी बेहतर बनाता है।",
+//     yield: "15–18 L/day",
+//     yieldHi: "15–18 लीटर/दिन",
+//     protein: "21%",
+//     fat: "3.5%",
+//     benefits: [
+//       "Fat content up to 3.5%",
+//       "Minimum crude protein of 21%",
+//       "Maximum crude fibre of 11%",
+//       "Vitamin A enriched at 7000 IU/KG",
+//       "Maximum moisture of 12%",
+//       "Improves the cow's reproductive cycle",
+//       "Enriched with all essential minerals",
+//     ],
+//     benefitsHi: [
+//       "फैट की मात्रा 3.5% तक",
+//       "क्रूड प्रोटीन न्यूनतम 21%",
+//       "क्रूड फाइबर अधिकतम 11%",
+//       "विटामिन A-7000 IU/KG से समृद्ध",
+//       "नमी अधिकतम 12%",
+//       "गाय का प्रजनन चक्र बेहतर बनाता है",
+//       "सभी आवश्यक मिनरल्स से युक्त",
+//     ],
+// },
+
+
+
+// // Barsana GOld 
+
+// {
+//     slug: "barsana-gold",
+//     name: "Gold",
+//     nameHi: "गोल्ड",
+//     tag: "Premium",
+//     tagHi: "प्रीमियम",
+//     accent: "#c9650a",
+//     image: Super,
+//     summary:
+//       "Also known as Barsana 'HiPro', formulated for cattle with a daily milk yield of more than 18-20 litres, delivering the highest-grade quality enriched with a variety of vitamins.",
+//     summaryHi:
+//       "बरसाना 'हाइप्रो' के नाम से भी जाना जाता है, उन पशुओं के लिए तैयार किया गया जिनकी दुधारू क्षमता प्रतिदिन 18-20 लीटर से अधिक है, जो विभिन्न प्रकार के विटामिन से युक्त सर्वोच्च गुणवत्ता प्रदान करता है।",
+//     yield: "18–20+ L/day",
+//     yieldHi: "18–20+ लीटर/दिन",
+//     protein: "22%",
+//     fat: "4%",
+//     benefits: [
+//       "Also known as Barsana 'HiPro'",
+//       "Balanced 4% fat content",
+//       "22% protein for higher lactation",
+//       "Ideal for cattle yielding 18-20+ L/day",
+//       "Top-grade quality in its category",
+//       "Enriched with a variety of vitamins",
+//     ],
+//     benefitsHi: [
+//       "बरसाना 'हाइप्रो' के नाम से भी जाना जाता है",
+//       "संतुलित 4% फैट सामग्री",
+//       "अधिक दुधारूपन के लिए 22% प्रोटीन",
+//       "18-20+ लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+//       "इस श्रेणी में सर्वोच्च गुणवत्ता",
+//       "विभिन्न प्रकार के विटामिन से युक्त",
+//     ],
+// },
+
+
+
+// // Eight Thousand 
+
+// {
+//     slug: "barsana-8000",
+//     name: "8000",
+//     nameHi: "8000",
+//     tag: "Most Popular",
+//     tagHi: "सबसे लोकप्रिय",
+//     accent: "#c9650a",
+//     image: Super,
+//     summary:
+//       "Barsana's most preferred and highest-demand product, formulated for cattle with a daily milk yield of 20-25 litres, fulfilling essential nutrient deficiencies and supporting overall body development.",
+//     summaryHi:
+//       "बरसाना का सबसे ज्यादा पसंद किया जाने वाला और सर्वाधिक मांग वाला उत्पाद, उन पशुओं के लिए तैयार किया गया जिनकी दुधारू क्षमता 20-25 लीटर प्रतिदिन की है, जो आवश्यक तत्वों की कमी को पूरा करता है और शरीर के सम्पूर्ण विकास को सहारा देता है।",
+//     yield: "20–25 L/day",
+//     yieldHi: "20–25 लीटर/दिन",
+//     protein: "24%",
+//     fat: "5%",
+//     benefits: [
+//       "Balanced 5% fat content",
+//       "24% protein for higher lactation",
+//       "Ideal for cattle yielding 20-25 L/day",
+//       "Fulfils essential nutrient deficiencies",
+//       "Supports complete body development",
+//       "Most preferred, highest-demand product",
+//     ],
+//     benefitsHi: [
+//       "संतुलित 5% फैट सामग्री",
+//       "अधिक दुधारूपन के लिए 24% प्रोटीन",
+//       "20-25 लीटर/दिन देने वाले पशुओं के लिए आदर्श",
+//       "आवश्यक तत्वों की कमी को पूरा करता है",
+//       "शरीर का सम्पूर्ण विकास करता है",
+//       "सबसे ज्यादा पसंद किया जाने वाला, सर्वाधिक मांग वाला उत्पाद",
+//     ],
+// },
+
+
+//   // RoyalMixture
+//   {
+//     slug: "barsana-royal-mixture",
+//     name: "Royal Mixture",
+//     nameHi: "रॉयल मिक्सचर",
+//     tag: "Royal",
+//     tagHi: "रॉयल",
+//     accent: "#a89a3a",
+//     image: RoyalMixture,
+//     summary:
+//       "A steam-cooked feed made from a blend of cotton cake, cotton seed and mustard cake, designed for high digestion, better health and improved reproduction in cattle.",
+//     summaryHi:
+//       "कपास खली, कपास बीज और सरसों खली के मिश्रण से बना एक स्टीम से पका हुआ आहार, जो पशुओं में उच्च पाचन, बेहतर स्वास्थ्य और बेहतर प्रजनन के लिए तैयार किया गया है।",
+//     yield: "N/A",
+//     yieldHi: "N/A",
+//     protein: "N/A",
+//     fat: "N/A",
+//     benefits: [
+//       "Supports high digestion",
+//       "Improves overall health",
+//       "Steam-cooked for better quality",
+//       "Supports timely reproduction",
+//       "Increases milk yield",
+//       "Made from cotton cake, cotton seed and mustard cake",
+//     ],
+//     benefitsHi: [
+//       "उच्च पाचन को सहारा देता है",
+//       "बेहतर स्वास्थ्य प्रदान करता है",
+//       "बेहतर गुणवत्ता के लिए स्टीम से पका हुआ",
+//       "समय से प्रजनन को सहारा देता है",
+//       "अधिक दूध उत्पादन",
+//       "कपास खली, कपास बीज और सरसों खली से निर्मित",
+//     ],
+// },
+  
+
+//    // Multigran Chokar
+//    {
+//     slug: "barsana-multigrain-chokar",
+//     name: "Multigrain Chokar",
+//     nameHi: "मल्टीग्रेन चोकर",
+//     tag: "Multigrain",
+//     tagHi: "मल्टीग्रेन",
+//     accent: "#a89a3a",
+//     image: MultiGranChukar,
+//     summary:
+//       "A steam-cooked feed made from a blend of sorghum, maize and mustard cake, designed for high digestion, better health and improved reproduction in cattle.",
+//     summaryHi:
+//       "ज्वार, मक्का और सरसों खली के मिश्रण से बना एक स्टीम से पका हुआ आहार, जो पशुओं में उच्च पाचन, बेहतर स्वास्थ्य और बेहतर प्रजनन के लिए तैयार किया गया है।",
+//     yield: "N/A",
+//     yieldHi: "N/A",
+//     protein: "N/A",
+//     fat: "N/A",
+//     benefits: [
+//       "Supports high digestion",
+//       "Improves overall health",
+//       "Steam-cooked for better quality",
+//       "Supports timely reproduction",
+//       "Increases milk yield",
+//       "Made from sorghum, maize and mustard cake",
+//     ],
+//     benefitsHi: [
+//       "उच्च पाचन को सहारा देता है",
+//       "बेहतर स्वास्थ्य प्रदान करता है",
+//       "बेहतर गुणवत्ता के लिए स्टीम से पका हुआ",
+//       "समय से प्रजनन को सहारा देता है",
+//       "अधिक दूध उत्पादन",
+//       "ज्वार, मक्का और सरसों खली से निर्मित",
+//     ],
+// },
+ 
+
+
 ];
 
 

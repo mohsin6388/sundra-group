@@ -26,7 +26,7 @@ function Footer() {
         .footer{
           background:#16261b;
           color:#f8f1e1;
-          margin-top:80px;
+          
         }
 
         .footer-container{
