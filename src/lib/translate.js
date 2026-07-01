@@ -168,13 +168,13 @@ export const content = {
   "science.energy.value": { hi: "2200–2800 kcal/kg", en: "2200–2800 kcal/kg" },
 
   "science.protein.label": { hi: "क्रूड प्रोटीन", en: "Crude Protein" },
-  "science.protein.value": { hi: "20–24%", en: "20–24%" },
+  "science.protein.value": { hi: "18–24%", en: "18–24%" },
 
   "science.fibre.label": { hi: "क्रूड फाइबर", en: "Crude Fibre" },
   "science.fibre.value": { hi: "≤ 11%", en: "≤ 11%" },
 
   "science.fat.label": { hi: "वसा (E.E.)", en: "Fat (E.E.)" },
-  "science.fat.value": { hi: "3–7%", en: "3–7%" },
+  "science.fat.value": { hi: "2.5–7%", en: "2.5–7%" },
 
   "science.moisture.label": { hi: "नमी", en: "Moisture" },
   "science.moisture.value": { hi: "≤ 12%", en: "≤ 12%" },
@@ -245,23 +245,62 @@ export const content = {
   "about.stats.states": { hi: "राज्यों में उपस्थिति", en: "States Covered" },
 
   // Mission
+  // "about.mission.tag": { hi: "हमारा मिशन", en: "Our Mission" },
+  // "about.mission.title_1": {
+  //   hi: "डेयरी किसानों को ऐसे चारे से सशक्त बनाना जो बनाए",
+  //   en: "Empowering dairy farmers with feed that creates",
+  // },
+  // "about.mission.title_2": {
+  //   hi: "असली आर्थिक समृद्धि",
+  //   en: "real economic prosperity",
+  // },
+  // "about.mission.desc1": {
+  //   hi: "हम मानते हैं कि भारत की डेयरी अर्थव्यवस्था की रीढ़ छोटे और मध्यम स्तर के किसान हैं। हमारा शोध, उत्पाद और फील्ड टीम उसी रीढ़ की सेवा के लिए है — एक-एक गांव से।",
+  //   en: "We believe the backbone of India's dairy economy is the small and mid-scale farmer. Our research, products, and field teams exist to serve that backbone — one village at a time.",
+  // },
+  // "about.mission.desc2": {
+  //   hi: "गंगा के मैदानों से तराई बेल्ट तक, सुंदरा ग्रुप के पोषण विशेषज्ञ सीधे किसानों के साथ मिलकर नस्ल, जलवायु और झुंड के आकार के अनुसार चारा कार्यक्रम तैयार करते हैं — दूध उत्पादन और पशु दीर्घायु में मापनीय सुधार देते हुए।",
+  //   en: "From the Gangetic plains to the Terai belt, Sundra Group's nutritionists work directly with farmers to design feed programs that match breed, climate, and herd size — delivering measurable improvements in milk output and animal longevity.",
+  // },
+
   "about.mission.tag": { hi: "हमारा मिशन", en: "Our Mission" },
-  "about.mission.title_1": {
-    hi: "डेयरी किसानों को ऐसे चारे से सशक्त बनाना जो बनाए",
-    en: "Empowering dairy farmers with feed that creates",
-  },
-  "about.mission.title_2": {
-    hi: "असली आर्थिक समृद्धि",
-    en: "real economic prosperity",
-  },
-  "about.mission.desc1": {
-    hi: "हम मानते हैं कि भारत की डेयरी अर्थव्यवस्था की रीढ़ छोटे और मध्यम स्तर के किसान हैं। हमारा शोध, उत्पाद और फील्ड टीम उसी रीढ़ की सेवा के लिए है — एक-एक गांव से।",
-    en: "We believe the backbone of India's dairy economy is the small and mid-scale farmer. Our research, products, and field teams exist to serve that backbone — one village at a time.",
-  },
-  "about.mission.desc2": {
-    hi: "गंगा के मैदानों से तराई बेल्ट तक, सुंदरा ग्रुप के पोषण विशेषज्ञ सीधे किसानों के साथ मिलकर नस्ल, जलवायु और झुंड के आकार के अनुसार चारा कार्यक्रम तैयार करते हैं — दूध उत्पादन और पशु दीर्घायु में मापनीय सुधार देते हुए।",
-    en: "From the Gangetic plains to the Terai belt, Sundra Group's nutritionists work directly with farmers to design feed programs that match breed, climate, and herd size — delivering measurable improvements in milk output and animal longevity.",
-  },
+"about.mission.title_1": {
+  hi: "डेयरी किसानों को ऐसे चारे से सशक्त बनाना जो बनाए",
+  en: "Empowering dairy farmers with feed that creates",
+},
+"about.mission.title_2": {
+  hi: "असली आर्थिक समृद्धि",
+  en: "real economic prosperity",
+},
+"about.mission.desc1": {
+  hi: "हम मानते हैं कि भारत की डेयरी अर्थव्यवस्था की रीढ़ छोटे और मध्यम स्तर के किसान हैं। हमारा शोध, उत्पाद और फील्ड टीम उसी रीढ़ की सेवा के लिए है — एक-एक गांव से।",
+  en: "We believe the backbone of India's dairy economy is the small and mid-scale farmer. Our research, products, and field teams exist to serve that backbone — one village at a time.",
+},
+"about.mission.desc2": {
+  hi: "गंगा के मैदानों से तराई बेल्ट तक, सुंदरा ग्रुप के पोषण विशेषज्ञ सीधे किसानों के साथ मिलकर नस्ल, जलवायु और झुंड के आकार के अनुसार चारा कार्यक्रम तैयार करते हैं — दूध उत्पादन और पशु दीर्घायु में मापनीय सुधार देते हुए।",
+  en: "From the Gangetic plains to the Terai belt, Sundra Group's nutritionists work directly with farmers to design feed programs that match breed, climate, and herd size — delivering measurable improvements in milk output and animal longevity.",
+},
+"about.mission.feature1.title": {
+  hi: "विज्ञान आधारित फार्मूलेशन",
+  en: "Science-First Formulation",
+},
+"about.mission.feature1.desc": {
+  hi: "हर बैच को इन-हाउस पोषण विशेषज्ञों द्वारा अधिकतम दूध उत्पादन के लिए परीक्षित किया जाता है।",
+  en: "Every batch is tested by in-house nutrition experts for maximum milk output and animal health.",
+},
+"about.mission.feature2.title": {
+  hi: "टिकाऊ सोर्सिंग",
+  en: "Sustainable Sourcing",
+},
+"about.mission.feature2.desc": {
+  hi: "हम स्थानीय और पर्यावरण अनुकूल कृषि पद्धतियों का समर्थन करने वाले किसानों से सामग्री प्राप्त करते हैं।",
+  en: "We source ingredients from farmers who support local and environmentally responsible agricultural practices.",
+},
+
+
+
+
+
 
   // Values mini cards
   "about.value1.title": {
@@ -433,6 +472,32 @@ export const content = {
     en: "Whether you're a dealer, cooperative, or individual farmer — our team is ready to help you find the right feed solution for your herd.",
   },
 
+
+
+
+  "about.directors.tag": { hi: "नेतृत्व", en: "Leadership" },
+"about.directors.title": { hi: "हमारे निदेशकों से मिलें", en: "Meet Our Directors" },
+"about.directors.desc": {
+  hi: "वे दूरदर्शी नेता जो सुंदरा ग्रुप की विकास यात्रा और नवाचार का मार्गदर्शन कर रहे हैं।",
+  en: "The visionaries steering Sundra Group's growth and innovation.",
+},
+
+"about.directors.d1.name": { hi: "सी.ए. संजीव अग्रवाल", en: "CA Sanjeev Agarwal" },
+"about.directors.d1.role": { hi: "निदेशक", en: "Director" },
+"about.directors.d1.qualification": { hi: "चार्टर्ड अकाउंटेंट", en: "Chartered Accountant" },
+"about.directors.d1.desc": {
+  hi: "कृषि व्यापार रणनीति, अनुपालन और सतत विकास प्रबंधन में दशकों के अनुभव के साथ एक कुशल वित्तीय नेता।",
+  en: "A seasoned financial leader with decades of expertise in agricultural business strategy, compliance, and sustainable growth management.",
+},
+
+"about.directors.d2.name": { hi: "सी.ए. सारांश अग्रवाल", en: "CA Saransh Agarwal" },
+"about.directors.d2.role": { hi: "निदेशक", en: "Director" },
+"about.directors.d2.qualification": { hi: "चार्टर्ड अकाउंटेंट", en: "Chartered Accountant" },
+"about.directors.d2.desc": {
+  hi: "एक गतिशील युवा नेता जो नवाचार और वित्तीय उत्कृष्टता को आगे बढ़ा रहे हैं तथा आधुनिक समाधानों और रणनीतिक दृष्टि के माध्यम से किसानों को सशक्त बनाने के लिए प्रतिबद्ध हैं।",
+  en: "A dynamic young leader driving innovation and financial excellence, committed to empowering farmers through modern solutions and strategic vision.",
+},
+
   // ═══ WHY BARSANA PAGE ═══
 
   // Hero
@@ -523,9 +588,9 @@ export const content = {
   // Faster Growth
   "why.growth.title": { hi: "तेज़ विकास", en: "Faster Growth" },
   "why.growth.desc": {
-    hi: "छोटे बछड़ों और बढ़ती बछिया के लिए, बरसाना काफ स्टार्टर रूमेन विकास और शरीर के वजन को तेज़ी से बढ़ाता है — कल के शीर्ष उत्पादकों को तैयार करता है।",
-    en: "For young calves and growing heifers, Barsana Calf Starter accelerates rumen development and body weight gain — setting up tomorrow's top producers.",
-  },
+  hi: "बरसाना के संतुलित पोषण से बछड़ों और बढ़ती बछियों का शारीरिक विकास तेज़ होता है — कल के बेहतरीन उत्पादक पशुओं की नींव रखते हुए।",
+  en: "Barsana's balanced nutrition accelerates body development in young calves and growing heifers — building the foundation for tomorrow's top producers.",
+},
   "why.growth.p1": {
     hi: "तेज़ रूमेन परिपक्वता",
     en: "Faster rumen maturation",

@@ -150,8 +150,9 @@ function ProductCard({ product }) {
 
           .product-specs {
             margin-top: 8px;
-            padding-top: 8px;
-            gap: 6px;
+            padding-top: 4px;
+            gap: 3px;
+            font-size: 10px;
           }
 
           .spec-label {

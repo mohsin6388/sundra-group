@@ -20,13 +20,33 @@ import {content} from "../lib/translate";
 import farmer_1 from "../assets/farmer-1.jpg"
 import farmer_2 from "../assets/farmer-2.jpg"
 import farmer_3 from "../assets/farmer-3.jpg"
+import sanjeev from "../assets/sanjeev.jpeg"
+import saransh from "../assets/saransh.jpeg"
 
 const Gold = ({ children }) => (
   <span style={{ color: "#c9871f" }}>{children}</span>
 );
 
+
 export default function AboutSections({ lang = "en" }) {
   const t = (key) => content[key]?.[lang] ?? key;
+
+  const DIRECTORS = [
+  {
+    name: t("about.directors.d1.name"),
+    role: t("about.directors.d1.role"),
+    initials: sanjeev,
+    qualification: t("about.directors.d1.qualification"),
+    desc: t("about.directors.d1.desc"),
+  },
+  {
+    name: t("about.directors.d2.name"),
+    role: t("about.directors.d2.role"),
+    initials: saransh,
+    qualification: t("about.directors.d2.qualification"),
+    desc: t("about.directors.d2.desc"),
+  },
+];
 
   const VALUES = [
     {
@@ -51,20 +71,18 @@ export default function AboutSections({ lang = "en" }) {
     { year: "2015", title: t("about.j1.title"), desc: t("about.j1.desc") },
     { year: "2017", title: t("about.j2.title"), desc: t("about.j2.desc") },
     { year: "2019", title: t("about.j3.title"), desc: t("about.j3.desc") },
-    // { year: "2018", title: t("about.j4.title"), desc: t("about.j4.desc") },
-    // { year: "2021", title: t("about.j5.title"), desc: t("about.j5.desc") },
     { year: "2025", title: t("about.j4.title"), desc: t("about.j4.desc") },
   ];
 
   const TEAM = [
     {
-      name: "Dr. Arvind Sharma",
+      name: "Arvind Sharma",
       role: "Chief Nutritionist",
       exp: "20+ years in bovine nutrition research",
       img: farmer_1,
     },
     {
-      name: "Arvind Sahu",
+      name: "Sanchit Sahu",
       role: "Head of Operations",
       exp: "ISO compliance & supply chain specialist",
       img: farmer_2,
@@ -130,10 +148,8 @@ export default function AboutSections({ lang = "en" }) {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(201,135,31,0.15); border: 1px solid rgba(201,135,31,0.4);
           color: #c9871f; padding: 6px 18px; border-radius: 50px;
-          font-size: 12px; font-weight: 700; 
+          font-size: 12px; font-weight: 700;
           text-transform: uppercase; margin-bottom: 24px;
-          
-
         }
         .hero-title {
           font-family: 'Playfair Display', serif;
@@ -145,23 +161,18 @@ export default function AboutSections({ lang = "en" }) {
           max-width: 560px; margin: 0 auto 40px; line-height: 1.8;
         }
         .hero-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-        .stats-bar { 
-        background: #c9871f; 
-        padding: 40px 40px; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
+        .stats-bar {
+          background: #c9871f;
+          padding: 40px 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-
         .stats-inner {
           max-width: 1100px;
           margin: 0 auto;
-
-          display: grid; 
-          grid-template-columns: 
-          repeat(3, 1fr); gap: 200px;
-
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); gap: 200px;
         }
         .stat-item { text-align: center; padding: 10px; border-right: 1px solid rgba(255,255,255,0.25); }
         .stat-value {
@@ -193,7 +204,7 @@ export default function AboutSections({ lang = "en" }) {
         }
         .journey-section { background: #fff; padding: 90px 30px; }
         .section-header { text-align: center; margin-bottom: 60px; }
-        .section-tag { color: #c9871f; font-weight: 700;  text-transform: uppercase; font-size: 12px; margin-bottom: 28px; }
+        .section-tag { color: #c9871f; font-weight: 700; text-transform: uppercase; font-size: 12px; margin-bottom: 28px; }
         .section-title { font-family: 'Inter', serif; font-size: clamp(1.8rem, 4vw, 44px); color: #1a2e1e; font-weight: 800; line-height: 1.2; margin: 0 0 16px; }
         .section-desc { color: #666; font-size: 15px; line-height: 1.8; max-width: 560px; margin: 0 auto; }
         .timeline { max-width: 900px; margin: 0 auto; position: relative; }
@@ -245,27 +256,101 @@ export default function AboutSections({ lang = "en" }) {
         .facility-features { margin: 0 0 36px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
         .facility-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #444; line-height: 1.6; }
         .facility-img { width: 100%; height: 500px; object-fit: cover; border-radius: 28px; display: block; }
+
+        /* ═══ DIRECTORS SECTION ═══ */
+        .directors-section { background: #f5f0e8; padding: 90px 30px; }
+        .directors-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 32px;
+          max-width: 780px;
+          margin: 0 auto;
+        }
+        .director-card {
+          background: #fff;
+          border: 1px solid rgba(201,135,31,0.2);
+          border-radius: 20px;
+          padding: 2rem 1.75rem;
+          position: relative;
+          overflow: hidden;
+          text-align: center;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .director-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.09); }
+        .director-card::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #2d6a2d, #c9871f);
+        }
+        .director-avatar {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+  border: 3px solid #c8a435;
+}
+
+.director-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%; /* face upar hota hai to yeh better lagta hai */
+  display: block;
+}
+        .director-name {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.15rem; font-weight: 700; color: #1a2e1e;
+          margin: 0 0 4px;
+        }
+        .director-role {
+          font-size: 11px; color: #c9871f; font-weight: 700;
+          text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 14px;
+        }
+        .director-divider {
+          width: 36px; height: 2px;
+          background: linear-gradient(90deg, #1f4d2c, #c9871f);
+          margin: 0 auto 14px; border-radius: 2px;
+        }
+        .director-qual {
+          display: inline-block;
+          background: rgba(31,77,44,0.08); color: #1f4d2c;
+          font-size: 12px; font-weight: 600;
+          padding: 4px 14px; border-radius: 50px;
+          border: 1px solid rgba(31,77,44,0.2);
+          margin-bottom: 14px;
+        }
+        .director-desc {
+          font-size: 13.5px; color: #666; line-height: 1.75; margin: 0;
+        }
+        .directors-footer {
+          display: flex; align-items: center; justify-content: center;
+          gap: 16px; margin-top: 3rem;
+        }
+        .directors-footer-line {
+          height: 1px; width: 60px;
+          background: #c9871f; opacity: 0.4;
+        }
+        .directors-footer-text {
+          font-size: 11px; color: #8B6914;
+          letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+        }
+
         .team-section { background: #1a2e1e; padding: 90px 30px; }
         .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
         .team-card {
-          width: fit-content;
-          margin: 0 auto;
+          width: fit-content; margin: 0 auto;
           background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-          border-radius: 50%;  padding: 20px;  text-align: center;
+          border-radius: 50%; padding: 20px; text-align: center;
           transition: background 0.2s ease, transform 0.2s ease;
         }
         .team-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-4px); }
-
         .team-img {
-         width: 180px; 
-        height: 180px; 
-        border-radius: 50%; 
-        object-fit: cover;
-        
-         display: block; 
-        border: 3px solid #c9871f; }
-
-
+          width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
+          display: block; border: 3px solid #c9871f;
+        }
         .team-name { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; font-weight: 700; margin: 0 0 6px; }
         .team-role { color: #c9871f; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
         .team-exp { color: rgba(255,255,255,0.5); font-size: 13px; line-height: 1.6; }
@@ -322,6 +407,7 @@ export default function AboutSections({ lang = "en" }) {
         }
         @media (max-width: 560px) {
           .values-mini-grid, .products-grid, .team-grid { grid-template-columns: 1fr !important; }
+          .directors-grid { grid-template-columns: 1fr !important; }
           .stats-inner { grid-template-columns: 1fr 1fr; gap: 46px;}
           .cta-contact-row { flex-direction: column; align-items: center; }
           .hero-links { flex-direction: column; align-items: center; }
@@ -331,13 +417,7 @@ export default function AboutSections({ lang = "en" }) {
       <div className="about-page">
         {/* ═══ HERO BANNER ═══ */}
         <section className="hero-banner">
-          <div
-            style={{
-              position: "relative",
-              maxWidth: "800px",
-              margin: "0 auto",
-            }}
-          >
+          <div style={{ position: "relative", maxWidth: "800px", margin: "0 auto" }}>
             <div className="hero-badge">
               <Globe2 size={12} />
               {t("about.hero.badge")}
@@ -375,135 +455,51 @@ export default function AboutSections({ lang = "en" }) {
         <section className="mission-section">
           <div className="section-inner">
             <div className="mission-grid">
-              {/* Left */}
               <div>
                 <p className="section-tag">{t("about.mission.tag")}</p>
                 <h2 className="section-title">
                   {t("about.mission.title_1")} <br />
                   <Gold>{t("about.mission.title_2")}</Gold>
                 </h2>
-                <p
-                  style={{
-                    fontSize: "15px",
-                    lineHeight: "1.85",
-                    color: "#555",
-                    margin: "0 0 8px",
-                  }}
-                >
+                <p style={{ fontSize: "15px", lineHeight: "1.85", color: "#555", margin: "0 0 8px" }}>
                   {t("about.mission.desc1")}
                 </p>
-                <p
-                  style={{
-                    fontSize: "15px",
-                    lineHeight: "1.85",
-                    color: "#555",
-                    margin: "0",
-                  }}
-                >
+                <p style={{ fontSize: "15px", lineHeight: "1.85", color: "#555", margin: "0" }}>
                   {t("about.mission.desc2")}
                 </p>
                 <div className="values-mini-grid">
                   {VALUES.map(({ Icon, title, desc }) => (
                     <div key={title} className="value-card">
-                      <div
-                        style={{
-                          width: "42px",
-                          height: "42px",
-                          borderRadius: "12px",
-                          background: "rgba(31,77,44,0.1)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          marginBottom: "12px",
-                        }}
-                      >
+                      <div style={{ width: "42px", height: "42px", borderRadius: "12px", background: "rgba(31,77,44,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "12px" }}>
                         <Icon size={20} color="#1f4d2c" />
                       </div>
-                      <h3
-                        style={{
-                          margin: "0 0 6px",
-                          fontSize: "14px",
-                          color: "#1a2e1e",
-                          fontWeight: "700",
-                        }}
-                      >
-                        {title}
-                      </h3>
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: "13px",
-                          lineHeight: "1.65",
-                          color: "#666",
-                        }}
-                      >
-                        {desc}
-                      </p>
+                      <h3 style={{ margin: "0 0 6px", fontSize: "14px", color: "#1a2e1e", fontWeight: "700" }}>{title}</h3>
+                      <p style={{ margin: 0, fontSize: "13px", lineHeight: "1.65", color: "#666" }}>{desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
-
-              {/* Right */}
               <div>
                 <div className="mission-img-wrap">
-                  <img
-                    src={GALLERY_IMAGES[2]}
-                    alt="Cattle at Sundra farm"
-                    className="mission-img"
-                  />
+                  <img src={GALLERY_IMAGES[2]} alt="Cattle at Sundra farm" className="mission-img" />
                   <div className="img-overlay">
-                    <p
-                      style={{
-                        color: "#c9871f",
-                        fontSize: "11px",
-                        letterSpacing: "2px",
-                        textTransform: "uppercase",
-                        margin: "0 0 8px",
-                      }}
-                    >
+                    <p style={{ color: "#c9871f", fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", margin: "0 0 8px" }}>
                       {t("about.overlay.badge")}
                     </p>
-                    <h3
-                      style={{
-                        color: "#fff",
-                        fontSize: "clamp(1rem, 2vw, 20px)",
-                        margin: "0 0 18px",
-                        fontFamily: "'Playfair Display', serif",
-                        lineHeight: "1.35",
-                      }}
-                    >
+                    <h3 style={{ color: "#fff", fontSize: "clamp(1rem, 2vw, 20px)", margin: "0 0 18px", fontFamily: "'Playfair Display', serif", lineHeight: "1.35" }}>
                       {t("about.overlay.title")}
                     </h3>
-                    <Link
-                      to="/contact"
-                      className="btn-gold"
-                      style={{ fontSize: "13px", padding: "10px 22px" }}
-                    >
+                    <Link to="/contact" className="btn-gold" style={{ fontSize: "13px", padding: "10px 22px" }}>
                       {t("about.overlay.cta")} <ArrowRight size={14} />
                     </Link>
                   </div>
                   <div className="img-badge">
                     <Milk size={22} color="#c9871f" />
                     <div>
-                      <div
-                        style={{
-                          fontSize: "10px",
-                          color: "#999",
-                          textTransform: "uppercase",
-                          letterSpacing: "1px",
-                        }}
-                      >
+                      <div style={{ fontSize: "10px", color: "#999", textTransform: "uppercase", letterSpacing: "1px" }}>
                         {t("about.overlay.stat")}
                       </div>
-                      <div
-                        style={{
-                          fontSize: "17px",
-                          fontWeight: "800",
-                          color: "#1a2e1e",
-                          fontFamily: "'Playfair Display', serif",
-                        }}
-                      >
+                      <div style={{ fontSize: "17px", fontWeight: "800", color: "#1a2e1e", fontFamily: "'Playfair Display', serif" }}>
                         200+ MT
                       </div>
                     </div>
@@ -514,10 +510,6 @@ export default function AboutSections({ lang = "en" }) {
           </div>
         </section>
 
-
-
-
-
         {/* ═══ JOURNEY — TIMELINE ═══ */}
         <section className="journey-section">
           <div className="section-inner">
@@ -525,9 +517,7 @@ export default function AboutSections({ lang = "en" }) {
               <p className="section-tag">{t("about.journey.tag")}</p>
               <h2 className="section-title">
                 {t("about.journey.title_1")}{" "}
-                <span style={{ color: "#2D6A3E" }}>
-                  {t("about.journey.title_2")}
-                </span>{" "}
+                <span style={{ color: "#2D6A3E" }}>{t("about.journey.title_2")}</span>{" "}
                 {t("about.journey.title_3")}
               </h2>
               <p className="section-desc">{t("about.journey.desc")}</p>
@@ -553,14 +543,18 @@ export default function AboutSections({ lang = "en" }) {
           </div>
         </section>
 
-
-
-
-
-
+         <div
+          style={{
+            borderTop: "1px solid #e5e5e5",
+            marginBottom: "30px",
+            marginTop: "20px",
+            marginLeft: "80px",
+            marginRight: "80px",
+          }}
+        />
 
         {/* ═══ PRODUCTS HIGHLIGHT ═══ */}
-        <section className="products-section">
+        {/* <section className="products-section">
           <div className="section-inner">
             <div className="section-header">
               <p className="section-tag">{t("about.products.tag")}</p>
@@ -576,18 +570,7 @@ export default function AboutSections({ lang = "en" }) {
                   </div>
                   <h3 className="product-name">{name}</h3>
                   <p className="product-desc">{desc}</p>
-                  <Link
-                    to="/products"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      color: "#c9871f",
-                      fontWeight: "700",
-                      fontSize: "13px",
-                      textDecoration: "none",
-                    }}
-                  >
+                  <Link to="/products" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "#c9871f", fontWeight: "700", fontSize: "13px", textDecoration: "none" }}>
                     {t("about.products.learn")} <ArrowRight size={13} />
                   </Link>
                 </div>
@@ -599,44 +582,25 @@ export default function AboutSections({ lang = "en" }) {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ═══ OUR FACILITY ═══ */}
         <section className="facility-section">
           <div className="section-inner">
             <div className="facility-grid">
-              {/* Left */}
               <div>
                 <p className="section-tag">{t("about.facility.tag")}</p>
                 <h2 className="section-title" style={{ lineHeight: 1.4 }}>{t("about.facility.title")}</h2>
-                <p
-                  style={{
-                    fontSize: "15px",
-                    lineHeight: "1.85",
-                    color: "#666",
-                    marginBottom: "14px",
-                  }}
-                >
+                <p style={{ fontSize: "15px", lineHeight: "1.85", color: "#666", marginBottom: "14px" }}>
                   {t("about.facility.desc1")}
                 </p>
-                <p
-                  style={{
-                    fontSize: "15px",
-                    lineHeight: "1.85",
-                    color: "#666",
-                    marginBottom: "24px",
-                  }}
-                >
+                <p style={{ fontSize: "15px", lineHeight: "1.85", color: "#666", marginBottom: "24px" }}>
                   {t("about.facility.desc2")}
                 </p>
                 <ul className="facility-features">
                   {FACILITY_FEATURES.map((feat) => (
                     <li key={feat}>
-                      <CheckCircle2
-                        size={16}
-                        color="#c9871f"
-                        style={{ flexShrink: 0, marginTop: "2px" }}
-                      />
+                      <CheckCircle2 size={16} color="#c9871f" style={{ flexShrink: 0, marginTop: "2px" }} />
                       {feat}
                     </li>
                   ))}
@@ -644,25 +608,10 @@ export default function AboutSections({ lang = "en" }) {
                 <div className="specs-row">
                   {FACILITY_SPECS.map(({ label, value }) => (
                     <div key={label} className="spec-item">
-                      <div
-                        style={{
-                          fontSize: "11px",
-                          color: "#999",
-                          textTransform: "uppercase",
-                          letterSpacing: "1.5px",
-                          marginBottom: "4px",
-                        }}
-                      >
+                      <div style={{ fontSize: "11px", color: "#999", textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "4px" }}>
                         {label}
                       </div>
-                      <div
-                        style={{
-                          fontSize: "22px",
-                          fontWeight: "800",
-                          color: "#1a2e1e",
-                          fontFamily: "'Playfair Display', serif",
-                        }}
-                      >
+                      <div style={{ fontSize: "22px", fontWeight: "800", color: "#1a2e1e", fontFamily: "'Playfair Display', serif" }}>
                         {value}
                       </div>
                     </div>
@@ -672,67 +621,49 @@ export default function AboutSections({ lang = "en" }) {
                   {t("about.facility.cta")} <ArrowRight size={16} />
                 </Link>
               </div>
-
-              {/* Right */}
               <div style={{ position: "relative" }}>
-                <img
-                  src={GALLERY_IMAGES[0]}
-                  alt="Manufacturing facility"
-                  className="facility-img"
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "-16px",
-                    right: "-16px",
-                    width: "120px",
-                    height: "120px",
-                    borderRadius: "20px",
-                    background: "#c9871f",
-                    opacity: 0.12,
-                    zIndex: -1,
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "24px",
-                    left: "24px",
-                    background: "#fff",
-                    borderRadius: "14px",
-                    padding: "14px 20px",
-                    boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "12px",
-                  }}
-                >
+                <img src={GALLERY_IMAGES[0]} alt="Manufacturing facility" className="facility-img" />
+                <div style={{ position: "absolute", bottom: "-16px", right: "-16px", width: "120px", height: "120px", borderRadius: "20px", background: "#c9871f", opacity: 0.12, zIndex: -1 }} />
+                <div style={{ position: "absolute", top: "24px", left: "24px", background: "#fff", borderRadius: "14px", padding: "14px 20px", boxShadow: "0 8px 30px rgba(0,0,0,0.12)", display: "flex", alignItems: "center", gap: "12px" }}>
                   <Factory size={22} color="#1f4d2c" />
                   <div>
-                    <div
-                      style={{
-                        fontSize: "10px",
-                        color: "#999",
-                        textTransform: "uppercase",
-                        letterSpacing: "1px",
-                      }}
-                    >
-                      Est.
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "800",
-                        color: "#1a2e1e",
-                        fontFamily: "'Playfair Display', serif",
-                        lineHeight: 1,
-                      }}
-                    >
-                      1998
-                    </div>
+                    <div style={{ fontSize: "10px", color: "#999", textTransform: "uppercase", letterSpacing: "1px" }}>Est.</div>
+                    <div style={{ fontSize: "18px", fontWeight: "800", color: "#1a2e1e", fontFamily: "'Playfair Display', serif", lineHeight: 1 }}>1998</div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ DIRECTORS SECTION ═══ */}
+        <section className="directors-section">
+          <div className="section-inner">
+            <div className="section-header">
+              <p className="section-tag">{t("about.directors.tag")}</p>
+              <h2 className="section-title">{t("about.directors.title")}</h2>
+              <p className="section-desc">
+                {t("about.directors.desc")}
+              </p>
+            </div>
+            <div className="directors-grid">
+              {DIRECTORS.map(({ name, role, initials, qualification, desc }) => (
+                <div key={name} className="director-card">
+                  <div className="director-avatar">
+                    <img src={initials} alt={name} />
+                  </div>
+                  <h3 className="director-name">{name}</h3>
+                  <p className="director-role">{role}</p>
+                  <div className="director-divider" />
+                  <span className="director-qual">{qualification}</span>
+                  <p className="director-desc">{desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="directors-footer">
+              <div className="directors-footer-line" />
+              <span className="directors-footer-text">Sundra Group Leadership</span>
+              <div className="directors-footer-line" />
             </div>
           </div>
         </section>
@@ -741,54 +672,26 @@ export default function AboutSections({ lang = "en" }) {
         <section className="team-section">
           <div className="section-inner">
             <div className="section-header">
-              <p
-                style={{
-                  color: "#c9871f",
-                  fontWeight: "700",
-                  // letterSpacing: "3px",
-                  textTransform: "uppercase",
-                  fontSize: "12px",
-                  marginBottom: "14px",
-                }}
-              >
+              <p style={{ color: "#c9871f", fontWeight: "700", textTransform: "uppercase", fontSize: "12px", marginBottom: "14px" }}>
                 {t("about.team.tag")}
               </p>
-              <h2
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "clamp(1.8rem, 4vw, 44px)",
-                  color: "#fff",
-                  fontWeight: "800",
-                  lineHeight: "1.2",
-                  margin: "0 0 16px",
-                }}
-              >
+              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 4vw, 44px)", color: "#fff", fontWeight: "800", lineHeight: "1.2", margin: "0 0 16px" }}>
                 {t("about.team.title")}
               </h2>
-              <p
-                style={{
-                  color: "rgba(255,255,255,0.5)",
-                  fontSize: "15px",
-                  lineHeight: "1.8",
-                  maxWidth: "520px",
-                  margin: "0 auto",
-                }}
-              >
+              <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", lineHeight: "1.8", maxWidth: "520px", margin: "0 auto" }}>
                 {t("about.team.desc")}
               </p>
             </div>
             <div className="team-grid">
               {TEAM.map(({ name, role, exp, img }) => (
-                <div style={{textAlign: "center",}}>
-                  <div key={name} className="team-card">
-                  <img src={img} alt={name} className="team-img" />
-                   </div>
-                 <div style={{paddingTop: "10px"}}>
-                  <div className="team-name">{name}</div>
-                  {/* <div className="team-role">{role}</div>
-                  <p className="team-exp">{exp}</p> */}
-                 </div>
+                <div key={name} style={{ textAlign: "center" }}>
+                  <div className="team-card">
+                    <img src={img} alt={name} className="team-img" />
                   </div>
+                  <div style={{ paddingTop: "10px" }}>
+                    <div className="team-name">{name}</div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -796,23 +699,8 @@ export default function AboutSections({ lang = "en" }) {
 
         {/* ═══ CTA SECTION ═══ */}
         <section className="cta-section">
-          <div
-            style={{
-              position: "relative",
-              maxWidth: "720px",
-              margin: "0 auto",
-            }}
-          >
-            <p
-              style={{
-                color: "rgba(255,255,255,0.7)",
-                // letterSpacing: "3px",
-                fontSize: "12px",
-                textTransform: "uppercase",
-                marginBottom: "16px",
-                fontWeight: "700",
-              }}
-            >
+          <div style={{ position: "relative", maxWidth: "720px", margin: "0 auto" }}>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "12px", textTransform: "uppercase", marginBottom: "16px", fontWeight: "700" }}>
               {t("about.cta.tag")}
             </p>
             <h2 className="cta-title">{t("about.cta.title")}</h2>
@@ -821,7 +709,7 @@ export default function AboutSections({ lang = "en" }) {
               <a href="tel:+919554588775" className="contact-pill">
                 <Phone size={15} /> +91 9554588775
               </a>
-              <a href="mailto:info@barsana.com" className="contact-pill">
+              <a href="mailto:sundragroup@gmail.com" className="contact-pill">
                 <Globe2 size={15} /> sundragroup@gmail.com
               </a>
             </div>

@@ -102,11 +102,13 @@ export default function Products({lang}) {
           }
 
           .Main{
-           padding: 0 30px
+           padding: 0 2px;
+           
           }
 
           .products-grid{
-          padding: 0 40px !important;
+          padding: 0 auto !important;
+          
           }
         }
       `}</style>
