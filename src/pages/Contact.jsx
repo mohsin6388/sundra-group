@@ -133,30 +133,27 @@ export default function Contact({ lang = "en" }) {
     return !Object.keys(e).length;
   };
 
-  const submit = async (e) => {
-    e.preventDefault();
-    if (!validate()) { toast.error(t("contact.form.error")); return; }
-    setLoading(true);
-    try {
-      const payload = Object.fromEntries(
-        Object.entries(form).filter(([, v]) => v.trim())
-      );
-      await axios.post(`${API}/contact`, payload);
-      toast.success(t("contact.form.success"), {
-        duration: 5000,
-        icon: <CheckCircle className="text-emerald-500" size={18} />,
-      });
-      setForm({ name: "", phone: "", email: "", subject: "", message: "" });
-    } catch (err) {
-      toast.error(
-        err?.response?.data?.detail || t("contact.form.fail"),
-        { duration: 4000 }
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
+  const submit = (e) => {
+  e.preventDefault();
+  if (!validate()) { toast.error(t("contact.form.error")); return; }
 
+  const whatsappNumber = "+919554588775"; // apna business WhatsApp number (country code + number, bina + ke)
+
+  const waMessage =
+    `New Enquiry:\n` +
+    `Name: ${form.name}\n` +
+    `Phone: ${form.phone}\n` +
+    (form.email ? `Email: ${form.email}\n` : "") +
+    (form.subject ? `Subject: ${form.subject}\n` : "") +
+    `Message: ${form.message}`;
+
+  const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waMessage)}`;
+  window.open(waUrl, "_blank");
+
+  setForm({ name: "", phone: "", email: "", subject: "", message: "" });
+};
+
+ 
   return (
     <>
       <Toaster position="top-center" richColors />
@@ -413,6 +410,11 @@ export default function Contact({ lang = "en" }) {
                 />
 
                 {/* CTA row */}
+
+
+
+
+
                 <div
                   className="flex flex-col sm:flex-row items-start
                                 sm:items-center justify-between gap-4 pt-1"

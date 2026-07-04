@@ -125,9 +125,9 @@ export default function AboutSections({ lang = "en" }) {
   ];
 
   const FACILITY_SPECS = [
-    { label: t("about.spec1.label"), value: "500+ MT" },
-    { label: t("about.spec2.label"), value: "ISO 9001:2015" },
-    { label: t("about.spec3.label"), value: "50,000 MT/yr" },
+    { label: t("about.spec1.label"), value: "200+ MT" },
+    // { label: t("about.spec2.label"), value: "ISO 9001:2015" },
+    // { label: t("about.spec3.label"), value: "50,000 MT/yr" },
   ];
 
   return (
@@ -628,7 +628,7 @@ export default function AboutSections({ lang = "en" }) {
                   <Factory size={22} color="#1f4d2c" />
                   <div>
                     <div style={{ fontSize: "10px", color: "#999", textTransform: "uppercase", letterSpacing: "1px" }}>Est.</div>
-                    <div style={{ fontSize: "18px", fontWeight: "800", color: "#1a2e1e", fontFamily: "'Playfair Display', serif", lineHeight: 1 }}>1998</div>
+                    <div style={{ fontSize: "18px", fontWeight: "800", color: "#1a2e1e", fontFamily: "'Playfair Display', serif", lineHeight: 1 }}>2015</div>
                   </div>
                 </div>
               </div>

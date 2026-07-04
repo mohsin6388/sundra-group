@@ -172,7 +172,7 @@ export default function ProductDetail({ lang }) {
             </div>
 
             {/* Extra Info */}
-            <div className="mt-8 grid grid-cols-2 gap-3 text-xs text-gray-600">
+            {/* <div className="mt-8 grid grid-cols-2 gap-3 text-xs text-gray-600">
               <div className="flex items-center gap-2">
                 <Wheat size={14} />
                 {isHi ? "स्टीम पकाया हुआ" : "Steam cooked"}
@@ -188,7 +188,7 @@ export default function ProductDetail({ lang }) {
               <div className="flex items-center gap-2">
                 {isHi ? "नमी से दूर रखें" : "Keep away from moisture"}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
