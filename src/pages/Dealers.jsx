@@ -154,38 +154,15 @@ export default function Dealers({ lang = "en" }) {
     return Object.keys(newErrors).length === 0;
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   if (!validateForm()) { toast.error(t("dealer.form.error")); return; }
-  //   setLoading(true);
-  //   try {
-  //     const payload = Object.fromEntries(
-  //       Object.entries(formData).filter(([_, value]) => value?.trim() !== "")
-  //     );
-  //     await axios.post(`${API}/dealer`, payload);
-  //     toast.success(t("dealer.form.success"), {
-  //       duration: 5000,
-  //       icon: <CheckCircle className="text-green-500" />,
-  //     });
-  //     setFormData({
-  //       full_name: "", phone: "", email: "", business_name: "",
-  //       city: "", state: "", pincode: "", experience_years: "",
-  //       interested_products: "", message: "",
-  //     });
-  //   } catch (err) {
-  //     toast.error(err?.response?.data?.detail || t("dealer.form.fail"), { duration: 4000 });
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   const handleSubmit = (e) => {
   e.preventDefault();
   if (!validateForm()) { toast.error(t("dealer.form.error")); return; }
 
-  const whatsappNumber = "+917571001640"; // apna business WhatsApp number (country code + number, bina + ke)
+  const toEmail = "sundragroup@gmail.com"; // apna business email yahan daalein
 
-  const waMessage =
+  const subject = `New Dealer Enquiry from ${formData.full_name}`;
+
+  const body =
     `New Dealer Enquiry:\n` +
     `Name: ${formData.full_name}\n` +
     `Phone: ${formData.phone}\n` +
@@ -198,8 +175,8 @@ export default function Dealers({ lang = "en" }) {
     (formData.interested_products ? `Interested Product: ${formData.interested_products}\n` : "") +
     (formData.message ? `Message: ${formData.message}` : "");
 
-  const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waMessage)}`;
-  window.open(waUrl, "_blank");
+  const mailtoUrl = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoUrl;
 
   setFormData({
     full_name: "", phone: "", email: "", business_name: "",

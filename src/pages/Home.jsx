@@ -151,36 +151,69 @@ export default function Home({ lang }) {
         {`
 
         .section-2{
-          maxWidth: "100%",
-          margin: "0 auto",
-           padding: "64px 2px",
-           fontFamily: "'Inter', sans-serif",
-          
+          max-width: 100%;
+          margin: 0 auto;
+          padding: 64px 2px;
+          font-family: 'Inter', sans-serif;
         }
 
         .inside-section-2-1{
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         gap:50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 50px;
+        }
+
+        .tagline{
+          font-size: 12px;
+          text-transform: uppercase;
+          color: ${C.gold};
+          font-weight: 500;
+          margin-bottom: 16px;
         }
 
         @media (max-width: 786px){
-        .section-2{
-          padding: 0px 50px;
-          width: 100%;
+          .section-2{
+            padding: 0px 50px;
+            width: 100%;
+          }
+
+          .tagline{
+          font-size: 12px;
+          text-transform: uppercase;
+          text-align: center;
+          color: ${C.gold};
+          font-weight: 500;
+          margin-bottom: 16px;
         }
 
-        .inside-section-2-1 {
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;  /* space-between → center, kyunki column mein better lagta hai */
-           gap: 10px;                /* 50px → 20px, column mein itna gap zyada lagta hai */
-         }
-
+          .inside-section-2-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;  /* space-between → center, kyunki column mein better lagta hai */
+            gap: 10px;                /* 50px → 20px, column mein itna gap zyada lagta hai */
+          }
         }
-    
+
+        .heading-title {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 500;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 786px) {
+  .heading-title {
+    white-space: nowrap;
+    font-size: clamp(14px, 4vw, 22px);
+  }
+
+  .heading-break {
+    display: none; /* mobile pe br hata do */
+  }
+}
 
     `}
       </style>
@@ -241,40 +274,21 @@ export default function Home({ lang }) {
               <div>
                 {/* Tag */}
                 <p
-                  style={{
-                    fontSize: "12px",
-                    textTransform: "uppercase",
-                    color: C.gold,
-                    fontWeight: 500,
-                    marginBottom: "16px",
-                  }}
+                  className="tagline"
                 >
                   {t("hero.tagline")}
                   {/* Trusted by thousands */}
                 </p>
 
                 {/* Heading */}
-                <h2
-                  style={{
-                    fontSize:
-                      lang === "hi"
-                        ? "clamp(24px, 3.5vw, 35px)"
-                        : "clamp(20px, 3vw, 30px)",
-                    fontWeight: 500,
-                    color: "#111",
-                    lineHeight: lang === "hi" ? 1.5 : 1.2,
-                    marginBottom: "16px",
-                  }}
-                >
-                  {t("hero.headline_1")}
-                  {/* Pashu ka doodh badhe, */}
-                  <br />
-                  {/* {t("hero.headline_2")} */}
-                  <span style={{ color: "#2D6A3E" }}>
-                    {" "}
-                    {t("hero.headline_3")}
-                  </span>
-                </h2>
+               <h2 className="heading-title">
+  {t("hero.headline_1")}
+  <br className="heading-break" />
+  <span style={{ color: "#2D6A3E" }}>
+    {" "}
+    {t("hero.headline_3")}
+  </span>
+</h2>
 
                 {/* Subtext */}
                 <p

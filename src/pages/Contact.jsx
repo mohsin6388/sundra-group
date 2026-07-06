@@ -137,9 +137,11 @@ export default function Contact({ lang = "en" }) {
   e.preventDefault();
   if (!validate()) { toast.error(t("contact.form.error")); return; }
 
-  const whatsappNumber = "+919554588775"; // apna business WhatsApp number (country code + number, bina + ke)
+  const toEmail = "sundragroup@gmail.com"; // apna business email yahan daalein
 
-  const waMessage =
+  const subject = form.subject || `New Enquiry from ${form.name}`;
+
+  const body =
     `New Enquiry:\n` +
     `Name: ${form.name}\n` +
     `Phone: ${form.phone}\n` +
@@ -147,8 +149,8 @@ export default function Contact({ lang = "en" }) {
     (form.subject ? `Subject: ${form.subject}\n` : "") +
     `Message: ${form.message}`;
 
-  const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waMessage)}`;
-  window.open(waUrl, "_blank");
+  const mailtoUrl = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoUrl;
 
   setForm({ name: "", phone: "", email: "", subject: "", message: "" });
 };
