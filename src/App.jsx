@@ -8,7 +8,6 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import InvestorDetails from "./pages/InvestorDetails";
 import TermsAndConditions from "./pages/Termandcondition";
 
-// Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Products = lazy(() => import("./pages/Products"));
