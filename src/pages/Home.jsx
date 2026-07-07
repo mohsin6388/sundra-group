@@ -185,7 +185,7 @@ export default function Home({ lang }) {
           font-size: 12px;
           text-transform: uppercase;
           color: ${C.gold};
-          font-weight: 500;
+          font-weight: 700;
           margin-bottom: 16px;
         }
 
@@ -200,7 +200,7 @@ export default function Home({ lang }) {
           text-transform: uppercase;
           text-align: center;
           color: ${C.gold};
-          font-weight: 500;
+          font-weight: 600;
           margin-bottom: 16px;
         }
 
@@ -215,7 +215,7 @@ export default function Home({ lang }) {
 
         .heading-title {
   font-size: clamp(20px, 3vw, 30px);
-  font-weight: 500;
+  font-weight: 600;
   color: #111;
   line-height: 1.2;
   margin-bottom: 16px;
@@ -245,7 +245,7 @@ export default function Home({ lang }) {
           style={{
             position: "relative",
             width: "100%",
-            padding:" 30px 0 0 0",
+            padding:" 0 0 10px 0",
             overflow: "hidden",
             // background: "red",
           }}
