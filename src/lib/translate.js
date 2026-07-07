@@ -465,7 +465,7 @@ export const content = {
   "about.cta.tag": { hi: "संपर्क करें", en: "Get in Touch" },
   "about.cta.title": {
     hi: "सुंदरा ग्रुप के साथ जुड़ें",
-    en: "Partner with Sundra Group",
+    en: "Join with Sundra Group",
   },
   "about.cta.desc": {
     hi: "चाहे आप डीलर हों, सहकारी समिति हों, या व्यक्तिगत किसान — हमारी टीम आपके पशु के लिए सही चारा समाधान खोजने में मदद के लिए तैयार है।",

@@ -86,11 +86,11 @@ const ContactCard = ({ t }) => (
       </a>
 
       <a
-        href={`tel:${COMPANY.phones[1].replace(/\D/g, "")}`}
+        href={`tel:${COMPANY.phones[2].replace(/\D/g, "")}`}
         className="inline-flex items-center gap-2 text-xl font-bold text-green-700 
                  hover:text-green-800 transition-colors"
       >
-        {COMPANY.phones[1]}
+        {COMPANY.phones[2]}
         <ArrowRight size={20} className="text-green-600" />
       </a>
     </div>

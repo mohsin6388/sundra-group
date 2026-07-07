@@ -669,7 +669,7 @@ export default function AboutSections({ lang = "en" }) {
         </section>
 
         {/* ═══ OUR TEAM ═══ */}
-        <section className="team-section">
+        {/* <section className="team-section">
           <div className="section-inner">
             <div className="section-header">
               <p style={{ color: "#c9871f", fontWeight: "700", textTransform: "uppercase", fontSize: "12px", marginBottom: "14px" }}>
@@ -695,19 +695,19 @@ export default function AboutSections({ lang = "en" }) {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ═══ CTA SECTION ═══ */}
         <section className="cta-section">
           <div style={{ position: "relative", maxWidth: "720px", margin: "0 auto" }}>
-            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "12px", textTransform: "uppercase", marginBottom: "16px", fontWeight: "700" }}>
+            {/* <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "12px", textTransform: "uppercase", marginBottom: "16px", fontWeight: "700" }}>
               {t("about.cta.tag")}
-            </p>
+            </p> */}
             <h2 className="cta-title">{t("about.cta.title")}</h2>
             <p className="cta-desc">{t("about.cta.desc")}</p>
             <div className="cta-contact-row">
               <a href="tel:+919554588775" className="contact-pill">
-                <Phone size={15} /> +91 9554588775
+                <Phone size={15} /> +91 7571001620
               </a>
               <a href="mailto:sundragroup@gmail.com" className="contact-pill">
                 <Globe2 size={15} /> sundragroup@gmail.com

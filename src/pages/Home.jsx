@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard";
 import banner1 from "../assets/banner-main.webp";
 import banner2 from "../assets/Sundra-banner.webp";
 import farmer from "../assets/products-cat.webp";
-import cow from "../assets/cow-use.png";
+import cow from "../assets/this-cow.png";
 import {content} from "../lib/translate";
 import {reviews} from "../lib/translate"
 import BarsanaAbout from "../components/BarsanaAbout";
@@ -157,6 +157,23 @@ export default function Home({ lang }) {
           font-family: 'Inter', sans-serif;
         }
 
+        .section-2-img {
+  width: 100%;
+  max-width: 450px; /* apni layout ke hisaab se adjust karo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  borderRadius: 10px;
+}
+
+.section-2-img img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
         .inside-section-2-1{
           display: flex;
           align-items: center;
@@ -228,7 +245,7 @@ export default function Home({ lang }) {
           style={{
             position: "relative",
             width: "100%",
-            padding: 0,
+            padding:" 30px 0 0 0",
             overflow: "hidden",
             // background: "red",
           }}
@@ -304,8 +321,8 @@ export default function Home({ lang }) {
                 </p>
               </div>
 
-              <div className="section-2-img">
-                <img src={cow} alt="" />
+              <div className="section-2-img" style={{ maxWidth: "450px", width: "100%" }}>
+                <img src={cow} alt="" style={{ width: "100%", height: "auto", objectFit: "contain", borderRadius: "16px"  }} />
               </div>
             </div>
 
@@ -314,6 +331,7 @@ export default function Home({ lang }) {
               style={{
                 borderTop: "1px solid #e5e5e5",
                 marginBottom: "40px",
+                marginTop: "15px"
               }}
             />
 

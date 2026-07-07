@@ -18,7 +18,7 @@ function Footer() {
     regOffice:
       "307, 10/433 Ratan Shanti Apartment, Khalasi Line, Kanpur, 208001",
     email: "sundragroup@gmail.com",
-    phones_1: ["+91-9554588775"],
+    phones_1: ["+91-7571001640"],
   };
 
   return (

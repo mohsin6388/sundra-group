@@ -5,7 +5,7 @@ import Logo from "./Logo";
 import "./Navbar.css";
 
 const COMPANY = {
-  phones: ["+91 9554588775"],
+  phones: ["+91 7571001640"],
 };
 
 const NAV = [
