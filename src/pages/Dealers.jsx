@@ -100,6 +100,18 @@ const ContactCard = ({ t }) => (
 export default function Dealers({ lang = "en" }) {
   const t = (key) => content[key]?.[lang] ?? key;
 
+  const [captcha, setCaptcha] = useState(() => {
+  const a = Math.floor(Math.random() * 10) + 1;
+  const b = Math.floor(Math.random() * 10) + 1;
+  return { a, b, answer: "" };
+});
+
+const refreshCaptcha = () => {
+  const a = Math.floor(Math.random() * 10) + 1;
+  const b = Math.floor(Math.random() * 10) + 1;
+  setCaptcha({ a, b, answer: "" });
+};
+
   const PERKS = [
     {
       icon: TrendingUp,
@@ -141,18 +153,39 @@ export default function Dealers({ lang = "en" }) {
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
+
   const validateForm = () => {
-    const newErrors = {};
-    ["full_name", "phone", "city", "state"].forEach((field) => {
-      if (!formData[field]?.trim()) newErrors[field] = `${field.replace("_", " ")} is required`;
-    });
-    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
-      newErrors.email = "Invalid email format";
-    if (formData.phone && !/^[0-9]{10}$/.test(formData.phone.replace(/\D/g, "")))
-      newErrors.phone = "Please enter a valid 10-digit phone number";
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  const newErrors = {};
+  ["full_name", "phone", "city", "state"].forEach((field) => {
+    if (!formData[field]?.trim()) newErrors[field] = `${field.replace("_", " ")} is required`;
+  });
+  if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+    newErrors.email = "Invalid email format";
+  if (formData.phone && !/^[0-9]{10}$/.test(formData.phone.replace(/\D/g, "")))
+    newErrors.phone = "Please enter a valid 10-digit phone number";
+
+  // captcha check
+  if (parseInt(captcha.answer, 10) !== captcha.a + captcha.b) {
+    newErrors.captcha = "Incorrect answer, try again";
+    refreshCaptcha();
+  }
+
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
+};
+
+  // const validateForm = () => {
+  //   const newErrors = {};
+  //   ["full_name", "phone", "city", "state"].forEach((field) => {
+  //     if (!formData[field]?.trim()) newErrors[field] = `${field.replace("_", " ")} is required`;
+  //   });
+  //   if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+  //     newErrors.email = "Invalid email format";
+  //   if (formData.phone && !/^[0-9]{10}$/.test(formData.phone.replace(/\D/g, "")))
+  //     newErrors.phone = "Please enter a valid 10-digit phone number";
+  //   setErrors(newErrors);
+  //   return Object.keys(newErrors).length === 0;
+  // };
 
   const handleSubmit = (e) => {
   e.preventDefault();
@@ -183,6 +216,8 @@ export default function Dealers({ lang = "en" }) {
     city: "", state: "", pincode: "", experience_years: "",
     interested_products: "", message: "",
   });
+
+  refreshCaptcha();
 };
 
   return (
@@ -371,6 +406,33 @@ export default function Dealers({ lang = "en" }) {
                   onChange={handleChange}
                   placeholder={t("dealer.placeholder.message")}
                 />
+
+                <div className="space-y-2">
+  <label className="block text-xs uppercase tracking-wider font-semibold text-gray-500">
+    {"Fill The Captcha"|| "Verify you're human"} <span className="text-red-500">*</span>
+  </label>
+  <div className="flex items-center gap-3">
+    <span className="px-4 py-3 rounded-xl bg-gray-100 border border-gray-200 font-semibold select-none">
+      {captcha.a} + {captcha.b} = ?
+    </span>
+    <input
+      type="number"
+      value={captcha.answer}
+      onChange={(e) => setCaptcha((prev) => ({ ...prev, answer: e.target.value }))}
+      placeholder="Answer"
+      className="w-24 px-4 py-3 rounded-xl border border-gray-200 bg-white outline-none 
+                 focus:ring-2 focus:ring-green-500 focus:border-transparent"
+    />
+    <button
+      type="button"
+      onClick={refreshCaptcha}
+      className="text-xs text-green-600 hover:text-green-800 underline"
+    >
+      Refresh
+    </button>
+  </div>
+  {errors.captcha && <p className="text-xs text-red-500">{errors.captcha}</p>}
+</div>
 
                 <button
                   type="submit"

@@ -32,7 +32,7 @@ export const content = {
   "stats.farmers_label": { hi: "किसान परिवार", en: "Farmer Families" },
   "stats.milk_increase": { hi: "22%", en: "22%" },
   "stats.milk_label": { hi: "ज़्यादा दूध", en: "More Milk" },
-  "stats.experience": { hi: "11+", en: "11+" },
+  "stats.experience": { hi: "10+", en: "10+" },
   "stats.experience_label": { hi: "साल का अनुभव", en: "Years of Experience" },
   "stats.dealers_count": { hi: "200+", en: "200+" },
   "stats.dealers_label": { hi: "डीलर्स ऑल इंडिया", en: "Dealers All India" },
@@ -230,8 +230,8 @@ export const content = {
     en: "Across India",
   },
   "about.hero.desc": {
-    hi: "11 से अधिक वर्षों से सुंदरा ग्रुप ने कठोर विज्ञान को किसान-प्रथम दर्शन के साथ जोड़ा है — ऐसे चारा समाधान देते हुए जो उत्पादन बढ़ाते हैं, पशु स्वास्थ्य सुधारते हैं और ग्रामीण आजीविका को मजबूत करते हैं।",
-    en: "For over 11 years, Sundra Group has combined rigorous science with a farmer-first philosophy — delivering feed solutions that boost yield, improve animal health, and strengthen rural livelihoods.",
+    hi: "10 से अधिक वर्षों से सुंदरा ग्रुप ने कठोर विज्ञान को किसान-प्रथम दर्शन के साथ जोड़ा है — ऐसे चारा समाधान देते हुए जो उत्पादन बढ़ाते हैं, पशु स्वास्थ्य सुधारते हैं और ग्रामीण आजीविका को मजबूत करते हैं।",
+    en: "For over 10 years, Sundra Group has combined rigorous science with a farmer-first philosophy — delivering feed solutions that boost yield, improve animal health, and strengthen rural livelihoods.",
   },
   "about.hero.cta1": { hi: "उत्पाद देखें", en: "Explore Products" },
   "about.hero.cta2": { hi: "हमारी टीम से बात करें", en: "Talk to Our Team" },
@@ -331,7 +331,7 @@ export const content = {
 
   // Journey
   "about.journey.tag": { hi: "हमारी यात्रा", en: "Our Journey" },
-  "about.journey.title_1": { hi: "11 वर्षों की", en: "11 years of" },
+  "about.journey.title_1": { hi: "10 वर्षों की", en: "10 years of" },
   "about.journey.title_2": { hi: "विकास", en: "growth" },
   "about.journey.title_3": { hi: "और नवाचार", en: "& innovation" },
   "about.journey.desc": {

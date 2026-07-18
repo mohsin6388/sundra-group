@@ -93,7 +93,7 @@ export default function Home({ lang }) {
 
    const stats = [
      { num: t("stats.farmers_count"), label: t("stats.farmers_label") },
-     { num: t("stats.milk_increase"), label: t("stats.milk_label") },
+    //  { num: t("stats.milk_increase"), label: t("stats.milk_label") },
      { num: t("stats.experience"), label: t("stats.experience_label") },
      { num: t("stats.dealers_count"), label: t("stats.dealers_label") },
    ];

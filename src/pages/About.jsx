@@ -62,7 +62,7 @@ export default function AboutSections({ lang = "en" }) {
   ];
 
   const STATS = [
-    { value: "11+", label: t("about.stats.years"), Icon: Trophy },
+    { value: "10+", label: t("about.stats.years"), Icon: Trophy },
     { value: "200 MT", label: t("about.stats.production"), Icon: Factory },
     { value: "8", label: t("about.stats.states"), Icon: MapPin },
   ];

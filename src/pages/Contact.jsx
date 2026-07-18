@@ -112,26 +112,45 @@ export default function Contact({ lang = "en" }) {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
+  const [captcha, setCaptcha] = useState(() => {
+  const a = Math.floor(Math.random() * 10) + 1;
+  const b = Math.floor(Math.random() * 10) + 1;
+  return { a, b, answer: "" };
+});
+
+const refreshCaptcha = () => {
+  const a = Math.floor(Math.random() * 10) + 1;
+  const b = Math.floor(Math.random() * 10) + 1;
+  setCaptcha({ a, b, answer: "" });
+};
+
   const handle = (e) => {
     const { name, value } = e.target;
     setForm((p) => ({ ...p, [name]: value }));
     if (errors[name]) setErrors((p) => ({ ...p, [name]: "" }));
   };
 
-  const validate = () => {
-    const e = {};
-    if (!form.name.trim())    e.name    = t("contact.validation.name");
-    if (!form.phone.trim()) {
-      e.phone = t("contact.validation.phone");
-    } else if (!/^\d{10}$/.test(form.phone.replace(/\D/g, ""))) {
-      e.phone = t("contact.validation.phone.invalid");
-    }
-    if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      e.email = t("contact.validation.email");
-    if (!form.message.trim()) e.message = t("contact.validation.message");
-    setErrors(e);
-    return !Object.keys(e).length;
-  };
+ const validate = () => {
+  const e = {};
+  if (!form.name.trim())    e.name    = t("contact.validation.name");
+  if (!form.phone.trim()) {
+    e.phone = t("contact.validation.phone");
+  } else if (!/^\d{10}$/.test(form.phone.replace(/\D/g, ""))) {
+    e.phone = t("contact.validation.phone.invalid");
+  }
+  if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+    e.email = t("contact.validation.email");
+  if (!form.message.trim()) e.message = t("contact.validation.message");
+
+  // captcha check
+  if (parseInt(captcha.answer, 10) !== captcha.a + captcha.b) {
+    e.captcha = "Incorrect answer, try again";
+    refreshCaptcha();
+  }
+
+  setErrors(e);
+  return !Object.keys(e).length;
+};
 
   const submit = (e) => {
   e.preventDefault();
@@ -153,6 +172,8 @@ export default function Contact({ lang = "en" }) {
   window.location.href = mailtoUrl;
 
   setForm({ name: "", phone: "", email: "", subject: "", message: "" });
+
+  refreshCaptcha();
 };
 
  
@@ -410,6 +431,45 @@ export default function Contact({ lang = "en" }) {
                   placeholder={t("contact.placeholder.message")}
                   error={errors.message}
                 />
+
+
+                <div>
+  <label className="block text-[11px] font-semibold uppercase tracking-wider
+                    text-gray-400 mb-1.5">
+    {"Fill The Captcha"}
+    <span className="text-red-400 ml-0.5">*</span>
+  </label>
+  <div className="flex items-center gap-3">
+    <span className="px-3.5 py-2.5 text-sm rounded-xl bg-gray-50/50 border border-gray-200 font-semibold select-none">
+      {captcha.a} + {captcha.b} = ?
+    </span>
+    <input
+      type="number"
+      value={captcha.answer}
+      onChange={(e) => setCaptcha((prev) => ({ ...prev, answer: e.target.value }))}
+      placeholder="Answer"
+      className="w-24 px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 bg-gray-50/50
+                 outline-none focus:bg-white focus:ring-2 focus:ring-emerald-500/20
+                 focus:border-emerald-400 transition-all duration-200"
+    />
+    <button
+      type="button"
+      onClick={refreshCaptcha}
+      className="text-xs text-emerald-600 hover:text-emerald-700 underline"
+    >
+      Refresh
+    </button>
+  </div>
+  {errors.captcha && (
+    <p className="mt-1.5 flex items-center gap-1 text-xs text-red-500">
+      <AlertCircle size={11} />
+      {errors.captcha}
+    </p>
+  )}
+</div>
+
+
+
 
                 {/* CTA row */}
 
