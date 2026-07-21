@@ -17,6 +17,7 @@ const Dealers = lazy(() => import("./pages/Dealers"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Investor = lazy(() => import("./pages/Investor"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 // Scroll to top component
 function ScrollToTop() {
@@ -92,7 +93,9 @@ function App() {
               <Route path="/investor" element={<Investor lang={lang}/>} />
               <Route path="/investors/:slug" element={<InvestorDetails lang={lang} />} />
               <Route path="/contact" element={<Contact lang={lang} />} />
-              <Route path="/terms-condition" element={<TermsAndConditions/>} />
+              <Route path="/terms-condition" element={<TermsAndConditions lang={lang}/>} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy lang={lang} />}/>
+
             </Routes>
           </Suspense>
           <Footer />

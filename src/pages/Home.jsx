@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard";
 import banner1 from "../assets/banner-main.webp";
 import banner2 from "../assets/Sundra-banner.webp";
 import farmer from "../assets/products-cat.webp";
-import cow from "../assets/this-cow.png";
+import cow from "../assets/this-cow.webp";
 import {content} from "../lib/translate";
 import {reviews} from "../lib/translate"
 import BarsanaAbout from "../components/BarsanaAbout";

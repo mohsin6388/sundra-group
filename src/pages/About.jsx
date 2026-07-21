@@ -17,11 +17,8 @@ import {
 } from "lucide-react";
 import { GALLERY_IMAGES } from "../lib/products";
 import {content} from "../lib/translate";
-import farmer_1 from "../assets/farmer-1.jpg"
-import farmer_2 from "../assets/farmer-2.jpg"
-import farmer_3 from "../assets/farmer-3.jpg"
-import sanjeev from "../assets/sanjeev.jpeg"
-import saransh from "../assets/saransh.jpeg"
+import sanjeev from "../assets/sanjeev.webp"
+import saransh from "../assets/saransh.webp"
 
 const Gold = ({ children }) => (
   <span style={{ color: "#c9871f" }}>{children}</span>
@@ -72,27 +69,6 @@ export default function AboutSections({ lang = "en" }) {
     { year: "2017", title: t("about.j2.title"), desc: t("about.j2.desc") },
     { year: "2019", title: t("about.j3.title"), desc: t("about.j3.desc") },
     { year: "2025", title: t("about.j4.title"), desc: t("about.j4.desc") },
-  ];
-
-  const TEAM = [
-    {
-      name: "Arvind Sharma",
-      role: "Chief Nutritionist",
-      exp: "20+ years in bovine nutrition research",
-      img: farmer_1,
-    },
-    {
-      name: "Sanchit Sahu",
-      role: "Head of Operations",
-      exp: "ISO compliance & supply chain specialist",
-      img: farmer_2,
-    },
-    {
-      name: "Rajesh Gupta",
-      role: "Field Agronomy Lead",
-      exp: "Farmer outreach across 8 states",
-      img: farmer_3,
-    },
   ];
 
   const PRODUCTS_HIGHLIGHT = [
@@ -667,35 +643,6 @@ export default function AboutSections({ lang = "en" }) {
             </div>
           </div>
         </section>
-
-        {/* ═══ OUR TEAM ═══ */}
-        {/* <section className="team-section">
-          <div className="section-inner">
-            <div className="section-header">
-              <p style={{ color: "#c9871f", fontWeight: "700", textTransform: "uppercase", fontSize: "12px", marginBottom: "14px" }}>
-                {t("about.team.tag")}
-              </p>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 4vw, 44px)", color: "#fff", fontWeight: "800", lineHeight: "1.2", margin: "0 0 16px" }}>
-                {t("about.team.title")}
-              </h2>
-              <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", lineHeight: "1.8", maxWidth: "520px", margin: "0 auto" }}>
-                {t("about.team.desc")}
-              </p>
-            </div>
-            <div className="team-grid">
-              {TEAM.map(({ name, role, exp, img }) => (
-                <div key={name} style={{ textAlign: "center" }}>
-                  <div className="team-card">
-                    <img src={img} alt={name} className="team-img" />
-                  </div>
-                  <div style={{ paddingTop: "10px" }}>
-                    <div className="team-name">{name}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
 
         {/* ═══ CTA SECTION ═══ */}
         <section className="cta-section">

@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 /**
  * Terms & Conditions page — generic agri/feed-business template.
  * Replace the placeholder clauses inside CONTENT with your final
  * legal text once ready. Structure (sections, numbering) can stay.
+ *
+ * `lang` is controlled by the App-level language state (same as
+ * every other page) and passed down as a prop — no internal toggle here.
  */
 
 const CONTENT = {
@@ -108,9 +111,8 @@ const CONTENT = {
   },
 };
 
-function TermsAndConditions({ lang: initialLang = "hi" }) {
-  const [lang, setLang] = useState(initialLang);
-  const t = CONTENT[lang];
+function TermsAndConditions({ lang = "hi" }) {
+  const t = CONTENT[lang] || CONTENT.hi;
 
   return (
     <div className="terms-page">
@@ -118,13 +120,6 @@ function TermsAndConditions({ lang: initialLang = "hi" }) {
         <Link to="/" className="terms-back-link">
           &larr; {lang === "hi" ? "होम पर वापस जाएं" : "Back to home"}
         </Link>
-
-        <button
-          className="terms-lang-toggle"
-          onClick={() => setLang(lang === "hi" ? "en" : "hi")}
-        >
-          {lang === "hi" ? "EN" : "हि"}
-        </button>
       </div>
 
       <div className="terms-content">
@@ -162,17 +157,6 @@ function TermsAndConditions({ lang: initialLang = "hi" }) {
           text-decoration: none;
         }
         .terms-back-link:hover { text-decoration: underline; }
-        .terms-lang-toggle {
-          background: #16261b;
-          color: #fdfbf5;
-          border: none;
-          border-radius: 6px;
-          padding: 6px 12px;
-          font-size: 13px;
-          font-weight: 600;
-          cursor: pointer;
-        }
-        .terms-lang-toggle:hover { opacity: 0.85; }
 
         .terms-content {
           max-width: 760px;
@@ -233,7 +217,4 @@ function TermsAndConditions({ lang: initialLang = "hi" }) {
   );
 }
 
-
-
-
-export default TermsAndConditions
+export default TermsAndConditions;

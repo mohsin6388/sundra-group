@@ -199,12 +199,12 @@ function Footer() {
               <li>
                 <Link to="/privacy-policy">Privacy policy</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/payment-policy">Payment policy</Link>
               </li>
               <li>
                 <Link to="/refund-policy">Return &amp; refund policy</Link>
-              </li>
+              </li> */}
             </ul>
 
             <div className="social-icons">
